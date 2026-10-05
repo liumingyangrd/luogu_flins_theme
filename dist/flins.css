@@ -1,0 +1,3363 @@
+/*! 洛谷 · 菲林斯主题「终夜长茔 · 夜巡」v1.0.0
+ *  构建产物，请勿直接编辑。源码：src/flins.css + src/_tokens.generated.css
+ *  用法：Stylus 新建样式，作用域填 luogu.com.cn，粘贴本文件全部内容。
+ */
+
+/* ══════════════════════════════════════════════════════════════
+   洛谷 · 菲林斯主题 —— Lentille 设计令牌覆盖（深色「夜巡」）
+   由 tools/make_tokens.py 生成，请勿手改；改色请改该脚本。
+   !important 用于压过洛谷页内 <style> 的 :root 定义；
+   元素自身的 .lcolor-var-* 声明仍可正常覆盖这些值。
+   ══════════════════════════════════════════════════════════════ */
+/* 用 html:not(.flins-light) 而不是 :root：浅色模式直接让这些
+   深色色阶整体失效，回落到洛谷原值，避免逐个还原。 */
+html:not(.flins-light) {
+  --lcolor--lapis-1: 24, 34, 73 !important; --lfe-color--lapis-1: #182249 !important;
+  --lcolor--lapis-2: 39, 55, 107 !important; --lfe-color--lapis-2: #27376b !important;
+  --lcolor--lapis-3: 92, 134, 232 !important; --lfe-color--lapis-3: #5c86e8 !important;
+  --lcolor--lapis-4: 164, 187, 242 !important; --lfe-color--lapis-4: #a4bbf2 !important;
+  --lcolor--lapis-5: 222, 231, 250 !important; --lfe-color--lapis-5: #dee7fa !important;
+  --lcolor--blue-1: 21, 39, 73 !important; --lfe-color--blue-1: #152749 !important;
+  --lcolor--blue-2: 32, 67, 107 !important; --lfe-color--blue-2: #20436b !important;
+  --lcolor--blue-3: 74, 168, 232 !important; --lfe-color--blue-3: #4aa8e8 !important;
+  --lcolor--blue-4: 154, 206, 242 !important; --lfe-color--blue-4: #9acef2 !important;
+  --lcolor--blue-5: 219, 238, 250 !important; --lfe-color--blue-5: #dbeefa !important;
+  --lcolor--cyan-1: 19, 46, 69 !important; --lfe-color--cyan-1: #132e45 !important;
+  --lcolor--cyan-2: 29, 80, 98 !important; --lfe-color--cyan-2: #1d5062 !important;
+  --lcolor--cyan-3: 64, 206, 206 !important; --lfe-color--cyan-3: #40cece !important;
+  --lcolor--cyan-4: 148, 228, 228 !important; --lfe-color--cyan-4: #94e4e4 !important;
+  --lcolor--cyan-5: 217, 245, 245 !important; --lfe-color--cyan-5: #d9f5f5 !important;
+  --lcolor--green-1: 24, 45, 55 !important; --lfe-color--green-1: #182d37 !important;
+  --lcolor--green-2: 38, 79, 69 !important; --lfe-color--green-2: #264f45 !important;
+  --lcolor--green-3: 90, 204, 120 !important; --lfe-color--green-3: #5acc78 !important;
+  --lcolor--green-4: 163, 226, 179 !important; --lfe-color--green-4: #a3e2b3 !important;
+  --lcolor--green-5: 222, 245, 228 !important; --lfe-color--green-5: #def5e4 !important;
+  --lcolor--lgreen-1: 30, 43, 52 !important; --lfe-color--lgreen-1: #1e2b34 !important;
+  --lcolor--lgreen-2: 52, 74, 62 !important; --lfe-color--lgreen-2: #344a3e !important;
+  --lcolor--lgreen-3: 132, 190, 100 !important; --lfe-color--lgreen-3: #84be64 !important;
+  --lcolor--lgreen-4: 186, 219, 168 !important; --lfe-color--lgreen-4: #badba8 !important;
+  --lcolor--lgreen-5: 230, 242, 224 !important; --lfe-color--lgreen-5: #e6f2e0 !important;
+  --lcolor--yellow-1: 49, 48, 39 !important; --lfe-color--yellow-1: #313027 !important;
+  --lcolor--yellow-2: 92, 84, 35 !important; --lfe-color--yellow-2: #5c5423 !important;
+  --lcolor--yellow-3: 250, 219, 20 !important; --lfe-color--yellow-3: #fadb14 !important;
+  --lcolor--yellow-4: 252, 235, 123 !important; --lfe-color--yellow-4: #fceb7b !important;
+  --lcolor--yellow-5: 254, 248, 208 !important; --lfe-color--yellow-5: #fef8d0 !important;
+  --lcolor--orange-1: 49, 39, 44 !important; --lfe-color--orange-1: #31272c !important;
+  --lcolor--orange-2: 91, 65, 46 !important; --lfe-color--orange-2: #5b412e !important;
+  --lcolor--orange-3: 246, 162, 52 !important; --lfe-color--orange-3: #f6a234 !important;
+  --lcolor--orange-4: 250, 203, 141 !important; --lfe-color--orange-4: #facb8d !important;
+  --lcolor--orange-5: 253, 236, 214 !important; --lfe-color--orange-5: #fdecd6 !important;
+  --lcolor--gold-1: 50, 44, 46 !important; --lfe-color--gold-1: #322c2e !important;
+  --lcolor--gold-2: 93, 77, 50 !important; --lfe-color--gold-2: #5d4d32 !important;
+  --lcolor--gold-3: 252, 198, 64 !important; --lfe-color--gold-3: #fcc640 !important;
+  --lcolor--gold-4: 253, 223, 148 !important; --lfe-color--gold-4: #fddf94 !important;
+  --lcolor--gold-5: 254, 244, 217 !important; --lfe-color--gold-5: #fef4d9 !important;
+  --lcolor--purple-1: 37, 29, 74 !important; --lfe-color--purple-1: #251d4a !important;
+  --lcolor--purple-2: 66, 45, 109 !important; --lfe-color--purple-2: #422d6d !important;
+  --lcolor--purple-3: 172, 104, 238 !important; --lfe-color--purple-3: #ac68ee !important;
+  --lcolor--purple-4: 209, 170, 245 !important; --lfe-color--purple-4: #d1aaf5 !important;
+  --lcolor--purple-5: 238, 225, 252 !important; --lfe-color--purple-5: #eee1fc !important;
+  --lcolor--pink-1: 50, 29, 55 !important; --lfe-color--pink-1: #321d37 !important;
+  --lcolor--pink-2: 94, 45, 69 !important; --lfe-color--pink-2: #5e2d45 !important;
+  --lcolor--pink-3: 255, 104, 120 !important; --lfe-color--pink-3: #ff6878 !important;
+  --lcolor--pink-4: 255, 170, 179 !important; --lfe-color--pink-4: #ffaab3 !important;
+  --lcolor--pink-5: 255, 225, 228 !important; --lfe-color--pink-5: #ffe1e4 !important;
+  --lcolor--red-1: 49, 29, 51 !important; --lfe-color--red-1: #311d33 !important;
+  --lcolor--red-2: 91, 45, 59 !important; --lfe-color--red-2: #5b2d3b !important;
+  --lcolor--red-3: 246, 102, 90 !important; --lfe-color--red-3: #f6665a !important;
+  --lcolor--red-4: 250, 169, 163 !important; --lfe-color--red-4: #faa9a3 !important;
+  --lcolor--red-5: 253, 224, 222 !important; --lfe-color--red-5: #fde0de !important;
+  --lcolor--grey-1: 33, 39, 67 !important; --lfe-color--grey-1: #212743 !important;
+  --lcolor--grey-2: 58, 65, 95 !important; --lfe-color--grey-2: #3a415f !important;
+  --lcolor--grey-3: 150, 162, 196 !important; --lfe-color--grey-3: #96a2c4 !important;
+  --lcolor--grey-4: 196, 203, 222 !important; --lfe-color--grey-4: #c4cbde !important;
+  --lcolor--grey-5: 234, 236, 243 !important; --lfe-color--grey-5: #eaecf3 !important;
+  --lcolor--primary: 96, 224, 240 !important; --lfe-color--primary: #60E0F0 !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：雷紫 ── */
+html.flins-accent-volt {
+  --lcolor--primary: 156, 140, 255 !important; --lfe-color--primary: #9C8CFF !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：提灯金 ── */
+html.flins-accent-lamp {
+  --lcolor--primary: 240, 192, 112 !important; --lfe-color--primary: #F0C070 !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：洛谷蓝 ── */
+html.flins-accent-luogu {
+  --lcolor--primary: 52, 152, 219 !important; --lfe-color--primary: #3498DB !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 浅色「霜晨」：家族色阶沿用洛谷原值，只改语义色 ── */
+html.flins-light {
+  --lcolor--primary: 14, 143, 152 !important; --lfe-color--primary: #0E8F98 !important;
+  --lcolor--primary-bg: 221, 243, 245 !important; --lfe-color--primary-bg: #DDF3F5 !important;
+  --lcolor--link: 11, 124, 134 !important; --lfe-color--link: #0B7C86 !important;
+  --lcolor--clicked: 60, 75, 196 !important; --lfe-color--clicked: #3C4BC4 !important;
+  --lcolor--disabled: 191, 191, 191 !important; --lfe-color--disabled: #BFBFBF !important;
+  --lcolor--background: 239, 243, 251 !important; --lfe-color--background: #EFF3FB !important;
+  --lcolor--success: 46, 158, 99 !important; --lfe-color--success: #2E9E63 !important;
+  --lcolor--warning: 192, 138, 18 !important; --lfe-color--warning: #C08A12 !important;
+  --lcolor--error: 217, 74, 92 !important; --lfe-color--error: #D94A5C !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   工具类重写：洛谷把 .lcolor--X / .lcolor-bg-X 的颜色硬编码成
+   rgb(...)，不引用变量，所以必须在这里改成引用 --lcolor--*，
+   否则难度标签、状态色、页脚底色都不会跟随主题。
+   ══════════════════════════════════════════════════════════════ */
+.lcolor--lapis-1 { color: rgb(var(--lcolor--lapis-1)) !important; }
+.lcolor-bg-lapis-1 { background-color: rgb(var(--lcolor--lapis-1)) !important; }
+.lcolor--lapis-2 { color: rgb(var(--lcolor--lapis-2)) !important; }
+.lcolor-bg-lapis-2 { background-color: rgb(var(--lcolor--lapis-2)) !important; }
+.lcolor--lapis-3 { color: rgb(var(--lcolor--lapis-3)) !important; }
+.lcolor-bg-lapis-3 { background-color: rgb(var(--lcolor--lapis-3)) !important; }
+.lcolor--lapis-4 { color: rgb(var(--lcolor--lapis-4)) !important; }
+.lcolor-bg-lapis-4 { background-color: rgb(var(--lcolor--lapis-4)) !important; }
+.lcolor--lapis-5 { color: rgb(var(--lcolor--lapis-5)) !important; }
+.lcolor-bg-lapis-5 { background-color: rgb(var(--lcolor--lapis-5)) !important; }
+.lcolor--blue-1 { color: rgb(var(--lcolor--blue-1)) !important; }
+.lcolor-bg-blue-1 { background-color: rgb(var(--lcolor--blue-1)) !important; }
+.lcolor--blue-2 { color: rgb(var(--lcolor--blue-2)) !important; }
+.lcolor-bg-blue-2 { background-color: rgb(var(--lcolor--blue-2)) !important; }
+.lcolor--blue-3 { color: rgb(var(--lcolor--blue-3)) !important; }
+.lcolor-bg-blue-3 { background-color: rgb(var(--lcolor--blue-3)) !important; }
+.lcolor--blue-4 { color: rgb(var(--lcolor--blue-4)) !important; }
+.lcolor-bg-blue-4 { background-color: rgb(var(--lcolor--blue-4)) !important; }
+.lcolor--blue-5 { color: rgb(var(--lcolor--blue-5)) !important; }
+.lcolor-bg-blue-5 { background-color: rgb(var(--lcolor--blue-5)) !important; }
+.lcolor--cyan-1 { color: rgb(var(--lcolor--cyan-1)) !important; }
+.lcolor-bg-cyan-1 { background-color: rgb(var(--lcolor--cyan-1)) !important; }
+.lcolor--cyan-2 { color: rgb(var(--lcolor--cyan-2)) !important; }
+.lcolor-bg-cyan-2 { background-color: rgb(var(--lcolor--cyan-2)) !important; }
+.lcolor--cyan-3 { color: rgb(var(--lcolor--cyan-3)) !important; }
+.lcolor-bg-cyan-3 { background-color: rgb(var(--lcolor--cyan-3)) !important; }
+.lcolor--cyan-4 { color: rgb(var(--lcolor--cyan-4)) !important; }
+.lcolor-bg-cyan-4 { background-color: rgb(var(--lcolor--cyan-4)) !important; }
+.lcolor--cyan-5 { color: rgb(var(--lcolor--cyan-5)) !important; }
+.lcolor-bg-cyan-5 { background-color: rgb(var(--lcolor--cyan-5)) !important; }
+.lcolor--green-1 { color: rgb(var(--lcolor--green-1)) !important; }
+.lcolor-bg-green-1 { background-color: rgb(var(--lcolor--green-1)) !important; }
+.lcolor--green-2 { color: rgb(var(--lcolor--green-2)) !important; }
+.lcolor-bg-green-2 { background-color: rgb(var(--lcolor--green-2)) !important; }
+.lcolor--green-3 { color: rgb(var(--lcolor--green-3)) !important; }
+.lcolor-bg-green-3 { background-color: rgb(var(--lcolor--green-3)) !important; }
+.lcolor--green-4 { color: rgb(var(--lcolor--green-4)) !important; }
+.lcolor-bg-green-4 { background-color: rgb(var(--lcolor--green-4)) !important; }
+.lcolor--green-5 { color: rgb(var(--lcolor--green-5)) !important; }
+.lcolor-bg-green-5 { background-color: rgb(var(--lcolor--green-5)) !important; }
+.lcolor--lgreen-1 { color: rgb(var(--lcolor--lgreen-1)) !important; }
+.lcolor-bg-lgreen-1 { background-color: rgb(var(--lcolor--lgreen-1)) !important; }
+.lcolor--lgreen-2 { color: rgb(var(--lcolor--lgreen-2)) !important; }
+.lcolor-bg-lgreen-2 { background-color: rgb(var(--lcolor--lgreen-2)) !important; }
+.lcolor--lgreen-3 { color: rgb(var(--lcolor--lgreen-3)) !important; }
+.lcolor-bg-lgreen-3 { background-color: rgb(var(--lcolor--lgreen-3)) !important; }
+.lcolor--lgreen-4 { color: rgb(var(--lcolor--lgreen-4)) !important; }
+.lcolor-bg-lgreen-4 { background-color: rgb(var(--lcolor--lgreen-4)) !important; }
+.lcolor--lgreen-5 { color: rgb(var(--lcolor--lgreen-5)) !important; }
+.lcolor-bg-lgreen-5 { background-color: rgb(var(--lcolor--lgreen-5)) !important; }
+.lcolor--yellow-1 { color: rgb(var(--lcolor--yellow-1)) !important; }
+.lcolor-bg-yellow-1 { background-color: rgb(var(--lcolor--yellow-1)) !important; }
+.lcolor--yellow-2 { color: rgb(var(--lcolor--yellow-2)) !important; }
+.lcolor-bg-yellow-2 { background-color: rgb(var(--lcolor--yellow-2)) !important; }
+.lcolor--yellow-3 { color: rgb(var(--lcolor--yellow-3)) !important; }
+.lcolor-bg-yellow-3 { background-color: rgb(var(--lcolor--yellow-3)) !important; }
+.lcolor--yellow-4 { color: rgb(var(--lcolor--yellow-4)) !important; }
+.lcolor-bg-yellow-4 { background-color: rgb(var(--lcolor--yellow-4)) !important; }
+.lcolor--yellow-5 { color: rgb(var(--lcolor--yellow-5)) !important; }
+.lcolor-bg-yellow-5 { background-color: rgb(var(--lcolor--yellow-5)) !important; }
+.lcolor--orange-1 { color: rgb(var(--lcolor--orange-1)) !important; }
+.lcolor-bg-orange-1 { background-color: rgb(var(--lcolor--orange-1)) !important; }
+.lcolor--orange-2 { color: rgb(var(--lcolor--orange-2)) !important; }
+.lcolor-bg-orange-2 { background-color: rgb(var(--lcolor--orange-2)) !important; }
+.lcolor--orange-3 { color: rgb(var(--lcolor--orange-3)) !important; }
+.lcolor-bg-orange-3 { background-color: rgb(var(--lcolor--orange-3)) !important; }
+.lcolor--orange-4 { color: rgb(var(--lcolor--orange-4)) !important; }
+.lcolor-bg-orange-4 { background-color: rgb(var(--lcolor--orange-4)) !important; }
+.lcolor--orange-5 { color: rgb(var(--lcolor--orange-5)) !important; }
+.lcolor-bg-orange-5 { background-color: rgb(var(--lcolor--orange-5)) !important; }
+.lcolor--gold-1 { color: rgb(var(--lcolor--gold-1)) !important; }
+.lcolor-bg-gold-1 { background-color: rgb(var(--lcolor--gold-1)) !important; }
+.lcolor--gold-2 { color: rgb(var(--lcolor--gold-2)) !important; }
+.lcolor-bg-gold-2 { background-color: rgb(var(--lcolor--gold-2)) !important; }
+.lcolor--gold-3 { color: rgb(var(--lcolor--gold-3)) !important; }
+.lcolor-bg-gold-3 { background-color: rgb(var(--lcolor--gold-3)) !important; }
+.lcolor--gold-4 { color: rgb(var(--lcolor--gold-4)) !important; }
+.lcolor-bg-gold-4 { background-color: rgb(var(--lcolor--gold-4)) !important; }
+.lcolor--gold-5 { color: rgb(var(--lcolor--gold-5)) !important; }
+.lcolor-bg-gold-5 { background-color: rgb(var(--lcolor--gold-5)) !important; }
+.lcolor--purple-1 { color: rgb(var(--lcolor--purple-1)) !important; }
+.lcolor-bg-purple-1 { background-color: rgb(var(--lcolor--purple-1)) !important; }
+.lcolor--purple-2 { color: rgb(var(--lcolor--purple-2)) !important; }
+.lcolor-bg-purple-2 { background-color: rgb(var(--lcolor--purple-2)) !important; }
+.lcolor--purple-3 { color: rgb(var(--lcolor--purple-3)) !important; }
+.lcolor-bg-purple-3 { background-color: rgb(var(--lcolor--purple-3)) !important; }
+.lcolor--purple-4 { color: rgb(var(--lcolor--purple-4)) !important; }
+.lcolor-bg-purple-4 { background-color: rgb(var(--lcolor--purple-4)) !important; }
+.lcolor--purple-5 { color: rgb(var(--lcolor--purple-5)) !important; }
+.lcolor-bg-purple-5 { background-color: rgb(var(--lcolor--purple-5)) !important; }
+.lcolor--pink-1 { color: rgb(var(--lcolor--pink-1)) !important; }
+.lcolor-bg-pink-1 { background-color: rgb(var(--lcolor--pink-1)) !important; }
+.lcolor--pink-2 { color: rgb(var(--lcolor--pink-2)) !important; }
+.lcolor-bg-pink-2 { background-color: rgb(var(--lcolor--pink-2)) !important; }
+.lcolor--pink-3 { color: rgb(var(--lcolor--pink-3)) !important; }
+.lcolor-bg-pink-3 { background-color: rgb(var(--lcolor--pink-3)) !important; }
+.lcolor--pink-4 { color: rgb(var(--lcolor--pink-4)) !important; }
+.lcolor-bg-pink-4 { background-color: rgb(var(--lcolor--pink-4)) !important; }
+.lcolor--pink-5 { color: rgb(var(--lcolor--pink-5)) !important; }
+.lcolor-bg-pink-5 { background-color: rgb(var(--lcolor--pink-5)) !important; }
+.lcolor--red-1 { color: rgb(var(--lcolor--red-1)) !important; }
+.lcolor-bg-red-1 { background-color: rgb(var(--lcolor--red-1)) !important; }
+.lcolor--red-2 { color: rgb(var(--lcolor--red-2)) !important; }
+.lcolor-bg-red-2 { background-color: rgb(var(--lcolor--red-2)) !important; }
+.lcolor--red-3 { color: rgb(var(--lcolor--red-3)) !important; }
+.lcolor-bg-red-3 { background-color: rgb(var(--lcolor--red-3)) !important; }
+.lcolor--red-4 { color: rgb(var(--lcolor--red-4)) !important; }
+.lcolor-bg-red-4 { background-color: rgb(var(--lcolor--red-4)) !important; }
+.lcolor--red-5 { color: rgb(var(--lcolor--red-5)) !important; }
+.lcolor-bg-red-5 { background-color: rgb(var(--lcolor--red-5)) !important; }
+.lcolor--grey-1 { color: rgb(var(--lcolor--grey-1)) !important; }
+.lcolor-bg-grey-1 { background-color: rgb(var(--lcolor--grey-1)) !important; }
+.lcolor--grey-2 { color: rgb(var(--lcolor--grey-2)) !important; }
+.lcolor-bg-grey-2 { background-color: rgb(var(--lcolor--grey-2)) !important; }
+.lcolor--grey-3 { color: rgb(var(--lcolor--grey-3)) !important; }
+.lcolor-bg-grey-3 { background-color: rgb(var(--lcolor--grey-3)) !important; }
+.lcolor--grey-4 { color: rgb(var(--lcolor--grey-4)) !important; }
+.lcolor-bg-grey-4 { background-color: rgb(var(--lcolor--grey-4)) !important; }
+.lcolor--grey-5 { color: rgb(var(--lcolor--grey-5)) !important; }
+.lcolor-bg-grey-5 { background-color: rgb(var(--lcolor--grey-5)) !important; }
+.lcolor--vip { color: rgb(var(--lcolor--vip, 240, 192, 112)) !important; }
+.lcolor-bg-vip { background-color: rgb(var(--lcolor--vip, 240, 192, 112)) !important; }
+.lcolor--primary { color: rgb(var(--lcolor--primary)) !important; }
+.lcolor-bg-primary { background-color: rgb(var(--lcolor--primary)) !important; }
+.lcolor--primary-bg { color: rgb(var(--lcolor--primary-bg)) !important; }
+.lcolor-bg-primary-bg { background-color: rgb(var(--lcolor--primary-bg)) !important; }
+.lcolor--link { color: rgb(var(--lcolor--link)) !important; }
+.lcolor-bg-link { background-color: rgb(var(--lcolor--link)) !important; }
+.lcolor--clicked { color: rgb(var(--lcolor--clicked)) !important; }
+.lcolor-bg-clicked { background-color: rgb(var(--lcolor--clicked)) !important; }
+.lcolor--disabled { color: rgb(var(--lcolor--disabled)) !important; }
+.lcolor-bg-disabled { background-color: rgb(var(--lcolor--disabled)) !important; }
+.lcolor--background { color: rgb(var(--lcolor--background)) !important; }
+.lcolor-bg-background { background-color: rgb(var(--lcolor--background)) !important; }
+.lcolor--success { color: rgb(var(--lcolor--success)) !important; }
+.lcolor-bg-success { background-color: rgb(var(--lcolor--success)) !important; }
+.lcolor--warning { color: rgb(var(--lcolor--warning)) !important; }
+.lcolor-bg-warning { background-color: rgb(var(--lcolor--warning)) !important; }
+.lcolor--error { color: rgb(var(--lcolor--error)) !important; }
+.lcolor-bg-error { background-color: rgb(var(--lcolor--error)) !important; }
+
+
+@charset "UTF-8";
+/* ══════════════════════════════════════════════════════════════════════════
+   洛谷 · 菲林斯主题   「终夜长茔 · 夜巡」
+   Luogu × Flins (Genshin Impact) Theme
+   ──────────────────────────────────────────────────────────────────────────
+   注意：本文件以「深色 · 夜巡」为默认形态。
+        加 html.flins-light 切换到浅色「霜晨」。
+        文件开头的 Lentille 令牌块由 tools/make_tokens.py 生成后在构建时前置，
+        所以直接引用本文件时请使用 dist/flins.css。
+
+   设计锚点（取自官方立绘：提灯 / 冷蓝火焰 / 金色新月 / 灯塔剪影 / 深靛蓝夜色）：
+     · 深靛蓝底约七成，冷蓝青光约两成，金只做零星点缀（≤一成）
+     · 交互态用冷蓝青做 1px 描边 + 辉光，模拟灯火照明
+     · 标题走衬线 + 放宽字距，取「优雅、疏离、庄重」的气质
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   0. 主题参数
+   这些变量是整套皮肤的「控制面板」，油猴脚本的设置面板改的就是它们。
+   想手动改配色 / 换背景图，只改这一节即可。
+   ────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* 0.1 角色基准色（自官方立绘像素采样推断，非官方 HEX） */
+  --flins-night-900: #0B0F2B;
+  --flins-night-800: #101040;
+  --flins-night-700: #202060;
+  --flins-night-600: #283078;
+  --flins-flame-500: #4C6FE8;
+  --flins-flame-400: #60A0C0;
+  --flins-flame-300: #90D0E0;
+  --flins-flame-200: #60E0F0;
+  --flins-gold-600: #C89020;
+  --flins-gold-500: #E0B020;
+  --flins-gold-300: #F0C070;
+  --flins-ink: #07070C;
+  --flins-ink-soft: #181828;
+  --flins-silver: #B9BCC6;
+  --flins-silver-bright: #F2F4F8;
+  --flins-violet: #482880;
+
+  /* 0.2 强调色（脚本会连同 RGB 三元组一起覆写） */
+  --flins-accent: #60E0F0;
+  --flins-accent-rgb: 96, 224, 240;
+  --flins-accent-soft: #90D0E0;
+
+  /* 0.3 表面与文字 */
+  --flins-bg-color: #080B21;
+  --flins-surface: rgba(17, 23, 54, 0.74);
+  --flins-surface-solid: #101635;
+  --flins-surface-sunken: rgba(9, 12, 32, 0.62);
+  --flins-surface-raised: rgba(26, 34, 72, 0.82);
+  --flins-border: rgba(150, 190, 235, 0.14);
+  --flins-border-strong: rgba(150, 200, 245, 0.26);
+  --flins-text: #E6EBFB;
+  --flins-text-muted: #A3AFCE;
+  /* 这个值不能凭感觉调：它用在说明文字、行号、时间戳上，
+     对比度审计实测 #6C7796 只有 4.37:1，差一点点不到 WCAG AA 的 4.5 */
+  --flins-text-dim: #8B97B8;
+  --flins-heading: #F2F4F8;
+  /* 压在强调色底上的文字色（近黑，保证亮底上的对比度） */
+  --flins-on-accent: #04121A;
+  --flins-stripe: rgba(255, 255, 255, 0.022);
+  --flins-glass-blur: blur(12px) saturate(1.15);
+
+  /* 代码与「样例输入输出」面板：浅色形态下必须整体翻过去，
+     所以走变量而不是在组件规则里写死深色值 */
+  --flins-code-bg: rgba(6, 9, 24, 0.86);
+  --flins-code-text: #D7E0F5;
+  --flins-code-gutter: rgba(255, 255, 255, 0.018);
+  --flins-inline-bg: rgba(var(--flins-accent-rgb), 0.12);
+  --flins-inline-fg: var(--flins-flame-200);
+
+  /* 标题旁那盏「小灯」的取色。深色形态用亮青才有灯火感；
+     浅色形态必须换成深青，否则白底上是一团看不见的淡色。 */
+  --flins-orn-bar: rgba(var(--flins-accent-rgb), 0.55);
+  --flins-orn-dot: var(--flins-flame-200);
+  --flins-orn-glow: 0 0 10px 2px rgba(var(--flins-accent-rgb), 0.7);
+  --flins-orn-moon-color: var(--flins-gold-300);
+  --flins-orn-moon-halo: rgba(224, 176, 32, 0.55);
+  --flins-selection-fg: #F2F4F8;
+
+  /* 表单类表面。洛谷有不少地方直接写死 background:#fff（下拉框、
+     搜索框、标签按钮、固定底栏、弹窗卡片），统一走这个变量才好翻深浅 */
+  --flins-field-bg: rgba(6, 9, 24, 0.6);
+  --flins-field-bg-solid: #0d1230;
+  /* 题目正文插图的衬底色：深色主题用浅衬底、浅色主题用白衬底，
+     让深浅两种底色的原图都能从页面里「浮」出来 */
+  --flins-figure-matte: rgba(255, 255, 255, 0.94);
+  /* 顶栏底色。必须【做实】：半透明的话滚动时下方内容会从玻璃里透出来，
+     用户明确要求「滚上这个条之上的内容不要显示」。
+     留一点点透明是为了跟背景图有一丝呼应，够不着底色就一定压得住。 */
+  --flins-topback: rgba(7, 10, 26, 0.985);
+
+  /* 0.4 背景图层（「可以更改背景图片」就是改这两个） */
+  --flins-bg-image: none;
+  --flins-bg-size: cover;
+  --flins-bg-position: center center;
+  --flins-bg-repeat: no-repeat;
+  --flins-bg-blur: 0px;
+  --flins-bg-brightness: 1;
+  --flins-bg-saturate: 1;
+  --flins-bg-zoom: 1;
+  --flins-bg-scrim: linear-gradient(
+      180deg,
+      rgba(6, 9, 26, 0.88) 0,
+      rgba(6, 9, 26, 0.62) 240px,
+      rgba(6, 9, 26, 0.72) 62%,
+      rgba(4, 6, 20, 0.9) 100%);
+
+  /* 0.5 造型 */
+  --flins-radius: 12px;
+  --flins-radius-sm: 8px;
+  --flins-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
+                  0 10px 30px -12px rgba(0, 0, 0, 0.75);
+  --flins-glow: 0 0 0 1px rgba(var(--flins-accent-rgb), 0.5),
+                0 0 14px -2px rgba(var(--flins-accent-rgb), 0.45);
+  --flins-motion: 1;               /* 0 = 关闭动效 */
+  --flins-ornaments: 1;            /* 0 = 关闭装饰（徽记 / 新月 / 极光） */
+
+  /* 0.6 字体：正文保持无衬线保证可读性，标题走衬线取贵族气 */
+  --flins-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                     "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC",
+                     "Noto Sans CJK SC", sans-serif;
+  --flins-font-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong",
+                        "SimSun", Georgia, "Times New Roman", serif;
+  --flins-font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas,
+                     "Liberation Mono", Menlo, monospace;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   1. 背景层
+   html::before 画图（可模糊 / 明暗 / 缩放），html::after 压蒙版，
+   两层都固定在视口，纯 CSS 即可工作，不需要额外 DOM。
+   ────────────────────────────────────────────────────────────────────────── */
+html {
+  background-color: var(--flins-bg-color) !important;
+  color-scheme: dark;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: -6vmax;                    /* 预留模糊 / 缩放时的出血，避免露边 */
+  z-index: -2;
+  pointer-events: none;
+  background-image: var(--flins-bg-image);
+  background-size: var(--flins-bg-size);
+  background-position: var(--flins-bg-position);
+  background-repeat: var(--flins-bg-repeat);
+  filter: blur(var(--flins-bg-blur))
+          brightness(var(--flins-bg-brightness))
+          saturate(var(--flins-bg-saturate));
+  transform: scale(var(--flins-bg-zoom));
+  transform-origin: center center;
+}
+
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--flins-bg-scrim);
+}
+
+/* 关掉洛谷自带的那条 400px 横幅背景，避免和上面的整页背景打架 */
+.theme-page::before {
+  display: none !important;
+}
+
+/* 让内容层全部透出背景 */
+html,
+body,
+#app,
+.lfe-body,
+.main-container,
+.theme-page,
+.theme-page > header,
+.theme-page > main,
+.theme-page > footer {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body {
+  font-family: var(--flins-font-body) !important;
+  color: var(--flins-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(var(--flins-accent-rgb), 0.32);
+  color: var(--flins-selection-fg);
+}
+
+/* 滚动条：夜色轨道 + 冷蓝灯火滑杆 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--flins-accent-rgb), 0.45) transparent;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(6, 9, 26, 0.4); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+              rgba(var(--flins-accent-rgb), 0.55),
+              rgba(76, 111, 232, 0.55));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+              rgba(var(--flins-accent-rgb), 0.85),
+              rgba(76, 111, 232, 0.8));
+  background-clip: padding-box;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   2. 官方主题变量（这些挂在 .top-bar / nav.sidebar / .theme-page 的行内 style 上，
+      只有 !important 才能压过行内样式）
+   ────────────────────────────────────────────────────────────────────────── */
+.top-bar,
+nav.sidebar.lside,
+.sidebar.lside,
+.nav-scrollbar {
+  --theme-navi-back: rgba(9, 13, 34, 0.82) !important;
+  --theme-navi-fore: var(--flins-text) !important;
+  --theme-navi-fore-rgb: 230, 235, 251 !important;
+}
+
+.theme-page {
+  --theme-body-back: transparent !important;
+  --theme-body-image: none !important;
+  --theme-body-color: none !important;
+  --theme-body-color-filter: none !important;
+  --theme-body-mid-mask: none !important;
+  --theme-card-background: var(--flins-surface) !important;
+  --theme-card-backdrop-filter: var(--flins-glass-blur) !important;
+}
+
+html.flins-glass-off .theme-page {
+  --theme-card-background: var(--flins-surface-solid) !important;
+  --theme-card-backdrop-filter: none !important;
+}
+
+/* 把语义色的 .lcolor-var-* 也接到主题强调色上，
+   否则元素自身的 --lcolor-rgb 会盖掉我们的 :root 覆盖 */
+.lcolor-var-primary { --lcolor-rgb: var(--flins-accent-rgb) !important; }
+.lcolor-var-link { --lcolor-rgb: 126, 232, 244 !important; }
+.lcolor-var-background { --lcolor-rgb: 8, 11, 33 !important; }
+.lcolor-var-primary-bg { --lcolor-rgb: 16, 42, 62 !important; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   3. 顶栏与侧边栏
+   ────────────────────────────────────────────────────────────────────────── */
+.top-bar {
+  background: var(--theme-navi-back) !important;
+  -webkit-backdrop-filter: var(--flins-glass-blur);
+  backdrop-filter: var(--flins-glass-blur);
+  border-bottom: 1px solid var(--flins-border) !important;
+  box-shadow: 0 8px 34px -22px rgba(0, 0, 0, 0.95);
+}
+
+.top-bar .breadcrumb a,
+.top-bar .user-nav .text {
+  color: var(--flins-text-muted) !important;
+  transition: color 0.18s ease;
+}
+.top-bar .breadcrumb a:hover,
+.top-bar .user-nav .text:hover {
+  color: var(--flins-accent) !important;
+}
+
+/* 「洛谷」是 <img class="header-logo"> 而不是文字，color 对它无效，只能用 filter。
+   深色形态：压成纯白 + 一点辉光（深底上品牌色偏暗，看不清）。
+   浅色形态：保持品牌原色 —— 蓝绿的洛谷标在白底上本来就好看，
+   不要做单色化，那会把品牌色丢掉。 */
+html.flins-dark .top-bar .header-logo {
+  filter: brightness(0) invert(1)
+          drop-shadow(0 0 10px rgba(var(--flins-accent-rgb), 0.35));
+}
+html.flins-light .top-bar .header-logo {
+  filter: none;
+}
+
+/* 顶栏左侧的「誓灯」徽记 */
+html:not(.flins-ornaments-off) .top-bar .logo-link::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  vertical-align: -5px;
+  background: var(--flins-emblem) center / contain no-repeat;
+  filter: drop-shadow(0 0 6px rgba(var(--flins-accent-rgb), 0.5));
+  opacity: 0.95;
+}
+
+/* 侧边栏 */
+nav.sidebar.lside,
+.sidebar.lside {
+  background: linear-gradient(
+      180deg,
+      rgba(9, 13, 34, 0.9) 0,
+      rgba(11, 15, 43, 0.86) 55%,
+      rgba(8, 11, 33, 0.92) 100%) !important;
+  -webkit-backdrop-filter: var(--flins-glass-blur);
+  backdrop-filter: var(--flins-glass-blur);
+  border-right: 1px solid var(--flins-border) !important;
+}
+
+.sidebar .nav-group > ul > li > a {
+  position: relative;
+  color: var(--flins-text-muted) !important;
+  border-radius: var(--flins-radius-sm);
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+.sidebar .nav-group > ul > li > a .title,
+.sidebar .nav-group > ul > li > a .icon {
+  transition: color 0.18s ease, filter 0.18s ease;
+}
+.sidebar .nav-group > ul > li > a:hover {
+  background: rgba(var(--flins-accent-rgb), 0.09) !important;
+  color: var(--flins-text) !important;
+}
+.sidebar .nav-group > ul > li > a:hover .icon {
+  filter: drop-shadow(0 0 7px rgba(var(--flins-accent-rgb), 0.75));
+}
+
+/* 选中项：一根幽焰灯芯 + 灯火辉光 */
+.sidebar .nav-group > ul > li > a.router-link-active,
+.sidebar .nav-group > ul > li > a.active {
+  background: linear-gradient(90deg,
+              rgba(var(--flins-accent-rgb), 0.20),
+              rgba(var(--flins-accent-rgb), 0.04) 70%,
+              transparent) !important;
+  color: var(--flins-heading) !important;
+}
+.sidebar .nav-group > ul > li > a.router-link-active::before,
+.sidebar .nav-group > ul > li > a.active::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  translate: 0 -50%;
+  width: 3px;
+  height: 62%;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--flins-orn-dot), var(--flins-accent));
+  box-shadow: 0 0 12px 1px rgba(var(--flins-accent-rgb), 0.75);
+}
+.sidebar .group-title .title {
+  color: var(--flins-text-dim) !important;
+  letter-spacing: 0.08em;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   4. 卡片 —— 夜里的玻璃灯罩
+   ────────────────────────────────────────────────────────────────────────── */
+/* 全局兜底：有些页面（个人主页等）用 .full-container 布局，
+   .l-card 并不在 .theme-page 里面，拿不到 --theme-card-background，
+   就会被页面 chunk 里写死的 #fff 赢掉，露出白块。 */
+.l-card {
+  background-color: var(--flins-surface) !important;
+}
+/* …但毛玻璃卡片是靠 ::before 上色的，卡片自身必须保持透明，
+   否则 backdrop-filter 会去模糊它自己的背景，失去灯罩效果。 */
+.theme-page.theme-frosted .l-card {
+  background-color: transparent !important;
+}
+
+.theme-page .l-card {
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius) !important;
+  box-shadow: var(--flins-shadow) !important;
+  color: var(--flins-text);
+}
+.theme-page.theme-frosted .l-card::before {
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius) !important;
+}
+/* 卡片顶部一道极细的冷光，像灯罩的受光边 */
+.theme-page .l-card {
+  position: relative;
+}
+.theme-page .l-card::after {
+  content: "";
+  position: absolute;
+  inset-inline: 12%;
+  top: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+              transparent,
+              rgba(var(--flins-accent-rgb), 0.45),
+              transparent);
+  opacity: 0.75;
+}
+
+.header-card .header-block {
+  color: var(--flins-text);
+}
+
+/* 卡片内部的分隔线 */
+.theme-page .l-card hr,
+.theme-page .l-card .delimiter,
+.theme-page .delimiter {
+  border-color: var(--flins-border) !important;
+  background-color: var(--flins-border) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   5. 排版与正文（markdown 区）
+   ────────────────────────────────────────────────────────────────────────── */
+.lfe-marked {
+  color: var(--flins-text) !important;
+  line-height: 1.78;
+}
+
+.lfe-h1, .lfe-h2, .lfe-h3, .lfe-h4, .lfe-h5, .lfe-h6,
+.lfe-marked h1, .lfe-marked h2, .lfe-marked h3,
+.lfe-marked h4, .lfe-marked h5, .lfe-marked h6 {
+  font-family: var(--flins-font-display) !important;
+  font-weight: 600 !important;
+  color: var(--flins-heading) !important;
+  letter-spacing: 0.02em;
+}
+
+/* 二三级标题：左侧一根灯杆 + 灯芯小点
+   颜色走变量，浅色形态自动换成深青，否则白底上根本看不见。
+   样式还能换：灯芯 / 新月 / 无（脚本设置面板里「标题小灯」那一项）。 */
+.lfe-marked h2, .lfe-h2,
+.lfe-marked h3, .lfe-h3 {
+  position: relative;
+  padding-inline-start: 0.62em;
+  border-inline-start: 2px solid var(--flins-orn-bar);
+}
+.lfe-marked h2::before, .lfe-h2::before,
+.lfe-marked h3::before, .lfe-h3::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -4px;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--flins-orn-dot);
+  box-shadow: var(--flins-orn-glow);
+}
+
+/* 样式：新月 —— 用 inset box-shadow 抠出一弯金月 */
+html.flins-orn-moon .lfe-marked h2::before,
+html.flins-orn-moon .lfe-h2::before,
+html.flins-orn-moon .lfe-marked h3::before,
+html.flins-orn-moon .lfe-h3::before {
+  width: 9px;
+  height: 9px;
+  inset-inline-start: -5.5px;
+  top: 0.66em;
+  background: transparent;
+  box-shadow: inset 2.6px -2.6px 0 0 var(--flins-orn-moon-color);
+  filter: drop-shadow(0 0 5px var(--flins-orn-moon-halo));
+}
+
+/* 样式：无 */
+html.flins-orn-none .lfe-marked h2,
+html.flins-orn-none .lfe-h2,
+html.flins-orn-none .lfe-marked h3,
+html.flins-orn-none .lfe-h3 {
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+html.flins-orn-none .lfe-marked h2::before,
+html.flins-orn-none .lfe-h2::before,
+html.flins-orn-none .lfe-marked h3::before,
+html.flins-orn-none .lfe-h3::before { display: none; }
+
+/* 总开关关掉时一律不显示 */
+html.flins-ornaments-off .lfe-marked h2::before,
+html.flins-ornaments-off .lfe-h2::before,
+html.flins-ornaments-off .lfe-marked h3::before,
+html.flins-ornaments-off .lfe-h3::before { display: none; }
+
+.lfe-marked a,
+.lfe-marked a:visited {
+  color: var(--lcolor--link, #7EE8F4);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--flins-accent-rgb), 0.35);
+  transition: border-color 0.18s ease, color 0.18s ease, text-shadow 0.18s ease;
+}
+.lfe-marked a:hover {
+  color: var(--flins-flame-200);
+  border-bottom-color: var(--flins-flame-200);
+  text-shadow: 0 0 12px rgba(var(--flins-accent-rgb), 0.55);
+}
+
+.lfe-marked code:not([class*="language-"]) {
+  background: var(--flins-inline-bg) !important;
+  color: var(--flins-inline-fg) !important;
+  border: 1px solid rgba(var(--flins-accent-rgb), 0.2);
+  border-radius: 5px;
+  padding: 0.08em 0.38em;
+  font-family: var(--flins-font-mono);
+  font-size: 0.92em;
+}
+
+.lfe-marked blockquote {
+  border-inline-start: 3px solid rgba(var(--flins-accent-rgb), 0.5) !important;
+  background: rgba(var(--flins-accent-rgb), 0.06) !important;
+  color: var(--flins-text-muted) !important;
+  border-radius: 0 var(--flins-radius-sm) var(--flins-radius-sm) 0;
+}
+
+.lfe-marked table {
+  border-color: var(--flins-border) !important;
+  border-radius: var(--flins-radius-sm);
+  overflow: hidden;
+}
+.lfe-marked th {
+  background: rgba(var(--flins-accent-rgb), 0.10) !important;
+  color: var(--flins-heading) !important;
+  font-family: var(--flins-font-display);
+  letter-spacing: 0.03em;
+}
+.lfe-marked td, .lfe-marked th {
+  border-color: var(--flins-border) !important;
+}
+.lfe-marked tr:nth-child(even) td {
+  background: var(--flins-stripe);
+}
+
+.lfe-marked details,
+.lfe-marked details.info,
+.lfe-marked details.success,
+.lfe-marked details.warning,
+.lfe-marked details.error {
+  background: rgba(9, 13, 34, 0.5) !important;
+  border-radius: var(--flins-radius-sm);
+}
+
+.lfe-caption {
+  color: var(--flins-text-dim) !important;
+  font-family: var(--flins-font-display);
+  letter-spacing: 0.04em;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   6. 代码块
+   ────────────────────────────────────────────────────────────────────────── */
+.lfe-code,
+.code-container,
+.lfe-marked pre {
+  background: var(--flins-code-bg) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius-sm) !important;
+  color: var(--flins-code-text) !important;
+}
+.lfe-code .copy-button,
+.code-container .copy-button {
+  color: var(--flins-text-dim) !important;
+  transition: color 0.18s ease;
+}
+.lfe-code .copy-button:hover,
+.code-container .copy-button:hover {
+  color: var(--flins-flame-200) !important;
+}
+.line-numbers,
+.line-numbers-rows,
+.line-numbers-sizer {
+  color: var(--flins-text-dim) !important;
+  border-inline-end: 1px solid var(--flins-border) !important;
+  background: var(--flins-code-gutter) !important;
+}
+
+/* 代码块【内部】的 pre / code 必须保持透明：
+   底由上面的 .code-container / .lfe-code / .lfe-marked pre 来铺，
+   而洛谷的 Prism 样式表（跨域，读不到）会给 pre/code 自己再上一层
+   #fafafa，深色主题下就变成一条条白块。
+   这条规则是跑真站白块审计时发现的（1 个题目页曾出现 18 处）。 */
+.code-container pre,
+.code-container code,
+.lfe-code pre,
+.lfe-code code,
+.lfe-marked pre > code[class*="language-"],
+pre[class*="language-"] > code {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 光有容器底色还不够：调色板样式会给 <code> 自己写死一个深色 color
+   （One Light 的 #383a42），把继承下来的浅色盖掉 ——
+   对比度审计实测只有 1.71:1，等于看不见。所以这里必须显式改 color。 */
+.code-container pre,
+.code-container code,
+.lfe-code pre,
+.lfe-code code,
+.lfe-marked pre,
+.lfe-marked pre > code,
+pre[class*="language-"],
+code[class*="language-"] {
+  color: var(--flins-code-text) !important;
+}
+
+/* Prism 词法着色：换成「冷蓝灯火」配色。
+   注释色直接引用 --flins-text-dim，别再写死 —— 写死过一版 #6C7796，
+   对比度只有 4.37:1，被审计抓出来了。 */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: var(--flins-text-dim) !important; }
+.token.punctuation { color: #A9B6D6 !important; }
+.token.tag, .token.attr-name, .token.namespace, .token.deleted { color: #7AA6E8 !important; }
+.token.function, .token.function-definition, .token.class-name, .token.return-type { color: #60E0F0 !important; }
+.token.boolean, .token.number, .token.constant, .token.symbol { color: #F0C070 !important; }
+.token.keyword, .token.directive, .token.important, .token.atrule { color: #9C8CFF !important; }
+.token.string, .token.char, .token.attr-value,
+.token.double-quoted-string, .token.single-quoted-string { color: #8FD9A8 !important; }
+.token.operator, .token.entity, .token.url, .token.variable { color: #C9D4EC !important; }
+.token.property, .token.builtin, .token.macro, .token.parameter { color: #90D0E0 !important; }
+.token.regex { color: #F2A65A !important; }
+.token.inserted { color: #52D096 !important; }
+
+/* 样例输入输出 */
+.io-sample, .io-sample-block {
+  background: var(--flins-code-bg) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius-sm);
+}
+.io-sample pre, .io-sample-block pre {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--flins-code-text) !important;
+}
+
+/* ACE 编辑器（提交代码页） */
+.ace-tm, .ace_editor {
+  background: var(--flins-code-bg) !important;
+  color: var(--flins-code-text) !important;
+}
+.ace-tm .ace_gutter, .ace_editor .ace_gutter {
+  background: var(--flins-code-gutter) !important;
+  color: var(--flins-text-dim) !important;
+  border-inline-end: 1px solid var(--flins-border);
+}
+.ace-tm .ace_active-line { background: rgba(var(--flins-accent-rgb), 0.07) !important; }
+.ace-tm .ace_selection { background: rgba(var(--flins-accent-rgb), 0.25) !important; }
+
+/* CodeMirror 编辑器（题目提交区 / 在线 IDE）
+   洛谷在提交页用亮色 CodeMirror 主题（ͼ2），在深色页面里会留下一条亮白 gutter：
+   .cm-gutters 是 rgb(245,245,245)、行号 rgb(108,108,108)、当前行 rgb(226,242,255)。
+   这里只改壳、gutter、行号、当前行；**不要动 token span 的颜色**——
+   对比度自愈会跳过 .cm-editor（见 userscript.js），token 颜色保持原样。 */
+html.flins-layout-flins .cm-editor,
+html.flins-layout-flins .cm-scroller {
+  background: rgba(12, 18, 42, 0.44) !important;
+  color: var(--flins-code-text) !important;
+}
+html.flins-layout-flins .cm-editor .cm-gutters,
+html.flins-layout-flins .cm-editor .cm-gutters-before {
+  background: rgba(11, 16, 39, 0.78) !important;
+  color: var(--flins-text-dim) !important;
+  border-right: 1px solid rgba(130, 156, 216, 0.18) !important;
+}
+html.flins-layout-flins .cm-editor .cm-gutters .cm-gutterElement {
+  color: var(--flins-text-dim) !important;
+  opacity: 0.82 !important;
+}
+html.flins-layout-flins .cm-editor .cm-lineNumbers .cm-gutterElement {
+  padding: 0 6px 0 8px !important;
+  min-width: 28px !important;
+  text-align: right !important;
+}
+html.flins-layout-flins .cm-editor .cm-activeLineGutter {
+  background: rgba(96, 224, 240, 0.12) !important;
+  color: var(--flins-accent-soft) !important;
+  opacity: 1 !important;
+}
+html.flins-layout-flins .cm-editor .cm-foldGutter,
+html.flins-layout-flins .cm-editor .cm-foldGutter .cm-gutterElement {
+  background: transparent !important;
+  color: var(--flins-text-dim) !important;
+}
+html.flins-layout-flins .cm-editor .cm-foldPlaceholder {
+  background: rgba(var(--flins-accent-rgb), 0.12) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.4) !important;
+  color: var(--flins-accent-soft) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   7. 按钮 / 链接 / 表单
+   ────────────────────────────────────────────────────────────────────────── */
+.l-button {
+  font-family: var(--flins-font-body);
+  letter-spacing: 0.02em;
+  transition: box-shadow 0.2s ease, filter 0.2s ease, transform 0.12s ease;
+}
+.l-button:hover { filter: brightness(1.08); }
+.l-button:active { transform: translateY(1px); }
+
+/* 实心主按钮：灯火渐变。
+   ⚠️ 洛谷的按钮不一定带 .primary，常见的是 .solid ——
+   只写 .primary 会漏掉「登录后才可提交」那种按钮，
+   结果白字压在青色渐变上（对比度审计实测 1.57:1，几乎看不清）。
+   凡是走主题强调色做底的按钮，文字一律用近黑的深色。 */
+.l-button.primary,
+.l-button.solid,
+.l-button[class*="lcolor-var-primary"],
+button.solid,
+button.l-button.solid {
+  background-image: linear-gradient(135deg,
+                    rgba(var(--flins-accent-rgb), 1) 0,
+                    var(--flins-flame-500) 120%) !important;
+  border-color: transparent !important;
+  color: var(--flins-on-accent) !important;
+  font-weight: 600;
+  box-shadow: 0 0 18px -6px rgba(var(--flins-accent-rgb), 0.85);
+}
+.l-button.primary:hover,
+.l-button.solid:hover,
+.l-button[class*="lcolor-var-primary"]:hover,
+button.solid:hover {
+  box-shadow: 0 0 24px -4px rgba(var(--flins-accent-rgb), 0.95);
+}
+/* 强调色底的标签 / 徽标同理 */
+.lcolor-bg-primary,
+.lcolor-bg-link,
+.lcolor-bg-clicked {
+  color: var(--flins-on-accent) !important;
+}
+
+.l-link, a.l-link {
+  color: var(--lcolor--link, #7EE8F4);
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+.l-link:hover, a.l-link:hover {
+  color: var(--flins-flame-200);
+  text-shadow: 0 0 10px rgba(var(--flins-accent-rgb), 0.5);
+  filter: none;
+}
+
+input.l-input, textarea.l-textarea, .l-input, .l-textarea,
+input[type="text"], input[type="password"], input[type="search"], textarea, select {
+  background: var(--flins-field-bg) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius-sm) !important;
+  color: var(--flins-text) !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+input:focus, textarea:focus, select:focus,
+.l-input:focus, .l-textarea:focus {
+  outline: none !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.75) !important;
+  box-shadow: var(--flins-glow) !important;
+}
+::placeholder { color: var(--flins-text-dim) !important; }
+
+.l-radio input, .l-check input { accent-color: var(--flins-accent); }
+
+/* 下拉 / 弹层 */
+.dropdown, .l-options, .l-dropdown {
+  background: rgba(12, 17, 42, 0.96) !important;
+  border: 1px solid var(--flins-border-strong) !important;
+  border-radius: var(--flins-radius-sm) !important;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.95) !important;
+  -webkit-backdrop-filter: var(--flins-glass-blur);
+  backdrop-filter: var(--flins-glass-blur);
+}
+
+/* 提示条 */
+.lg-alert, .notification-toast-stack > * {
+  background: rgba(12, 17, 42, 0.94) !important;
+  border: 1px solid var(--flins-border-strong) !important;
+  color: var(--flins-text) !important;
+  border-radius: var(--flins-radius-sm);
+  -webkit-backdrop-filter: var(--flins-glass-blur);
+  backdrop-filter: var(--flins-glass-blur);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8. 标签 / 状态 / 难度
+   保持洛谷原有的色相语义（红→橙→黄→绿→蓝→紫 = 难度递增），
+   只把明度统一到夜色可读区间。
+   ────────────────────────────────────────────────────────────────────────── */
+/* ⚠️ 选择器别写成裸的 `.tag`。
+   洛谷表格的【列头单元格】类名就是 `.header-container.tag`（题目标签那一列），
+   裸 `.tag` 会把整个列头也套上一个胶囊盒子，在表头中间多出一块浅色方块 ——
+   又丑又莫名其妙。所以这里只认真正的标签芯片。 */
+.tags > *,
+span.tag,
+a.tag,
+.l-tag {
+  border-radius: 99px !important;
+  border: 1px solid var(--flins-border) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--flins-text-muted) !important;
+  letter-spacing: 0.02em;
+}
+/* 表格列头一律不要底色和边框 */
+.header-container,
+.header-container.title,
+.header-container.tag,
+.header-container.difficulty,
+.header-container.status {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.status, .stat {
+  font-variant-numeric: tabular-nums;
+}
+.stat-text { color: var(--flins-text-muted) !important; }
+
+.problem-block-actions .btn-actions,
+.btn-actions {
+  border-top: 1px solid var(--flins-border) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.5 列表页 / 弹层 —— 洛谷在这些地方硬编码了 #fff
+   这些是把「白块审计」跑在真实页面上逐个抓出来的（见 tools/live-check.mjs）：
+     · .bottom-wrap.float  题目列表底部固定翻页条，background:#fff
+     · .combo-wrapper>.text 下拉框，background:#fff + #bfbfbf 边框
+     · .refined-input.search-text  关键词搜索框
+     · .block-item / .tag-button   标签按钮
+     · .l-card.container / .type-burger  标签弹窗的卡片（不在 .theme-page 里，
+       拿不到 --theme-card-background，所以必须单独处理）
+   ────────────────────────────────────────────────────────────────────────── */
+.bottom-wrap,
+.bottom-wrap.float {
+  background-color: var(--flins-surface-raised) !important;
+  border-top: 1px solid var(--flins-border) !important;
+  box-shadow: 0 -10px 30px -22px rgba(0, 0, 0, 0.9) !important;
+  color: var(--flins-text) !important;
+}
+.bottom-wrap.float {
+  -webkit-backdrop-filter: var(--flins-glass-blur);
+  backdrop-filter: var(--flins-glass-blur);
+}
+
+.combo-wrapper > .text,
+.text.lform-size-middle,
+.refined-input,
+.search-text,
+.search-box,
+.block-item,
+.tag-button,
+.tag-select-area,
+.menu-container {
+  background-color: var(--flins-field-bg) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+.combo-wrapper > .text { border: 1px solid var(--flins-border) !important; }
+.block-item.selected,
+.block-item.solid,
+.tag-button.selected,
+.block-item[aria-pressed="true"] {
+  background-color: rgba(var(--flins-accent-rgb), 0.16) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.55) !important;
+  color: var(--flins-heading) !important;
+}
+
+/* 弹窗 / 抽屉里的卡片 */
+.l-card.container,
+.l-card.type-burger,
+.l-card.theme-list-card,
+.modal .l-card,
+.modal-content .l-card {
+  background-color: var(--flins-surface-solid) !important;
+  border: 1px solid var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+
+/* 个人主页的用户信息条（背景写死在页面 chunk 里） */
+.user-header-bottom,
+.user-header-wrap {
+  background-color: var(--flins-surface) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+.user-header-bottom .stat-text,
+.user-header-bottom .info-text { color: var(--flins-text-muted) !important; }
+
+/* 新外壳个人页有两种用户名容器：
+   .luogu-username.username 走语义色（橙 / 粉 / 蓝，见上方令牌）；
+   .luogu-username.user-name 不带语义色，洛谷默认写死 #404040，
+   深色形态下在窄窗口 / 移动布局里就会显示成「黑名」。
+   这里只压不带语义色的 .user-name，不影响 .username 的彩色用户名。 */
+html:not(.flins-light) .luogu-username.user-name {
+  color: var(--flins-text) !important;
+}
+
+/* 题库底部的翻页条：页码是 <button>，页面 chunk 里写死了
+   background:#fff 且 color:#fff —— 深色主题下就是白底白字，数字全看不见。
+   （这条是拿「按坐标查元素」把 DOM 挖出来才定位到的，见 tools/live-check.mjs） */
+.page-bar button,
+.toolbar .page-bar button {
+  background-color: var(--flins-field-bg) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius-sm) !important;
+  color: var(--flins-text) !important;
+  transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease;
+}
+.page-bar button:hover {
+  border-color: rgba(var(--flins-accent-rgb), 0.6) !important;
+  color: var(--flins-heading) !important;
+}
+.page-bar button.active,
+.page-bar button.selected,
+.page-bar button[aria-current],
+.page-bar button:disabled {
+  background-color: rgba(var(--flins-accent-rgb), 0.22) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.7) !important;
+  color: var(--flins-heading) !important;
+  font-weight: 600;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.6 老版前端（Amaze UI + lg-*）
+   洛谷现在是「新版外壳 + 老版内容」的过渡状态：首页等内容仍由
+   Amaze UI 渲染，而且那层 <main> 带的是【行内】的
+   style="background-color: rgb(239,239,239)" —— 行内样式必须用
+   !important 才能压过去（行内声明的优先级高于外部样式表）。
+
+   白底来源（已逐个核对到具体文件与选择器）：
+     luogu3.css   .lg-article { background: rgba(255,255,255,.7) }
+     amazeui.css  .am-panel-default > .am-panel-hd { background-color:#f5f5f5 }
+                  .am-btn-default { background-color:#e6e6e6 }
+                  .am-modal-dialog { background:#f8f8f8 }
+   ────────────────────────────────────────────────────────────────────────── */
+.main-container main,
+.main-container > main,
+#app-old {
+  background-color: transparent !important;
+}
+
+.lg-article,
+.lg-article-sub,
+.lg-article-nctrl {
+  background: var(--flins-surface) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: var(--flins-radius) !important;
+  color: var(--flins-text) !important;
+  box-shadow: var(--flins-shadow) !important;
+}
+
+/* Amaze UI 的面板 / 卡片 */
+.am-panel {
+  background-color: var(--flins-surface) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+.am-panel-default > .am-panel-hd,
+.am-panel > .am-panel-hd {
+  background-color: var(--flins-surface-raised) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-heading) !important;
+}
+.am-panel-bd { color: var(--flins-text) !important; }
+.am-panel-primary { border-color: rgba(var(--flins-accent-rgb), 0.5) !important; }
+.am-panel-success { border-color: rgba(82, 208, 150, 0.5) !important; }
+
+/* 首页轮播：图片保留，容器与圆点跟主题走 */
+.am-slider,
+.am-slider-default,
+.am-slider-default .am-slider-desc {
+  background-color: var(--flins-surface-solid) !important;
+  color: var(--flins-text) !important;
+}
+.am-slider-default .am-slider-counter { color: var(--flins-text-muted) !important; }
+
+/* Amaze UI 的按钮 / 表单 / 表格 / 弹窗 */
+.am-btn-default {
+  color: var(--flins-text) !important;
+  background-color: var(--flins-field-bg) !important;
+  border-color: var(--flins-border-strong) !important;
+}
+.am-btn-default:hover { color: var(--flins-heading) !important; }
+.am-modal-dialog {
+  background: var(--flins-surface-solid) !important;
+  color: var(--flins-text) !important;
+  border-radius: var(--flins-radius) !important;
+}
+.am-form-field,
+.am-form input,
+.am-form select,
+.am-form textarea,
+.lg-index-tool input {
+  background-color: var(--flins-field-bg) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+.am-table { color: var(--flins-text) !important; }
+.am-table > thead > tr > th {
+  background-color: var(--flins-surface-raised) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-heading) !important;
+}
+.am-table > tbody > tr > td { border-color: var(--flins-border) !important; }
+.am-table-striped > tbody > tr:nth-child(odd) > td { background-color: var(--flins-stripe) !important; }
+.am-dropdown-content,
+.am-popup-inner {
+  background-color: var(--flins-surface-solid) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+.am-comment-main,
+.am-comment-bd { background-color: var(--flins-surface) !important; border-color: var(--flins-border) !important; }
+
+/* Amaze UI 在浅底上写死的深色文字，深色态要翻过来 */
+.lg-article a,
+.lg-article h1, .lg-article h2, .lg-article h3,
+.lg-article h4, .lg-article h5, .lg-article h6,
+.am-panel-bd a, .am-panel-bd h1, .am-panel-bd h2, .am-panel-bd h3 {
+  color: inherit;
+}
+.lg-article a { color: var(--lcolor--link, #7EE8F4) !important; }
+
+/* lg-fg-* 是一组写死颜色且带 !important 的前景色工具类，
+   其中 greendark / bluedark 在深底上几乎不可见。
+   深色形态下按色相整体提亮（浅色形态保持洛谷原值）。
+   注：选择器要带 html 前缀并同样用 !important 才能压过原规则。 */
+html:not(.flins-light) .lg-fg-brown     { color: #d9a441 !important; }
+html:not(.flins-light) .lg-fg-gray      { color: #9aa6c4 !important; }
+html:not(.flins-light) .lg-fg-red       { color: #ff7b6b !important; }
+html:not(.flins-light) .lg-fg-yellow    { color: #ffd93d !important; }
+html:not(.flins-light) .lg-fg-orange    { color: #ffa552 !important; }
+html:not(.flins-light) .lg-fg-purple    { color: #c07fe0 !important; }
+html:not(.flins-light) .lg-fg-green     { color: #6fd46f !important; }
+html:not(.flins-light) .lg-fg-greendark { color: #7fe08a !important; }
+html:not(.flins-light) .lg-fg-bluedark  { color: #a8bcdd !important; }
+html:not(.flins-light) .lg-fg-bluelight { color: #5ab6e8 !important; }
+
+/* Amaze UI 的评论/帖子气泡箭头。
+   它是【伪元素】—— `.am-comment-main:after` 的 border-right-color 写死成
+   #f8f8f8，JS 的自愈根本够不到（伪元素没法用 element.style 改），
+   所以深色主题下每张帖子左边都挂着一个白色三角。必须用 CSS 覆盖。 */
+.am-comment-main:after {
+  border-right-color: var(--flins-surface-solid) !important;
+}
+.am-comment-flip .am-comment-main:after,
+.am-comment-primary.am-comment-flip .am-comment-main:after,
+.am-comment-secondary.am-comment-flip .am-comment-main:after,
+.am-comment-highlight.am-comment-flip .am-comment-main:after,
+.am-comment-success.am-comment-flip .am-comment-main:after,
+.am-comment-warning.am-comment-flip .am-comment-main:after,
+.am-comment-danger.am-comment-flip .am-comment-main:after {
+  border-left-color: var(--flins-surface-solid) !important;
+}
+/* :before 是描边层，保持透明即可 */
+.am-comment-main:before { border-color: transparent !important; }
+.am-comment-main {
+  background-color: var(--flins-surface) !important;
+  border-color: var(--flins-border) !important;
+  color: var(--flins-text) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.7 版式：菲林斯（flins） vs 原版（classic）
+   ──────────────────────────────────────────────────────────────────────────
+   洛谷的骨架是「贴着屏幕边缘的顶栏 + 64px 图标窄侧栏 + 满宽内容区」。
+   要让它不像洛谷，就得动骨架本身，而不只是换色：
+
+     · 顶栏 / 侧栏 都从屏幕边缘"拿下来"，变成带圆角与描边的悬浮面板
+     · 侧栏常驻展开带文字（不再是悬停才展开的图标条）
+     · 内容区收成居中的阅读栏，四周留白
+     · 卡片去掉四周边框，改成内嵌面板 + 顶部一道金色细线
+     · 表格去掉竖线、行高拉开、悬停有反馈
+     · 背景叠一层灯塔水印，把「夜巡」的味道压进去
+   ────────────────────────────────────────────────────────────────────────── */
+html.flins-layout-flins {
+  --flins-side-w: 212px;
+  --flins-gap: 14px;
+  --flins-top-h: 52px;
+  --flins-nav-h: 44px;
+  --flins-read-w: 1180px;
+  --flins-panelback: rgba(9, 13, 34, 0.88);
+}
+
+/* ── 骨架 1：顶栏变成悬浮玻璃条 ── */
+html.flins-layout-flins .top-bar {
+  left: var(--flins-gap) !important;
+  right: var(--flins-gap) !important;
+  width: auto !important;
+  top: var(--flins-gap) !important;
+  height: var(--flins-top-h) !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--flins-border) !important;
+  border-bottom: 1px solid var(--flins-border) !important;
+  box-shadow: 0 20px 44px -30px #000, 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
+}
+
+/* ── 骨架 2：侧栏变成悬浮面板，且常驻展开 ── */
+html.flins-layout-flins .lside.bar,
+html.flins-layout-flins nav.sidebar.lside {
+  left: var(--flins-gap) !important;
+  top: calc(var(--flins-top-h) + var(--flins-gap) * 2) !important;
+  bottom: var(--flins-gap) !important;
+  width: var(--flins-side-w) !important;
+  max-width: var(--flins-side-w) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--flins-border) !important;
+  border-right: 1px solid var(--flins-border) !important;
+  box-shadow: 0 24px 50px -34px #000, 0 1px 0 rgba(255, 255, 255, 0.04) inset !important;
+}
+html.flins-layout-flins nav.sidebar li .title,
+html.flins-layout-flins nav.sidebar .group-title,
+html.flins-layout-flins nav.sidebar .on-expand {
+  display: inline-flex !important;
+  align-items: center;
+}
+html.flins-layout-flins nav.sidebar .on-expand { display: block !important; }
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px !important;
+  margin: 2px 8px !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .icon {
+  margin: 0 !important;
+  width: 20px;
+  justify-content: center;
+  flex: 0 0 20px;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .title {
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+html.flins-layout-flins nav.sidebar .nav-group { margin-bottom: 4px; }
+html.flins-layout-flins nav.sidebar .group-title {
+  padding: 10px 20px 4px !important;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  opacity: 0.65;
+}
+
+/* ── 骨架 3：内容区收成居中的阅读栏 ── */
+html.flins-layout-flins .main-container.lside-nav {
+  --left-side-offset: calc(var(--flins-side-w) + var(--flins-gap) * 2) !important;
+  --usable-width: calc(100vw - var(--flins-side-w) - var(--flins-gap) * 2) !important;
+  width: calc(100% - var(--flins-side-w) - var(--flins-gap) * 2) !important;
+  margin-left: calc(var(--flins-side-w) + var(--flins-gap) * 2) !important;
+  padding-top: calc(var(--flins-top-h) + var(--flins-gap) * 2) !important;
+  padding-bottom: var(--flins-gap) !important;
+}
+html.flins-layout-flins .columba-content-wrap {
+  max-width: var(--flins-read-w);
+  margin-inline: auto !important;
+  padding-inline: var(--flins-gap) !important;
+}
+
+/* ── 卡片：去边框，改成内嵌面板 + 顶部金线 ── */
+html.flins-layout-flins .theme-page .l-card {
+  border: 1px solid transparent !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
+              0 20px 46px -34px rgba(0, 0, 0, 0.9) !important;
+}
+html.flins-layout-flins .theme-page .l-card::after {
+  display: block !important;
+  inset-inline: 18px !important;
+  background: linear-gradient(90deg,
+              transparent,
+              rgba(240, 192, 112, 0.55),
+              transparent) !important;
+  opacity: 0.9 !important;
+}
+html.flins-layout-flins .theme-page.theme-frosted .l-card::before {
+  border: 1px solid transparent !important;
+  border-radius: 14px !important;
+}
+
+/* ── 表格：去竖线、拉开行高、悬停反馈 ── */
+html.flins-layout-flins .list-wrap .header-wrap > .header > *,
+html.flins-layout-flins .list-wrap .row-wrap > .row > * {
+  padding-block: 0.68em !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row {
+  transition: background-color 0.16s ease;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row:hover {
+  background-color: rgba(var(--flins-accent-rgb), 0.07) !important;
+}
+
+/* ── 排版：行距与标题层级拉开 ── */
+html.flins-layout-flins .lfe-marked { line-height: 1.92; }
+html.flins-layout-flins .lfe-marked h2,
+html.flins-layout-flins .lfe-h2 { font-size: 1.45em !important; margin-block: 1.6em 0.75em !important; }
+html.flins-layout-flins .lfe-marked h3,
+html.flins-layout-flins .lfe-h3 { font-size: 1.2em !important; margin-block: 1.3em 0.6em !important; }
+
+/* ── 按钮：一律胶囊形 ── */
+html.flins-layout-flins .l-button,
+html.flins-layout-flins button.solid,
+html.flins-layout-flins .am-btn {
+  border-radius: 999px !important;
+  padding-inline: 1.15em !important;
+}
+
+/* ── 标签：改成描边，不要实心填充 ── */
+html.flins-layout-flins .tags > *,
+html.flins-layout-flins span.tag,
+html.flins-layout-flins a.tag {
+  background: transparent !important;
+  border-color: var(--flins-border-strong) !important;
+}
+
+/* ── 装饰：内容区背景压一层灯塔水印 ── */
+html.flins-layout-flins .theme-page > main {
+  position: relative;
+}
+html.flins-layout-flins .theme-page > main::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  width: min(46vw, 620px);
+  height: min(60vh, 620px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.10;
+  background: var(--flins-emblem) center bottom / contain no-repeat;
+  filter: saturate(0.8);
+}
+html.flins-ornaments-off.flins-layout-flins .theme-page > main::after { display: none; }
+
+/* ── 老版前端兜底：把这些面板一并压成夜色表面 ──
+   「运势」卡（.lg-index-benben / .lg-punch-*）不带语义色类，
+   白底黑字挂在深色页面上非常扎眼，这里按类名批量兜住。 */
+html:not(.flins-light) .lg-index-benben:not([class*="lg-fg-"]):not([class*="lcolor"]),
+html:not(.flins-light) .lg-index-stat,
+html:not(.flins-light) [class*="punch"]:not([class*="lg-fg-"]):not([class*="lcolor"]),
+html:not(.flins-light) .am-panel-bd {
+  background-color: var(--flins-surface) !important;
+  color: var(--flins-text) !important;
+}
+html:not(.flins-light) [class*="punch"] *,
+html:not(.flins-light) .lg-index-benben * {
+  border-color: var(--flins-border) !important;
+}
+
+/* ── 下拉 / 气泡的小尖 ──
+   它们是 ::before / ::after 的 CSS 三角形，颜色写死在伪元素上，
+   JS 完全够不到，深色主题下会露出白三角（私信、下拉框都有）。
+   这里按 Amaze 的容器类名统一改色。 */
+html:not(.flins-light) .am-dropdown-content::before,
+html:not(.flins-light) .am-dropdown-content::after,
+html:not(.flins-light) .am-selected-content::before,
+html:not(.flins-light) .am-selected-content::after,
+html:not(.flins-light) [class*="dropdown-content"]::before,
+html:not(.flins-light) [class*="dropdown-content"]::after {
+  border-bottom-color: var(--flins-surface-solid) !important;
+}
+/* 侧栏分组的分隔线（也是 ::after 画的一根浅色横线） */
+html:not(.flins-light) .nav-group.on-expand::after,
+html:not(.flins-light) .nav-group.login-actions::after {
+  border-bottom-color: var(--flins-border) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.8 版式加码（菲林斯版式专属）
+   8.7 已经把骨架挪出来了，但看上去还是「一张深色的洛谷」——因为
+   ① 夜色蒙版压得太重，背景插画基本看不见，等于白画
+   ② 卡片还是一个一个的实心块，容器感很重
+   这一节把这两件事都放开：蒙版减半让灯塔与新月透出来，卡片换成
+   厚玻璃（大圆角 + 强模糊 + 无边框 + 顶部金线），字号与间距整体加大。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* 背景透出来：减薄蒙版，提高插画亮度 */
+html.flins-layout-flins {
+  --flins-bg-scrim-base: 0.30;
+}
+html.flins-layout-flins body {
+  background-attachment: fixed;
+}
+html.flins-layout-flins .theme-page,
+html.flins-layout-flins .main-container,
+html.flins-layout-flins main {
+  background-color: transparent !important;
+}
+
+/* 卡片 → 厚玻璃 */
+html.flins-layout-flins .theme-page .l-card {
+  background-color: rgba(10, 14, 36, 0.52) !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset,
+              0 30px 70px -44px rgba(0, 0, 0, 0.95) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+}
+html.flins-layout-flins .theme-page.theme-frosted .l-card {
+  background-color: transparent !important;
+}
+html.flins-layout-flins .theme-page.theme-frosted .l-card::before {
+  background-color: rgba(10, 14, 36, 0.52) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.2) !important;
+  backdrop-filter: blur(18px) saturate(1.2) !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+}
+html.flins-light.flins-layout-flins .theme-page .l-card {
+  background-color: rgba(255, 255, 255, 0.62) !important;
+}
+html.flins-light.flins-layout-flins .theme-page.theme-frosted .l-card::before {
+  background-color: rgba(255, 255, 255, 0.62) !important;
+}
+
+/* 标题：更大、更松、下面压一道金色细线 */
+html.flins-layout-flins .lfe-marked h2,
+html.flins-layout-flins .lfe-h2 {
+  font-size: 1.55em !important;
+  letter-spacing: 0.04em !important;
+  padding-bottom: 0.35em !important;
+  border-bottom: 1px solid rgba(240, 192, 112, 0.28) !important;
+}
+html.flins-layout-flins .lfe-marked h3,
+html.flins-layout-flins .lfe-h3 {
+  font-size: 1.24em !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* 侧栏：条目间距更大，选中项做成发光药丸 */
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a {
+  padding: 10px 14px !important;
+  margin: 3px 10px !important;
+  border-radius: 10px !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a.router-link-active {
+  background: rgba(var(--flins-accent-rgb), 0.20) !important;
+  box-shadow: none !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group { margin-bottom: 10px; }
+
+/* 表格：去表头底色，行更高，彻底扁平 */
+html.flins-layout-flins .list-wrap .header-wrap > .header {
+  background-color: transparent !important;
+}
+html.flins-layout-flins .list-wrap .header-wrap > .header > * {
+  color: var(--flins-text-dim) !important;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > * {
+  padding-block: 0.85em !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 正文：更大的字号与更松的行距 */
+html.flins-layout-flins .lfe-marked {
+  font-size: 15.5px;
+  line-height: 2;
+}
+html.flins-layout-flins .lfe-marked p { margin-block: 0.95em; }
+
+/* ── 加码 2：顶部信息卡变成通栏「英雄区」 ──
+   原本它也是一个圆角玻璃块，跟下面的卡片没有区别，视觉上没有起点。
+   改成左右出血、直角、底部渐隐的通栏横幅，页面一下子有了"页头"。 */
+/* 顶部信息卡：不铺"英雄区"渐变横幅（强调色 + 深色玻璃）——
+   深色形态下会变成一条发亮横带，浅色形态下是一大片奶油色。
+   这里去掉渐变与强调色着色，只当一张普通卡片处理，需要底色就跟着卡片走。 */
+html.flins-layout-flins .theme-page > header .header-card {
+  border-radius: var(--flins-radius) !important;
+  margin-inline: var(--flins-gap) !important;
+  width: auto !important;
+  max-width: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  position: relative;
+  overflow: visible;
+}
+/* 底部那条金青双色发丝线同样去掉 */
+html.flins-layout-flins .theme-page > header .header-card::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+html.flins-layout-flins .theme-page > header .header-card::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+/* 英雄区的标题加大一号 */
+html.flins-layout-flins .theme-page > header h1 {
+  font-size: 1.5em !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ── 加码 3：侧栏给自己一块独立的玻璃底，与内容彻底分开 ── */
+html.flins-layout-flins nav.sidebar.lside {
+  background: linear-gradient(180deg,
+              rgba(10, 14, 40, 0.86) 0%,
+              rgba(8, 11, 32, 0.78) 60%,
+              rgba(6, 9, 26, 0.88) 100%) !important;
+}
+html.flins-light.flins-layout-flins nav.sidebar.lside {
+  background: linear-gradient(180deg,
+              rgba(255, 255, 255, 0.94) 0%,
+              rgba(246, 250, 255, 0.88) 100%) !important;
+}
+
+/* 浅色形态下顶栏同样要够实 */
+html.flins-light { --flins-topback: rgba(255, 255, 255, 0.97); }
+html.flins-light.flins-layout-flins { --flins-panelback: rgba(255, 255, 255, 0.92); }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.9 版式加码 2：把左侧竖栏整个搬成顶部横向导航
+   前几版再怎么调，左竖栏还在，一眼就是洛谷。这一节直接改骨架朝向：
+   侧栏变成顶栏下面的一条胶囊状横向导航，内容区不再有左偏移、占满整宽。
+   同时统一全站圆角、修掉插图看不清与几处原生色漏网。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── ① 顶栏：整条就是一个圆角玻璃条 ── */
+html.flins-layout-flins .top-bar {
+  background: var(--flins-topback) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.25) !important;
+  backdrop-filter: blur(20px) saturate(1.25) !important;
+  height: var(--flins-top-h) !important;
+  top: var(--flins-gap) !important;
+  left: var(--flins-gap) !important;
+  right: var(--flins-gap) !important;
+  border: 1px solid var(--flins-border) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset !important;
+}
+
+/* ── ② 导航：三种形态，靠 flins-nav-* 类切换 ──
+      inline = 导航并进顶栏那一行          （一条）
+      stack  = 顶栏在上、导航在下，两块融合 （一个整体的两行）
+      side   = 左侧悬浮竖栏面板            （经典侧边栏）
+   公共部分先把条目铺成横向，side 形态再改回竖排。 */
+
+html.flins-layout-flins nav.sidebar .nav-group {
+  display: flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul {
+  display: flex !important;
+  align-items: center;
+  gap: 2px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li {
+  display: flex !important;
+  align-items: center;
+}
+/* 分组之间的分隔线是竖栏模式用的，横向模式下会变成一条条杂线（"对不齐"就是这个） */
+html.flins-layout-flins.flins-nav-inline nav.sidebar .nav-group::after,
+html.flins-layout-flins.flins-nav-stack nav.sidebar .nav-group::after { display: none !important; }
+/* 「更多功能 / 相关链接」必须留着：图片上传、云剪贴板、帮助中心都在这几组里 */
+html.flins-layout-flins nav.sidebar .nav-group.on-expand { display: flex !important; }
+html.flins-layout-flins nav.sidebar .nav-group > .group-title { display: none !important; }
+/* 单行：大区与功能区合并成一条连续导航，组与组之间不再留空隙 */
+html.flins-layout-flins.flins-nav-inline nav.sidebar .nav-group {
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a {
+  display: flex !important;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  white-space: nowrap;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .title {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+/* 图标必须占【固定宽度的格子】。
+   各种图标的固有宽度不一样（比赛是信号条、评测记录是饼图、主页是房子），
+   直接并排的话后面的文字起始位置就会参差 —— 这就是"有图标的项对不齐"。
+   给 .icon 一个固定宽度并把里面的 svg/img 也钉住，文字起点就齐了。 */
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .icon {
+  width: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .icon > *,
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .icon svg,
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a .icon img {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: block;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a::before { display: none !important; }
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a.router-link-active {
+  background: rgba(var(--flins-accent-rgb), 0.22) !important;
+  color: var(--flins-heading) !important;
+  /* 选中项原本还带一圈强调色辉光（box-shadow），用户明确说不要这种「幽光」，
+     只保留底色。 */
+  box-shadow: none !important;
+}
+html.flins-layout-flins nav.sidebar .nav-group > ul > li > a:hover {
+  background: rgba(var(--flins-accent-rgb), 0.10) !important;
+}
+
+/* ════ 形态 A：单行 —— 导航叠进顶栏那一行 ════ */
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside {
+  /* 顶栏自带链接（首页是「洛谷网校 / 洛谷有题」）宽度随页面变，
+     固定偏移难免贴太近，所以左边多留一段空白。不画分隔线。
+     右边要给搜索 / 私信 / 铃铛 / 头像留够 —— 登录态下这一坨有 350px 上下，
+     预留不足 250px 时，导航会压到它们上面。 */
+  left: clamp(240px, 23vw, 400px) !important;
+  right: clamp(270px, 21vw, 390px) !important;
+  padding-left: 8px !important;
+  border: 0 !important;
+  top: var(--flins-gap) !important;
+  bottom: auto !important;
+  /* 首页顶栏层级比侧栏高，不抬起来会被整条盖住 */
+  z-index: 300 !important;
+  width: auto !important;
+  max-width: none !important;
+  height: var(--flins-top-h) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box !important;
+  padding-bottom: 5px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  /* 滚动条要【看得见】：scrollbar-width:none 会让条目看起来被截断，
+     用户不知道这条能横向滚。但也别太亮：0.5 透明度 + 5px 高会在顶栏下沿
+     显成一条刺眼青色横线。取 0.22 / 3px，只在需要时隐约可见。 */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--flins-accent-rgb), 0.22) transparent;
+}
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside::-webkit-scrollbar { height: 3px; }
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside::-webkit-scrollbar-track { background: transparent; }
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside::-webkit-scrollbar-thumb {
+  background: rgba(var(--flins-accent-rgb), 0.22);
+  border-radius: 999px;
+}
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside:hover::-webkit-scrollbar-thumb {
+  background: rgba(var(--flins-accent-rgb), 0.4);
+}
+html.flins-layout-flins.flins-nav-inline .main-container.lside-nav {
+  --left-side-offset: 0px !important;
+  --usable-width: 100vw !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  padding-top: calc(var(--flins-top-h) + var(--flins-gap) * 2) !important;
+}
+
+/* ════ 形态 B：双行融合 —— 顶栏上圆角、导航下圆角，无缝拼成一块 ════
+   接缝两侧都不能有圆角，否则会出现两个缺口。 */
+html.flins-layout-flins.flins-nav-stack .top-bar {
+  border-radius: var(--flins-radius) var(--flins-radius) 0 0 !important;
+  border-bottom: 0 !important;
+}
+html.flins-layout-flins.flins-nav-stack nav.sidebar.lside {
+  left: var(--flins-gap) !important;
+  right: var(--flins-gap) !important;
+  top: calc(var(--flins-gap) + var(--flins-top-h)) !important;
+  bottom: auto !important;
+  z-index: 299 !important;
+  width: auto !important;
+  max-width: none !important;
+  height: var(--flins-nav-h) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 2px;
+  padding: 0 12px !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 0 0 var(--flins-radius) var(--flins-radius) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-top: 0 !important;
+  background: var(--flins-topback) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.25) !important;
+  backdrop-filter: blur(20px) saturate(1.25) !important;
+  box-shadow: 0 26px 50px -38px rgba(0, 0, 0, 0.95) !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--flins-accent-rgb), 0.5) transparent;
+}
+html.flins-layout-flins.flins-nav-stack nav.sidebar.lside::-webkit-scrollbar { height: 5px; }
+html.flins-layout-flins.flins-nav-stack nav.sidebar.lside::-webkit-scrollbar-track { background: transparent; }
+html.flins-layout-flins.flins-nav-stack nav.sidebar.lside::-webkit-scrollbar-thumb {
+  background: rgba(var(--flins-accent-rgb), 0.5);
+  border-radius: 999px;
+}
+html.flins-layout-flins.flins-nav-stack .main-container.lside-nav {
+  --left-side-offset: 0px !important;
+  --usable-width: 100vw !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  padding-top: calc(var(--flins-gap) * 2 + var(--flins-top-h) + var(--flins-nav-h)) !important;
+}
+
+/* ════ 形态 C：左侧悬浮竖栏 ════ */
+html.flins-layout-flins.flins-nav-side nav.sidebar.lside {
+  left: var(--flins-gap) !important;
+  right: auto !important;
+  top: calc(var(--flins-gap) + var(--flins-top-h) + var(--flins-gap)) !important;
+  bottom: var(--flins-gap) !important;
+  width: var(--flins-side-w) !important;
+  max-width: var(--flins-side-w) !important;
+  height: auto !important;
+  display: block !important;
+  padding: 8px 0 !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: var(--flins-radius) !important;
+  border: 1px solid var(--flins-border) !important;
+  background: var(--flins-panelback) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.2) !important;
+  backdrop-filter: blur(20px) saturate(1.2) !important;
+  box-shadow: 0 24px 50px -34px rgba(0, 0, 0, 0.9) !important;
+  z-index: 200 !important;
+  scrollbar-width: thin;
+}
+html.flins-layout-flins.flins-nav-side nav.sidebar .nav-group {
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+html.flins-layout-flins.flins-nav-side nav.sidebar .nav-group > ul { display: block !important; }
+html.flins-layout-flins.flins-nav-side nav.sidebar .nav-group > ul > li > a {
+  margin: 2px 10px !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+}
+html.flins-layout-flins.flins-nav-side nav.sidebar .nav-group > .group-title {
+  display: block !important;
+  padding: 12px 20px 4px !important;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+}
+html.flins-layout-flins.flins-nav-side .main-container.lside-nav {
+  --left-side-offset: calc(var(--flins-side-w) + var(--flins-gap) * 2) !important;
+  --usable-width: calc(100vw - var(--flins-side-w) - var(--flins-gap) * 2) !important;
+  width: calc(100% - var(--flins-side-w) - var(--flins-gap) * 2) !important;
+  margin-left: calc(var(--flins-side-w) + var(--flins-gap) * 2) !important;
+  padding-top: calc(var(--flins-top-h) + var(--flins-gap) * 2) !important;
+}
+
+/* ── ③ 全站统一大圆角 ── */
+html.flins-layout-flins {
+  --flins-radius: 20px;
+  --flins-radius-sm: 12px;
+}
+/* 顶部信息卡：只保留圆角与左右留白，不加任何底色、渐变、金线。
+   两点必须注意：
+   ① .l-card 的底色由 ::before 那层磨砂玻璃绘制，只写 background 清不掉它；
+   ② 玻璃规则写作 `.theme-page.theme-frosted .l-card::before`，特异性 (0,5,1)，
+      高于普通写法，必须用同样长的选择器链才压得住。 */
+html.flins-layout-flins .theme-page.theme-frosted > header .l-card.header-card::before,
+html.flins-layout-flins .theme-page.theme-frosted > header .l-card.header-card::after,
+html.flins-layout-flins .theme-page.theme-frosted > header .l-card.header-card {
+  background: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+html.flins-layout-flins .theme-page > header .header-card {
+  border-radius: var(--flins-radius) !important;
+  margin-inline: var(--flins-gap) !important;
+  width: auto !important;
+}
+html.flins-layout-flins .top-bar,
+html.flins-layout-flins .l-card,
+html.flins-layout-flins .bottom-wrap.float,
+html.flins-layout-flins .lfe-code,
+html.flins-layout-flins .code-container,
+html.flins-layout-flins .io-sample,
+html.flins-layout-flins .io-sample-block,
+html.flins-layout-flins .dropdown,
+html.flins-layout-flins .l-options,
+html.flins-layout-flins select,
+html.flins-layout-flins input,
+html.flins-layout-flins textarea,
+html.flins-layout-flins .l-button,
+html.flins-layout-flins button {
+  border-radius: var(--flins-radius) !important;
+}
+html.flins-layout-flins .l-button,
+html.flins-layout-flins button.solid,
+html.flins-layout-flins .am-btn { border-radius: 999px !important; }
+html.flins-layout-flins .tags > *,
+html.flins-layout-flins span.tag,
+html.flins-layout-flins a.tag { border-radius: 999px !important; }
+
+/* ── ④ 题目正文里的插图：加浅色衬底，让它从深色页面里浮出来 ──
+   P1002 那张棋盘坐标图自带深色底，压在深色卡片上边界全糊了。 */
+html.flins-layout-flins .lfe-marked img {
+  background: var(--flins-figure-matte) !important;
+  padding: 8px !important;
+  border-radius: var(--flins-radius) !important;
+  outline: 1px solid var(--flins-border) !important;
+  box-shadow: 0 16px 40px -30px rgba(0, 0, 0, 0.9);
+}
+
+/* ── ⑤ 漏网的原生色：题目列表「所属题库」选中态是洛谷原生蓝，
+     看起来像一块蓝色蒙版。这里把常见选中/激活态统一到强调色。 ── */
+html.flins-layout-flins .block-item.selected,
+html.flins-layout-flins .block-item.active,
+html.flins-layout-flins li.selected,
+html.flins-layout-flins .option.active,
+html.flins-layout-flins .tag-button.selected,
+html.flins-layout-flins ul.luogu > li.selected {
+  background-color: rgba(var(--flins-accent-rgb), 0.24) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.7) !important;
+  color: var(--flins-heading) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.98 骨架重做：把「一条窄栏堆到底」改成「宽屏双栏」
+
+   洛谷的骨架是：内容居中成 1180px 的窄栏，然后一叠卡片从上堆到下。
+   题目页实测 .main-container 高 7330px —— 内容全在一条竖线上，
+   1600 的屏幕左右各空 205px，而右边其实什么都没放。
+   这里动的是【骨架】不是皮肤：
+     · 内容区从 1180 放宽到 1480，把浪费的横向空间吃回来
+     · 页面主体改成两栏：正文主栏 + 右侧 sticky 信息栏
+     · 题目页题面单独提出来，让它自己占主栏宽度
+   ────────────────────────────────────────────────────────────────────────── */
+html.flins-layout-flins {
+  --flins-read-w: 1480px;
+}
+
+/* ② 内容区放宽。
+      ⚠️ 不要让 .columba-content-wrap 缩 max-width：它的宽度是洛谷用
+      margin: 0 208px 撑出来的，改 max-width 实测无效果（computed 仍是 1174）。
+      也不要在题目页给它加 padding-right 让位给信息栏 —— 洛谷原生的
+      右侧栏（提交框/标签/相关讨论/推荐题目）要保留，那才是内容主体。 */
+html.flins-layout-flins .columba-content-wrap {
+  max-width: min(var(--flins-read-w), calc(100vw - 40px)) !important;
+}
+
+/* ② 洛谷原生右侧栏（.side）里装的正是有价值的东西：
+   提交框、算法标签、相关讨论、推荐题目。
+
+   ⚠️ 这里不要改 flex 值：
+      .sidebar-container 的 flex-direction 是 row-reverse（洛谷靠它把 .side 放到左边）。
+      若给 > .main 加 flex: 1 1 auto、给 > .side 加 flex: 0 0 auto，
+      在 row-reverse 容器里 .main 会撑满整行宽度（1452），
+      .side 被挤到「第二行」，【题面整块被推到右栏下面】（yDoc 从 375 掉到 1294）。
+
+   结论：这两个宽度/flex 一律不要碰，让洛谷原生布局自己跑。
+   下面只做外观（圆角/间距）层面的调整。 */
+html.flins-layout-flins .columba-content-wrap .sidebar-container > .side,
+html.flins-layout-flins .columba-content-wrap .sidebar-container > .main {
+  flex: 0 1 auto;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.97 顶栏重做：从「一条深色实心栏」变成「悬浮玻璃控制岛」
+
+   洛谷原版顶栏是一条通栏色块，左边 logo、右边图标，中间一大片空白。
+   这里把它重做成三段式的浮岛：
+     [品牌区] ————— [导航区，吃掉剩余空间] ————— [用户区]
+   外围一圈发丝描边 + 大圆角 + 落下阴影，让它从背景图里浮起来。
+   底色的透明度刻意留一点，好让背景图从玻璃里透出来 ——
+   旧版为了「滚动时内容不透过」把它做实到 0.985，代价是完全没有了玻璃感。
+   实测顶栏 z-index 高于内容，0.86 的深色 + 20px 模糊已经压得住滚动内容。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ① 岛体本身 */
+html.flins-layout-flins .top-bar {
+  border-radius: var(--flins-radius) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-bottom: 1px solid var(--flins-border) !important;
+  background:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0) 46%),
+    var(--flins-topback) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.3) !important;
+  backdrop-filter: blur(20px) saturate(1.3) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.07) inset,
+    0 22px 48px -32px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* ② 内部改成三段式：品牌 / 导航 / 用户 */
+html.flins-layout-flins .top-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+html.flins-layout-flins .top-bar > .left {
+  display: flex !important;
+  align-items: center !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  gap: 4px !important;
+  height: 100% !important;
+}
+html.flins-layout-flins .top-bar > .right {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  height: 100% !important;
+  padding-left: 12px !important;
+  margin-left: 8px !important;
+  /* 用户区用一根发丝线和导航区分开，像岛上的另一个舱室 */
+  border-left: 1px solid var(--flins-border) !important;
+}
+
+/* ③ 品牌区：加大右侧留白，和导航拉开距离 */
+html.flins-layout-flins .top-bar .logo-link {
+  flex: 0 0 auto !important;
+  padding-right: 14px !important;
+  margin-right: 4px !important;
+  border-right: 1px solid var(--flins-border) !important;
+}
+
+/* ④ 导航区吃掉中间全部空间。
+      注意：nav.sidebar 不在 .top-bar 的 DOM 里，它是顶栏的【兄弟节点】，
+      所以没法用 flex 让它进去，只能靠 fixed 定位贴到顶栏的中间段上。
+      旧版用 clamp(240px, 23vw, 400px) 猜左侧宽度 —— 换个页面、换个登录态
+      就会压到搜索/私信/头像上。这里改成跟顶栏同一套坐标：
+        左边界 = 顶栏左边 + logo 宽度 + 面包屑宽度（面包屑截断到固定上限）
+        右边界 = 顶栏右边 + 用户区宽度（用 minmax 兜住） */
+html.flins-layout-flins.flins-nav-inline nav.sidebar.lside {
+  /* 左边界 = 顶栏左外边距 + 品牌区宽（logo 右边缘）+ 面包屑真实宽度 + 一点间隙
+     三个变量都由脚本实测写入，见 syncNavBounds()。 */
+  left: calc(var(--flins-gap) + var(--flins-brand-w) + var(--flins-crumb-w) + 10px) !important;
+  right: calc(var(--flins-gap) + var(--flins-user-w)) !important;
+  top: var(--flins-gap) !important;
+  bottom: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  height: var(--flins-top-h) !important;
+  margin: 0 !important;
+  padding: 0 6px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 101 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--flins-accent-rgb), 0.5) transparent;
+}
+
+/* ⑤ 三段式的宽度预算。
+      ⚠️ 这三个值由脚本实测写入（syncNavBounds），不要在这里写死：
+      logo 宽度随语言/登录态变、面包屑随页面变、用户区随登录态变，
+      写死就会「导航条比左边文字短一截」或者压到搜索框上。
+      这里只提供初值，防止脚本还没跑的那一瞬间布局跳一下。 */
+html.flins-layout-flins {
+  --flins-brand-w: 182px;
+  --flins-crumb-w: 150px;
+  --flins-user-w: 232px;
+  --flins-crumb-max: 190px;   /* 面包屑截断上限，防止长路径把导航挤没 */
+}
+
+/* ⑥ 面包屑：给个上限并截断。
+      JS 会在截断【之后】量出真实宽度写回 --flins-crumb-w，
+      所以导航的起点永远贴着面包屑的真实右边缘，不会多留空白。 */
+html.flins-layout-flins.flins-nav-inline .top-bar .breadcrumb {
+  flex: 0 1 auto !important;
+  max-width: var(--flins-crumb-max) !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  opacity: 0.9;
+}
+
+/* ⑦ 顶栏里的图标按钮：统一成圆形玻璃片，悬停才亮 */
+html.flins-layout-flins .top-bar > .right .user-nav a,
+html.flins-layout-flins .top-bar > .right .user-nav > * {
+  border-radius: 999px !important;
+  transition: background-color 0.18s ease, color 0.18s ease !important;
+}
+html.flins-layout-flins .top-bar > .right .user-nav a:hover {
+  background: rgba(var(--flins-accent-rgb), 0.12) !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.95 私信气泡的「白小尖」
+   气泡本体已经被 .l-card / 表面色规则染成主题色，但那个指向头像的三角
+   是洛谷用 border 硬编码画的（rgb(232,232,232)，浅色主题的泡泡色），
+   它不引用任何变量，所以深色形态下气泡边上会露出一块白色小尖。
+   左右两边的三角朝向不同，要分别改。
+   ────────────────────────────────────────────────────────────────────────── */
+html:not(.flins-light) .message-block.right .message::after {
+  border-left-color: var(--flins-surface) !important;
+}
+html:not(.flins-light) .message-block.left .message::after {
+  border-right-color: var(--flins-surface) !important;
+}
+/* 浅色形态：三角跟着浅色气泡走，别用深色底 */
+html.flins-light .message-block.right .message::after {
+  border-left-color: #ffffff !important;
+}
+html.flins-light .message-block.left .message::after {
+  border-right-color: #ffffff !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.95 跟着形态反色的东西：logo、两处灯
+   深色形态下要发白、浅色形态下要发黑，否则浅色主题里白 logo 直接看不见。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ① 顶栏「洛谷」文字标 */
+html.flins-dark .top-bar .logo-link,
+html.flins-dark .top-bar .logo-link .text,
+html.flins-dark .top-bar .logo-link span { color: var(--flins-heading) !important; }
+html.flins-light .top-bar .logo-link,
+html.flins-light .top-bar .logo-link .text,
+html.flins-light .top-bar .logo-link span { color: #1b2436 !important; }
+
+/* ② 顶栏左侧那个誓灯徽记。
+      深色形态维持原样（本身就是浅色描边）；浅色形态下整块反相，
+      不然浅底上是一团看不清的浅灰。 */
+html.flins-light .top-bar .logo-link::after {
+  filter: invert(1) hue-rotate(180deg) brightness(0.55) saturate(1.6);
+}
+
+/* ③ 标题小灯（.lfe-h2::before 等）同样跟着反色 */
+html.flins-light .lfe-h2::before,
+html.flins-light .lfe-h3::before,
+html.flins-light .lfe-marked h2::before,
+html.flins-light .lfe-marked h3::before {
+  filter: invert(1) hue-rotate(180deg) brightness(0.5) saturate(1.8);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8.96 两处灯支持换成自定义图片
+   用户的诉求原话是「小灯能换成图片吗」「带的这个太丑了」。
+   三处灯（顶栏誓灯徽记 / 标题小灯 / 右下角小灯）现在都能换图。
+   换图时加 flins-emblem-img / flins-lamp-img 类，切换 ::before/::after 的画法：
+   内置的是程序化画的（渐变、圆点、发光），换图后一律改成背景图 + contain。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ① 顶栏左上角誓灯徽记 */
+html.flins-emblem-img:not(.flins-ornaments-off) .top-bar .logo-link::after {
+  background: var(--flins-emblem-image) center / contain no-repeat !important;
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  /* 内置版带一层强调色辉光，换图后保留一点点，用户嫌"幽光"可以在这里去掉 */
+  filter: drop-shadow(0 0 6px rgba(var(--flins-accent-rgb), 0.4));
+  opacity: 1;
+}
+
+/* ② 标题小灯：内置是 6x6 圆点，换图后要放大并往前挪，别压住标题 */
+html.flins-lamp-img .lfe-marked h2::before,
+html.flins-lamp-img .lfe-h2::before,
+html.flins-lamp-img .lfe-marked h3::before,
+html.flins-lamp-img .lfe-h3::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background: var(--flins-lamp-image) center / contain no-repeat !important;
+  box-shadow: none !important;
+  inset-inline-start: -26px;
+  top: 0.34em;
+}
+
+/* ③ 右下角小灯：换图后不再是内置的圆底徽记 */
+html.flins-layout-flins .flins-fab[data-img="1"] {
+  background-image: var(--flins-fab-image) !important;
+  background-size: 62% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   9. 页脚 —— 附上一句角色铭牌
+   ────────────────────────────────────────────────────────────────────────── */
+.theme-page > footer {
+  color: var(--flins-text-dim) !important;
+  border-top: 1px solid var(--flins-border) !important;
+  margin-top: 28px;
+}
+.theme-page > footer a { color: var(--flins-text-muted) !important; }
+.theme-page > footer a:hover { color: var(--flins-accent) !important; }
+.theme-page > footer .copyright { color: var(--flins-text-dim) !important; }
+
+html:not(.flins-ornaments-off) .theme-page > footer .copyright::after {
+  content: "『诡灯陌影』· 菲林斯 · 挪德卡莱执灯人 · 掌灯暗行";
+  display: block;
+  margin-top: 6px;
+  font-family: var(--flins-font-display);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: rgba(var(--flins-accent-rgb), 0.42);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   10. 装饰层
+   ────────────────────────────────────────────────────────────────────────── */
+/* 誓灯徽记（以 data URI 提供，脚本会把外部 SVG 覆盖进来） */
+:root {
+  --flins-emblem: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='30' cy='26' r='15' fill='%2360E0F0' fill-opacity='.13'/%3E%3Cpath d='M52.4 6.4a8.8 8.8 0 1 0 6.3 10.6 7 7 0 1 1-6.3-10.6z' fill='%23F0C070'/%3E%3Cpath d='M24.2 15.6h11.6l-1.6-4.2H25.8z' fill='%23C8CBD6'/%3E%3Crect x='24.6' y='16.2' width='10.8' height='13.4' rx='1.8' fill='%230B0F2B' stroke='%23C8CBD6' stroke-width='1.3'/%3E%3Cpath d='M30 18.4c2.7 3.3 3.9 5.1 3.9 7.1a3.9 3.9 0 0 1-7.8 0c0-2 1.2-3.8 3.9-7.1z' fill='%2360E0F0'/%3E%3Cpath d='M25.6 30.4h8.8l2.4 19.0H23.2z' fill='%23101640'/%3E%3Crect x='22.2' y='49.6' width='15.6' height='3.6' rx='1' fill='%23C8CBD6' fill-opacity='.85'/%3E%3C/svg%3E");
+}
+
+/* 内容区顶部的极光扫带（很淡，只在内容区上方出现） */
+html:not(.flins-ornaments-off) .theme-page > main::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 260px;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(120% 100% at 12% 0%, rgba(var(--flins-accent-rgb), 0.10), transparent 62%),
+    radial-gradient(90% 90% at 88% 0%, rgba(76, 111, 232, 0.10), transparent 60%);
+  mask-image: linear-gradient(180deg, #000, transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent);
+}
+.theme-page > main { position: relative; }
+
+/* 页面加载动画：把洛谷的转圈染成幽焰色 */
+.page-loading .fa-spinner-third,
+.page-loading .fa-spin,
+.page-loading svg {
+  color: var(--flins-accent) !important;
+  filter: drop-shadow(0 0 8px rgba(var(--flins-accent-rgb), 0.7));
+}
+
+/* 头像与图片 */
+img.avatar, .avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--flins-border-strong),
+              0 0 14px -4px rgba(var(--flins-accent-rgb), 0.6);
+}
+
+/* 表单布局与信息行 */
+.l-flex-info-row { border-color: var(--flins-border) !important; }
+.l-form-layout .field > .name { color: var(--flins-text-muted) !important; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   11. 动效
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.flins-motion-off) .sidebar .nav-group > ul > li > a.router-link-active::before,
+  html:not(.flins-motion-off) .sidebar .nav-group > ul > li > a.active::before {
+    animation: flins-lamp 3.4s ease-in-out infinite;
+  }
+  html:not(.flins-motion-off) .top-bar .logo-link::after {
+    animation: flins-breathe 5.2s ease-in-out infinite;
+  }
+}
+
+@keyframes flins-lamp {
+  0%, 100% { opacity: 0.85; box-shadow: 0 0 12px 1px rgba(var(--flins-accent-rgb), 0.7); }
+  50%      { opacity: 1;    box-shadow: 0 0 18px 3px rgba(var(--flins-accent-rgb), 0.95); }
+}
+@keyframes flins-breathe {
+  0%, 100% { opacity: 0.82; }
+  50%      { opacity: 1; }
+}
+
+html.flins-motion-off *,
+html.flins-motion-off *::before,
+html.flins-motion-off *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   12. 浅色「霜晨」
+   深色色阶在 html.flins-light 下整体失效（见令牌块），这里只需把
+   自定义表面 / 背景蒙版 / 文字色翻到浅色。
+   ────────────────────────────────────────────────────────────────────────── */
+html.flins-light {
+  color-scheme: light;
+  --flins-bg-color: #E9EFFA;
+  --flins-surface: rgba(255, 255, 255, 0.86);
+  --flins-surface-solid: #FFFFFF;
+  --flins-surface-sunken: rgba(240, 245, 254, 0.86);
+  --flins-surface-raised: #FFFFFF;
+  --flins-border: rgba(52, 84, 148, 0.16);
+  --flins-border-strong: rgba(52, 84, 148, 0.30);
+  --flins-text: #16203C;
+  --flins-text-muted: #53628A;
+  --flins-text-dim: #7C89A8;
+  --flins-heading: #101A33;
+  --flins-stripe: rgba(20, 40, 90, 0.022);
+  --flins-code-bg: #F3F7FE;
+  --flins-code-text: #22304E;
+  --flins-code-gutter: rgba(20, 40, 90, 0.035);
+  --flins-inline-bg: rgba(14, 143, 152, 0.12);
+  --flins-inline-fg: #0B6E76;
+  --flins-field-bg: rgba(255, 255, 255, 0.92);
+  --flins-field-bg-solid: #FFFFFF;
+  /* 浅色形态下标题小灯换成深青，白底上才看得见 */
+  --flins-orn-bar: rgba(14, 143, 152, 0.75);
+  --flins-orn-dot: #0E7C86;
+  --flins-orn-glow: 0 0 8px 1px rgba(14, 143, 152, 0.45);
+  --flins-orn-moon-color: #C8901F;
+  --flins-orn-moon-halo: rgba(200, 144, 31, 0.4);
+  --flins-selection-fg: #0B1A33;
+  --flins-glow: 0 0 0 1px rgba(14, 143, 152, 0.45),
+                0 0 12px -2px rgba(14, 143, 152, 0.35);
+  --flins-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+                  0 10px 28px -16px rgba(28, 48, 92, 0.42);
+  --flins-bg-scrim: linear-gradient(
+      180deg,
+      rgba(236, 242, 253, 0.72) 0,
+      rgba(236, 242, 253, 0.42) 240px,
+      rgba(233, 239, 250, 0.58) 62%,
+      rgba(226, 234, 249, 0.8) 100%);
+}
+
+html.flins-light body { color: var(--flins-text); }
+html.flins-light .top-bar,
+html.flins-light nav.sidebar.lside,
+html.flins-light .sidebar.lside,
+html.flins-light .nav-scrollbar {
+  --theme-navi-back: rgba(248, 251, 255, 0.86) !important;
+  --theme-navi-fore: #16203C !important;
+  --theme-navi-fore-rgb: 22, 32, 60 !important;
+}
+html.flins-light nav.sidebar.lside,
+html.flins-light .sidebar.lside {
+  background: linear-gradient(180deg,
+              rgba(248, 251, 255, 0.94) 0,
+              rgba(238, 244, 253, 0.9) 55%,
+              rgba(232, 239, 251, 0.95) 100%) !important;
+}
+/* 旧的 filter:none 覆盖已删除 —— 它压在 L283 那条规则后面，
+   导致浅色形态的 logo 反色失效，还是品牌蓝。 */
+html.flins-light .theme-page .l-card::after { opacity: 0.5; }
+html.flins-light .lfe-marked a { color: var(--lcolor--link, #0B7C86); }
+
+/* 表单与浮层：深色态是「夜色输入框」，浅色态要翻成白底 */
+html.flins-light input.l-input,
+html.flins-light textarea.l-textarea,
+html.flins-light .l-input,
+html.flins-light .l-textarea,
+html.flins-light input[type="text"],
+html.flins-light input[type="password"],
+html.flins-light input[type="search"],
+html.flins-light input[type="url"],
+html.flins-light textarea,
+html.flins-light select {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--flins-text) !important;
+}
+html.flins-light .dropdown,
+html.flins-light .l-options,
+html.flins-light .l-dropdown,
+html.flins-light .lg-alert,
+html.flins-light .notification-toast-stack > * {
+  background: rgba(255, 255, 255, 0.97) !important;
+  color: var(--flins-text) !important;
+  box-shadow: 0 20px 50px -26px rgba(28, 48, 92, 0.45) !important;
+}
+html.flins-light .sidebar .nav-group > ul > li > a:hover {
+  background: rgba(var(--flins-accent-rgb), 0.10) !important;
+}
+
+/* 浅色下的语法着色：用低明度同色系，保证浅底可读 */
+html.flins-light .token.comment { color: #7C89A8 !important; }
+html.flins-light .token.keyword { color: #6A4FD0 !important; }
+html.flins-light .token.function,
+html.flins-light .token.class-name,
+html.flins-light .token.return-type { color: #0E7C86 !important; }
+html.flins-light .token.string,
+html.flins-light .token.char { color: #1F7A46 !important; }
+html.flins-light .token.number,
+html.flins-light .token.boolean,
+html.flins-light .token.constant { color: #96650C !important; }
+html.flins-light .token.operator,
+html.flins-light .token.punctuation { color: #3A4767 !important; }
+html.flins-light .token.property,
+html.flins-light .token.builtin { color: #166B8A !important; }
+html.flins-light .ace-tm .ace_gutter { background: rgba(20, 40, 90, 0.04) !important; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   14. 题目页独立 UI
+
+   这一节的目标不是「给洛谷的卡片换个颜色」，而是【换掉骨架】。
+   洛谷题目页的原貌是：一个 top-row/bottom-row 挤成一坨的头部卡，
+   下面一张横跨 1452px、高 7000px+ 的题面卡，右边挂三张点开才有内容的空壳卡。
+   这里重排成：
+     ┌──────────────────────────────────────────────┐
+     │  Hero：题号 + 标题 + 统计数据（通栏）           │
+     ├───────────────────────────────┬──────────────┤
+     │  题面（限宽，居左，行高收紧）    │  操作/信息栏  │
+     └───────────────────────────────┴──────────────┘
+   ⚠️ 这一节写在文件最后，且有 html.flins-layout-flins 前缀，
+      用来压过前面 8.x 区段里针对 .lfe-marked / .l-card 的旧规则。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── 14.1 题面：限宽 + 收紧行高 ─────────────────────────────────────────────
+   原来 916px 宽、行高 1.92（≈31px）。行高 1.92 对中文长段落太散，
+   读到下一行容易丢行；1.78 是中文正文的舒适值。
+   宽度不再压死，交给 .l-card.problem 的内边距控制即可。 */
+html.flins-layout-flins .l-card.problem .lfe-marked {
+  line-height: 1.78 !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked p {
+  margin-block: 0.85em !important;
+}
+/* 段首不再额外缩进，靠段间距分隔（中文排版惯例） */
+html.flins-layout-flins .l-card.problem .lfe-marked p {
+  text-indent: 0 !important;
+}
+
+/* 题面里的小节标题：加一条左侧强调色竖线 + 拉开上间距，
+   让「题目背景 / 题目描述 / 输入格式」这些分节一眼可辨 */
+html.flins-layout-flins .l-card.problem .lfe-h2,
+html.flins-layout-flins .l-card.problem .lfe-marked h2 {
+  position: relative !important;
+  font-size: 1.38em !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  margin-block: 2.1em 0.9em !important;
+  padding-left: 14px !important;
+  color: var(--flins-heading) !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-h2::before,
+html.flins-layout-flins .l-card.problem .lfe-marked h2::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.18em !important;
+  bottom: 0.18em !important;
+  width: 3px !important;
+  border-radius: 2px !important;
+  background: var(--flins-accent) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  opacity: 0.9 !important;
+}
+
+/* ── 14.2 代码块：题面里的行内代码与代码块 ─────────────────────────────── */
+html.flins-layout-flins .l-card.problem .lfe-marked code:not([class*="language-"]) {
+  font-family: var(--flins-font-mono) !important;
+  font-size: 0.88em !important;
+  padding: 0.16em 0.42em !important;
+  border-radius: 6px !important;
+  background: rgba(var(--flins-accent-rgb), 0.10) !important;
+  border: 1px solid rgba(var(--flins-accent-rgb), 0.16) !important;
+  color: var(--flins-accent-soft) !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked pre {
+  border-radius: 14px !important;
+  border: 1px solid var(--flins-border) !important;
+  padding: 16px 18px !important;
+  margin-block: 1.2em !important;
+  line-height: 1.62 !important;
+}
+
+/* ── 14.3 引用块：换成左侧强调色细边 + 极淡底 ─────────────────────────── */
+html.flins-layout-flins .l-card.problem .lfe-marked blockquote {
+  margin: 1.3em 0 !important;
+  padding: 12px 18px !important;
+  border-left: 3px solid rgba(var(--flins-accent-rgb), 0.55) !important;
+  border-radius: 0 12px 12px 0 !important;
+  background: rgba(var(--flins-accent-rgb), 0.05) !important;
+  color: var(--flins-text-muted) !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked blockquote p {
+  margin-block: 0.4em !important;
+}
+
+/* ── 14.4 列表：把默认圆点换成强调色方块，并与正文缩进对齐 ───────────── */
+html.flins-layout-flins .l-card.problem .lfe-marked ul,
+html.flins-layout-flins .l-card.problem .lfe-marked ol {
+  padding-left: 1.5em !important;
+  margin-block: 0.9em !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked li {
+  margin-block: 0.32em !important;
+  line-height: 1.72 !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked ul > li::marker {
+  color: var(--flins-accent) !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked ol > li::marker {
+  color: var(--flins-accent) !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* ── 14.5 题面顶部的操作条（复制 Markdown / 中文 / 展开 / IDE 模式）────
+   原来是一行 14px 的说明文字挤在题面最上方，和正文分不开。
+   改成一条独立的工具条：右对齐、带发丝下边线、悬停才亮。
+   ⚠️ 必须给 position: relative + z-index。洛谷题面的第一个 h2 自带
+   position/层级，实测会把整条操作条盖住（elementFromPoint 落在 h2 上），
+   导致「复制 Markdown / 中文 / 展开」全部点不动。 */
+html.flins-layout-flins .l-card.problem .problem-block-actions {
+  position: relative !important;
+  z-index: 5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 16px !important;
+  margin: 0 0 6px !important;
+  padding: 0 2px 12px !important;
+  border-bottom: 1px solid var(--flins-border) !important;
+  font-size: 13px !important;
+}
+html.flins-layout-flins .l-card.problem .problem-block-actions a {
+  color: var(--flins-text-muted) !important;
+  text-decoration: none !important;
+  transition: color 0.16s ease !important;
+}
+html.flins-layout-flins .l-card.problem .problem-block-actions a:hover {
+  color: var(--flins-accent) !important;
+}
+
+/* ── 14.6 题面正文里的表格 ──────────────────────────────────────────────── */
+html.flins-layout-flins .l-card.problem .lfe-marked table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  margin-block: 1.2em !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked th {
+  background: rgba(var(--flins-accent-rgb), 0.08) !important;
+  color: var(--flins-heading) !important;
+  font-weight: 600 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--flins-border) !important;
+  padding: 10px 14px !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked td {
+  border: 0 !important;
+  border-bottom: 1px solid var(--flins-border) !important;
+  padding: 9px 14px !important;
+}
+html.flins-layout-flins .l-card.problem .lfe-marked tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+/* ── 14.7 头部区：把洛谷那两行挤在一起的卡片重排 ────────────────────────
+   原生结构：.top-row（左标题 + 右统计）+ .bottom-row（左菜单 + 右按钮）。
+   问题：统计数字和标题一样大，四个数据挤成一行小字，看不出重点。
+   改：标题行独占，统计做成大字号数值 + 小字标签的横向排布。 */
+html.flins-layout-flins .header-card {
+  border-radius: var(--flins-radius) !important;
+}
+html.flins-layout-flins .header-card .top-row {
+  align-items: flex-end !important;
+  gap: 28px !important;
+  padding-bottom: 4px !important;
+}
+html.flins-layout-flins .header-card .top-row > .left {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+html.flins-layout-flins .header-card .top-row > .right {
+  flex: 0 0 auto !important;
+}
+/* 统计块：数值放大、标签变小 */
+html.flins-layout-flins .header-card .stat.stacked {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 22px !important;
+}
+html.flins-layout-flins .header-card .stat.stacked .field {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--flins-heading) !important;
+  font-variant-numeric: tabular-nums !important;
+  line-height: 1.25 !important;
+}
+html.flins-layout-flins .header-card .stat.stacked .field > span:last-child {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  color: var(--flins-text-dim) !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* ── 14.8 题面卡：去掉多余的顶部空白，内边距收紧 ─────────────────────── */
+html.flins-layout-flins .l-card.problem {
+  padding-top: 18px !important;
+}
+
+/* ── 14.9 右栏：三张空壳卡（标签/讨论/推荐默认收起）压扁成一行提示 ────
+   它们默认高度 124px 却几乎全是「标题 + 展开按钮」，
+   在窄栏里叠三张非常占地方。改成紧凑卡片。 */
+html.flins-layout-flins .sidebar-container > .side .l-card {
+  padding: 14px 16px !important;
+  border-radius: 16px !important;
+}
+html.flins-layout-flins .sidebar-container > .side .l-card .lfe-h3 {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin: 0 0 6px !important;
+  color: var(--flins-heading) !important;
+}
+html.flins-layout-flins .sidebar-container > .side .l-card .lfe-caption {
+  font-size: 12.5px !important;
+  color: var(--flins-text-dim) !important;
+  margin: 0 !important;
+}
+html.flins-layout-flins .sidebar-container > .side .l-flex-info-row {
+  font-size: 13px !important;
+  padding: 4px 0 !important;
+}
+
+/* ── 打印 ────────────────────────────────────────────────────────────── */
+@media print {
+  html::before, html::after { display: none !important; }
+  html, body { background: #fff !important; color: #000 !important; }
+  .theme-page .l-card { box-shadow: none !important; border-color: #ccc !important; }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   15. 题目页「非洛谷」独立 UI
+
+   第 14 节把卡片里面的文字排好了，但页面还是「一张卡 + 一张卡」的洛谷骨架。
+   这一节把题目页当做一个独立产品来排版：
+     · 头部卡：透明通栏 Hero，不做容器
+     · 题面卡：连 .l-card 的玻璃底也去掉，正文直接落在背景上，
+       只留一条居中的可读文本带
+     · 右栏：压窄，作为工具面板保留
+   这样就没有「卡片页」了 —— 只有「Hero + 文章 + 侧边工具」。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* 15.1 题面卡去壳 ----------------------------------------------------- */
+html.flins-layout-flins .theme-page.theme-frosted .l-card.problem::before,
+html.flins-layout-flins .theme-page.theme-frosted .l-card.problem::after,
+html.flins-layout-flins .theme-page.theme-frosted .l-card.problem {
+  background: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+html.flins-layout-flins .l-card.problem {
+  padding: 0 18px 24px !important;
+}
+
+/* 题面正文：限宽 + 居中文本带，避免 950px 超长行 */
+html.flins-layout-flins .l-card.problem .lfe-marked-wrap {
+  max-width: 860px !important;
+  margin-inline: auto !important;
+}
+html.flins-layout-flins .l-card.problem .problem-block-actions {
+  max-width: 860px !important;
+  margin-inline: auto !important;
+  width: auto !important;
+}
+
+/* 15.2 头部：透明 Hero 强化 ------------------------------------------- */
+html.flins-layout-flins .theme-page > header .header-card {
+  display: block !important;
+  padding: 22px 12px 8px !important;
+}
+html.flins-layout-flins .header-card .top-row {
+  border-bottom: 1px solid var(--flins-border) !important;
+  padding-bottom: 16px !important;
+  margin-bottom: 6px !important;
+}
+html.flins-layout-flins .header-card h2.title {
+  font-size: clamp(28px, 3.2vw, 42px) !important;
+  letter-spacing: 0 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+html.flins-layout-flins .header-card .top-row > .right {
+  font-size: 13px !important;
+}
+html.flins-layout-flins .header-card .menu.items a,
+html.flins-layout-flins .header-card .menu.items span {
+  font-size: 15px !important;
+  padding: 8px 14px !important;
+}
+
+/* 15.3 右栏：收窄成工具面板，卡壳去掉毛玻璃，改成更硬的面板感 ------ */
+html.flins-layout-flins .side {
+  flex: 1 1 360px !important;
+  max-width: 390px !important;
+}
+html.flins-layout-flins .side .l-card {
+  background-color: transparent !important;
+}
+html.flins-layout-flins .theme-page.theme-frosted .side .l-card::before,
+html.flins-layout-flins .theme-page.theme-frosted .side .l-card::after,
+html.flins-layout-flins .theme-page.theme-frosted .side .l-card {
+  border-radius: 16px !important;
+}
+html.flins-layout-flins .side .l-card > h3 {
+  font-size: 15px !important;
+}
+
+/* 15.4 题目信息行：数字亮起，标签弱化 -------------------------------- */
+html.flins-layout-flins .side .l-flex-info-row span:last-child,
+html.flins-layout-flins .side .l-flex-info-row a:last-child {
+  color: var(--flins-accent-soft) !important;
+  font-weight: 600 !important;
+}
+
+/* 15.5 右栏操作按钮 ---------------------------------------------------- */
+html.flins-layout-flins .side .lform-size-middle,
+html.flins-layout-flins .side .lform-size-small,
+html.flins-layout-flins .side .lform-button,
+html.flins-layout-flins .side button {
+  border-radius: 10px !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   16. 全面独立 UI：首页 / 列表 / 全局控件
+
+   只改题目页是不够的。洛谷味最重的是：
+     · 首页那个 1100px 居中窄条 + 三个孤立 am-g 块
+     · 题库/评测那种一行一条横线、表头灰底的表格
+     · 一堆蓝色默认按钮、硬边框输入框
+   这一节把全局骨架从「窄居中 + 表格」改成「宽幅 + 信息流 + 统一控件」。
+   写在最后，用 html.flins-layout-flins 前缀压过旧规则。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* 16.1 首页容器：放宽到 1480 -------------------------------------------
+   ⚠️ 这里不要改栅格模型：
+      `.lg-index-content .am-g` 不能加 `display: grid` + `grid-template-columns`。
+      Amaze UI 的栅格是【浮动 + 百分比宽度】实现的
+      （.am-u-md-8 = 66.67%、.am-u-md-4 = 33.33%），换成 grid 后那些百分比
+      会按 grid 轨道解析，两个子块被塞进同一条窄轨道里：
+        · 运势卡被压成 95px 宽的竖条，中文一字一行
+        · 左侧 986px 的滑块区整片空白
+      结论：首页内部栅格【交给 Amaze 自己算】，这里只动最外层容器宽度。 */
+html.flins-layout-flins .lg-index-content.am-center {
+  max-width: 1480px !important;
+  width: calc(100% - 44px) !important;
+}
+/* 网格块只加大间距，不碰 display / 列宽 */
+html.flins-layout-flins .lg-index-content .am-g {
+  margin-bottom: 18px !important;
+}
+
+/* 16.2 列表页：表格行 → 独立信息行 -------------------------------------
+   洛谷的 .list-wrap 内部是 header + 一堆 .row-wrap > .row。
+   现在：表头透明小标签，行与行之间不再靠横线，靠圆角行卡 + 间距。 */
+html.flins-layout-flins .list-wrap {
+  display: block !important;
+  padding: 6px 0 10px !important;
+}
+html.flins-layout-flins .list-wrap .header-wrap {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 12px 14px 8px !important;
+  letter-spacing: 0.04em !important;
+}
+html.flins-layout-flins .list-wrap .header-wrap > .header > * {
+  color: var(--flins-text-dim) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  padding: 4px 8px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 52px !important;
+  padding: 10px 16px !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: 14px !important;
+  background: rgba(12, 17, 44, 0.5) !important;
+  box-shadow: none !important;
+  transition: background 0.16s ease, border-color 0.16s ease !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row:hover {
+  background: rgba(24, 32, 68, 0.62) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.34) !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > * {
+  padding: 0 12px !important;
+}
+
+/* 16.3 底部翻页条：固定条改成浮岛式，不再刺眼 -------------------------- */
+html.flins-layout-flins .bottom-wrap.float {
+  background: rgba(8, 12, 32, 0.88) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45) !important;
+  padding: 8px 12px !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* 16.4 全局控件：统一按钮 / 输入框 / 下拉 ------------------------------- */
+html.flins-layout-flins .lform-button,
+html.flins-layout-flins button.lform-size-middle,
+html.flins-layout-flins button.lform-size-small,
+html.flins-layout-flins .lform-input,
+html.flins-layout-flins input[type="text"],
+html.flins-layout-flins input[type="search"],
+html.flins-layout-flins input[type="number"],
+html.flins-layout-flins select,
+html.flins-layout-flins textarea {
+  border-radius: 10px !important;
+  font-family: var(--flins-font-sans) !important;
+}
+html.flins-layout-flins .lform-button,
+html.flins-layout-flins button.lform-size-middle,
+html.flins-layout-flins button.lform-size-small {
+  border: 1px solid rgba(var(--flins-accent-rgb), 0.28) !important;
+  background: rgba(var(--flins-accent-rgb), 0.10) !important;
+  color: var(--flins-accent-soft) !important;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease !important;
+}
+html.flins-layout-flins .lform-button:hover,
+html.flins-layout-flins button.lform-size-middle:hover,
+html.flins-layout-flins button.lform-size-small:hover {
+  background: rgba(var(--flins-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.5) !important;
+  color: var(--flins-heading) !important;
+}
+html.flins-layout-flins .lform-input,
+html.flins-layout-flins input[type="text"],
+html.flins-layout-flins input[type="search"],
+html.flins-layout-flins input[type="number"],
+html.flins-layout-flins select,
+html.flins-layout-flins textarea {
+  background: var(--flins-field-bg) !important;
+  border: 1px solid var(--flins-border-strong) !important;
+  color: var(--flins-text) !important;
+}
+html.flins-layout-flins .lform-input:focus,
+html.flins-layout-flins input[type="text"]:focus,
+html.flins-layout-flins input[type="search"]:focus,
+html.flins-layout-flins input[type="number"]:focus,
+html.flins-layout-flins select:focus,
+html.flins-layout-flins textarea:focus {
+  border-color: var(--flins-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--flins-accent-rgb), 0.18) !important;
+  outline: none !important;
+}
+
+/* 16.5 标签 / 徽标：统一成实色圆角胶囊 --------------------------------
+   ⚠️ 不要用 rgba(accent, .08) 这类淡色背景：会得到「有胶囊形状但底色没填满」
+   的半透明药丸；.22 叠在深底上同样显得没填实。
+   这里用不透明深青实底 + 亮字：背景不是透明叠加，是真的填满。 */
+html.flins-layout-flins .tags a,
+html.flins-layout-flins .l-tag,
+html.flins-layout-flins [class*="tag-button"] {
+  border-radius: 999px !important;
+  padding: 3px 12px !important;
+  background: rgba(16, 78, 96, 0.97) !important;
+  border: 1px solid rgba(126, 232, 244, 0.55) !important;
+  color: #e9fbff !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.45 !important;
+  text-decoration: none !important;
+}
+html.flins-layout-flins .tags a:hover,
+html.flins-layout-flins .l-tag:hover,
+html.flins-layout-flins [class*="tag-button"]:hover {
+  background: rgba(22, 104, 126, 0.97) !important;
+  border-color: rgba(126, 232, 244, 0.85) !important;
+  color: #ffffff !important;
+}
+
+/* 16.6 分页控件：去蓝底，用当前页高亮药丸 ------------------------------ */
+html.flins-layout-flins .pagination a,
+html.flins-layout-flins .pagination span,
+html.flins-layout-flins .pagination button {
+  border-radius: 8px !important;
+  border: 1px solid transparent !important;
+}
+html.flins-layout-flins .pagination .current,
+html.flins-layout-flins .pagination .active,
+html.flins-layout-flins .pagination a:hover,
+html.flins-layout-flins .pagination button:hover {
+  background: rgba(var(--flins-accent-rgb), 0.18) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.4) !important;
+  color: var(--flins-accent-soft) !important;
+}
+
+/* 16.7 链接色 —— 这里【故意什么都不写】。
+   ⚠️ 不要再加无差别的链接色规则：
+      形如 `html.flins-layout-flins .main-container a { color: var(--flins-accent-soft) !important }`
+      的写法特异性是 (0,2,2)，高于主题给用户名语义色写的
+      `html:not(.flins-light) .lg-fg-red`（0,2,1），会把【红名刷成青色】。
+      链接色本来就由令牌体系管着：--lcolor--link = #7EE8F4（青色），
+      洛谷原生样式引用它，深浅两种形态都已覆盖（见 _tokens.generated.css）。
+      所以这里不需要、也绝不能再用无差别的 `a { color }` 兜底，
+      那会把 .lg-fg-* / .lcolor--* / 行内 var(--lfe-color--*) 这些语义色一起压掉。
+      要改链接色，去改令牌 --lcolor--link。 */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   17  去洛谷化第二波：首页玻璃信息块 / 运势卡 / 列表行进阶排版
+   这是 16 节之后的“大刀阔斧”层。这节只做外观，不改布局骨架：
+   · 首页内部栅格仍由 Amaze 浮动 + 百分比计算，禁止再碰 .am-g 的 display
+   · 链接色仍由令牌管，禁止再写无差别 a { color }
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* 17.1 首页文章卡：重边框重阴影 → 透明玻璃块 + 青线上沿 */
+html.flins-layout-flins .lg-index-content .lg-article,
+html.flins-layout-flins .lg-index-content .lg-article-sub,
+html.flins-layout-flins .lg-index-content .lg-article-nctrl {
+  position: relative !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+    rgba(14, 20, 48, 0.48) !important;
+  border: 1px solid rgba(130, 156, 216, 0.14) !important;
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+html.flins-layout-flins .lg-index-content .lg-article::before,
+html.flins-layout-flins .lg-index-content .lg-article-sub::before,
+html.flins-layout-flins .lg-index-content .lg-article-nctrl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(126, 232, 244, 0.62), transparent);
+  pointer-events: none;
+}
+html.flins-layout-flins .lg-index-content .lg-article h3,
+html.flins-layout-flins .lg-index-content .lg-article h2 {
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* 17.2 首页运势卡：宜/忌分栏收进细格子里。
+   ⚠️ 结构：lg-punch 内是 Amaze 的 div.am-g > div.am-u-sm-6（浮动百分比）。
+   只能给这两个列加内层背景，不能把 .am-g 改成 grid（Amaze 栅格靠浮动 + 百分比）。 */
+html.flins-layout-flins .lg-index-content .lg-punch,
+html.flins-layout-flins .lg-index-content .lg-punch .lg-punch-result,
+html.flins-layout-flins .lg-index-content .lg-index-benben {
+  border: 1px solid rgba(130, 156, 216, 0.16) !important;
+  border-radius: 14px !important;
+  background: rgba(9, 14, 38, 0.55) !important;
+}
+html.flins-layout-flins .lg-index-content .lg-punch h2 {
+  font-size: 18px !important;
+  font-weight: 750 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-punch .lg-punch-result {
+  font-weight: 750 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-punch .am-g > .am-u-sm-6 {
+  padding: 8px 10px !important;
+  background: rgba(16, 23, 58, 0.58) !important;
+  border: 1px solid var(--flins-border) !important;
+  border-radius: 12px !important;
+  box-sizing: border-box !important;
+}
+html.flins-layout-flins .lg-index-content .lg-punch .lg-bold {
+  font-weight: 750 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-punch .lg-small {
+  font-size: 12px !important;
+}
+
+/* 17.3 列表行：加左侧状态色条 + 标题更重 + 进度弱化 */
+html.flins-layout-flins .list-wrap .row-wrap > .row {
+  position: relative !important;
+  align-items: center !important;
+  padding-left: 22px !important;
+  background:
+    linear-gradient(180deg, rgba(21, 30, 64, 0.12), rgba(10, 15, 38, 0.22)),
+    rgba(12, 17, 44, 0.88) !important;
+  border-color: rgba(130, 156, 216, 0.13) !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 18%;
+  bottom: 18%;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(var(--flins-accent-rgb), 0.95), rgba(var(--flins-accent-rgb), 0.12));
+  pointer-events: none;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row .pid,
+html.flins-layout-flins .list-wrap .row-wrap > .row .title a {
+  color: var(--flins-heading) !important;
+  font-weight: 650 !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row .title a:hover {
+  color: var(--flins-accent-soft) !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row .difficulty {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  opacity: 1 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row .progress {
+  font-size: 12px !important;
+  opacity: 0.9 !important;
+}
+
+/* 17.3b 题库页固定列轨道 -----------------------------------------------
+   ⚠️ 洛谷默认：行的 .tag 列是弹性宽度，标签多的行会把 .difficulty 向右推，
+   于是不同行的难度 x 都不一样（「难度不在一列」）。
+   修法：题库行（带 .difficulty 的行）用固定 grid 轨道，
+   status / pid / title / tag / difficulty / progress 六列起始位置全部钉死。
+   表头曾被洛谷放在一个只有 772px 的窄容器里（header-wrap），行容器却全宽
+   1410px，所以只给 header 塞 grid 不会对齐。这里把 header-wrap 一并拉成全宽，
+   并让 header 使用与行完全相同的 padding + grid 轨道。
+   ⚠️ 用 :has(.difficulty) 限定题库行，评测/讨论行结构不同不会被误伤。 */
+html.flins-layout-flins .list-wrap .row-wrap > .row:has(> .difficulty),
+html.flins-layout-flins .list-wrap .header-wrap > .header:has(> .header-container.difficulty) {
+  display: grid !important;
+  grid-template-columns: 64px 120px minmax(0, 1fr) 260px 150px 90px !important;
+  align-items: center !important;
+  column-gap: 0 !important;
+}
+html.flins-layout-flins .list-wrap .header-wrap:has(.header-container.difficulty) {
+  display: block !important;
+  width: 100% !important;
+  padding: 12px 16px 8px 30px !important;
+  box-sizing: border-box !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row:has(> .difficulty) > *,
+html.flins-layout-flins .list-wrap .header-wrap > .header:has(> .header-container.difficulty) > * {
+  min-width: 0 !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* 17.4 首页右侧信息流：公告/友链的行块、比赛卡、统计区按钮 */
+html.flins-layout-flins .lg-index-content .lg-right .lg-article > p {
+  margin: 6px 0 !important;
+  padding: 8px 10px !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.028) !important;
+  border: 1px solid rgba(130, 156, 216, 0.08) !important;
+  line-height: 1.55 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-right .lg-article > p:hover {
+  background: rgba(var(--flins-accent-rgb), 0.07) !important;
+  border-color: rgba(var(--flins-accent-rgb), 0.18) !important;
+}
+html.flins-layout-flins .lg-index-content .lg-index-contest {
+  background: rgba(9, 14, 38, 0.5) !important;
+  border: 1px solid rgba(130, 156, 216, 0.14) !important;
+  border-radius: 12px !important;
+  margin: 10px 0 !important;
+  box-shadow: none !important;
+}
+html.flins-layout-flins .lg-index-content .lg-index-contest .am-panel-hd {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(130, 156, 216, 0.1) !important;
+  padding: 10px 14px !important;
+  color: var(--flins-heading) !important;
+  font-weight: 700 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-index-contest .am-panel-bd {
+  padding: 8px 14px 10px !important;
+}
+html.flins-layout-flins .lg-index-content .lg-index-stat .am-btn {
+  border-radius: 999px !important;
+  font-weight: 650 !important;
+}
+html.flins-layout-flins .lg-index-content .lg-index-stat .am-btn-danger,
+html.flins-layout-flins .lg-index-content .lg-index-stat .am-btn-primary {
+  border: 1px solid rgba(var(--flins-accent-rgb), 0.3) !important;
+  background: rgba(var(--flins-accent-rgb), 0.1) !important;
+  color: var(--flins-accent-soft) !important;
+}
+
+/* 17.5 讨论区一行一帖：外层 .row 是卡，内层 .l-card 去卡化。
+   ⚠️ 老版列表（题库/评测）一行含多个列，不存在 l-card；只有新版列表
+   （讨论区等）才是 .row > .l-card。这样写不会误伤题库行。 */
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card::before,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card::after {
+  display: none !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .top-container,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .avatar-right {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card img.avatar,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .avatar img {
+  border-radius: 999px !important;
+  border: 1px solid rgba(130, 156, 216, 0.18) !important;
+}
+
+/* 17.6 讨论帖行内信息排版：
+   结构：.avatar-right > .top（标题 + 分组）+ .bottom（作者/时间/回复）。
+   标题 a 带着行内主题色（var(--flins-text) !important），所以这里只碰字号字重，
+   不去抢颜色。 */
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .top-container {
+  gap: 12px !important;
+  padding: 0 4px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .avatar-right {
+  min-width: 0 !important;
+  gap: 4px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .title.link {
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.01em !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .content-right {
+  gap: 6px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .content-right .wrap {
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+  background: rgba(var(--flins-accent-rgb), 0.08) !important;
+  border: 1px solid rgba(var(--flins-accent-rgb), 0.16) !important;
+  color: var(--flins-text-muted) !important;
+  font-size: 12px !important;
+  white-space: nowrap !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .content-right .indicator {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 999px !important;
+  margin-right: 4px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card .bottom {
+  color: var(--flins-text-dim) !important;
+  font-size: 12px !important;
+  opacity: 0.88 !important;
+}
+
+/* 17.7 讨论帖详情页：标题、作者行、回复流。
+   帖子主体是 main > .l-card（没有 .problem 类，所以 14/15 节不碰它）。
+   回复行沿用 17.5 结构：.row > .l-card.comment > .author + .collapsed-wrapper。 */
+html.flins-layout-flins .columba-content-wrap .main .l-card h1.title.lfe-h1 {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  color: var(--flins-heading) !important;
+  padding-bottom: 12px !important;
+  position: relative !important;
+  line-height: 1.35 !important;
+}
+html.flins-layout-flins .columba-content-wrap .main .l-card h1.title.lfe-h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 54px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(var(--flins-accent-rgb), 0.9), transparent);
+}
+html.flins-layout-flins .columba-content-wrap .main .l-card .row.row-space-between {
+  color: var(--flins-text-muted) !important;
+  font-size: 13px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .author,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .collapsed-wrapper,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .comment-wrapper {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .author {
+  padding: 4px 0 8px !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .avatar {
+  border-radius: 999px !important;
+  border: 1px solid rgba(130, 156, 216, 0.18) !important;
+}
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .time,
+html.flins-layout-flins .list-wrap .row-wrap > .row > .l-card.comment .action {
+  color: var(--flins-text-dim) !important;
+  font-size: 12px !important;
+}
+
+/* 17.8 个人主页：头部卡玻璃化、菜单与统计、侧栏标题。
+   个人主页不在 .theme-page 里，用的是 .full-container.columba-content-wrap，
+   这里统一把它的 l-card 压成玻璃卡（不影响 .theme-page 内已有规则）。 */
+html.flins-layout-flins .full-container.columba-content-wrap > .l-card,
+html.flins-layout-flins .full-container.columba-content-wrap .sidebar-container .l-card,
+html.flins-layout-flins .full-container.columba-content-wrap .main > .l-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+    rgba(14, 20, 48, 0.52) !important;
+  border: 1px solid rgba(130, 156, 216, 0.14) !important;
+  border-radius: var(--flins-radius) !important;
+  box-shadow: var(--flins-shadow) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .user-header-top {
+  gap: 18px !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .user-header-top .avatar {
+  border-radius: 18px !important;
+  border: 2px solid rgba(130, 156, 216, 0.25) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .user-info .luogu-username.user-name {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  color: var(--flins-heading) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .user-info .signature,
+html.flins-layout-flins .full-container.columba-content-wrap .user-info [class*="description"],
+html.flins-layout-flins .full-container.columba-content-wrap .user-info [class*="motto"] {
+  color: var(--flins-text-muted) !important;
+  font-size: 13px !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .user-action .l-button {
+  border-radius: 999px !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .menu {
+  border-bottom: 1px solid var(--flins-border) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .menu ul.items li {
+  color: var(--flins-text-muted) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .menu ul.items li.active,
+html.flins-layout-flins .full-container.columba-content-wrap .menu ul.items li.sel,
+html.flins-layout-flins .full-container.columba-content-wrap .menu ul.items li.on {
+  color: var(--flins-accent-soft) !important;
+  border-bottom-color: rgba(var(--flins-accent-rgb), 0.8) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .stat.stacked {
+  color: var(--flins-text) !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .lfe-h3 {
+  color: var(--flins-heading) !important;
+  font-weight: 750 !important;
+}
+html.flins-layout-flins .full-container.columba-content-wrap .lfe-caption {
+  color: var(--flins-text-muted) !important;
+}
+
+/* ── 打印 ────────────────────────────────────────────────────────────── */
+@media print {
+  html::before, html::after { display: none !important; }
+  html, body { background: #fff !important; color: #000 !important; }
+  .theme-page .l-card { box-shadow: none !important; border-color: #ccc !important; }
+}

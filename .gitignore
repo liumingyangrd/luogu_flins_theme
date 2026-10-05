@@ -1,0 +1,68 @@
+# 洛谷 · 菲林斯主题 —— 只提交发布所需的文件
+#
+# 被忽略的是开发过程产物：体积大、含本机登录态、或对使用者没有价值。
+
+# ── 浏览器自动化目录：体积大且含真实登录态 ──────────────────────────
+.login/
+.realtest/
+.exttest/
+.audit/
+.shots/
+**/profile/
+**/profile-*/
+**/Default/
+Cookies
+Cookies-journal
+Login Data
+Login Data-journal
+Local State
+Web Data
+
+# ── 探针输出 ────────────────────────────────────────────────────────
+*.log
+.probe*.txt
+.audit*.txt
+.final.txt
+.home.txt
+.name.txt
+.login-log.txt
+
+# ── 工具链：只发布构建与验证脚本，其余探针留在本地 ──────────────────
+tools/*
+!tools/build.mjs
+!tools/make_backgrounds.py
+!tools/make_tokens.py
+!tools/live-check.mjs
+!tools/verify.mjs
+!tools/check-extension.mjs
+!tools/check-installed.mjs
+!tools/extract-vue-attrs.mjs
+
+# ── 本地笔记与脚本（不随仓库发布）───────────────────────────────────
+*.cmd
+/*.md
+!/README.md
+!/CONTRIBUTING.md
+docs/*.md
+
+# ── 编辑器 / 系统 ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ── Node / Python ──────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 注意：dist/ 与 assets/ 需要提交
+#   dist/   给用户安装的成品（油猴脚本 / 扩展 / 纯 CSS）
+#   assets/ 构建输入，node tools/build.mjs 会读

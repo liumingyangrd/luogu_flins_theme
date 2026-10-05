@@ -1,0 +1,415 @@
+﻿:root { --lcolor--lapis-1: 202, 213, 232; --lfe-color--lapis-1: #cad5e8; --lcolor--lapis-2: 114, 141, 207; --lfe-color--lapis-2: #728dcf; --lcolor--lapis-3: 41, 73, 180; --lfe-color--lapis-3: #2949b4; --lcolor--lapis-4: 14, 29, 105; --lfe-color--lapis-4: #0e1d69; --lcolor--lapis-5: 2, 5, 28; --lfe-color--lapis-5: #02051c; --lcolor--blue-1: 224, 247, 255; --lfe-color--blue-1: #e0f7ff; --lcolor--blue-2: 137, 209, 245; --lfe-color--blue-2: #89d1f5; --lcolor--blue-3: 52, 152, 219; --lfe-color--blue-3: #3498db; --lcolor--blue-4: 20, 85, 143; --lfe-color--blue-4: #14558f; --lcolor--blue-5: 5, 34, 66; --lfe-color--blue-5: #052242; --lcolor--cyan-1: 181, 245, 236; --lfe-color--cyan-1: #b5f5ec; --lcolor--cyan-2: 92, 219, 211; --lfe-color--cyan-2: #5cdbd3; --lcolor--cyan-3: 19, 194, 194; --lfe-color--cyan-3: #13c2c2; --lcolor--cyan-4: 0, 109, 117; --lfe-color--cyan-4: #006d75; --lcolor--cyan-5: 0, 35, 41; --lfe-color--cyan-5: #002329; --lcolor--green-1: 217, 240, 199; --lfe-color--green-1: #d9f0c7; --lcolor--green-2: 148, 214, 109; --lfe-color--green-2: #94d66d; --lcolor--green-3: 82, 196, 26; --lfe-color--green-3: #52c41a; --lcolor--green-4: 34, 112, 10; --lfe-color--green-4: #22700a; --lcolor--green-5: 7, 36, 1; --lfe-color--green-5: #072401; --lcolor--lgreen-1: 218, 224, 211; --lfe-color--lgreen-1: #dae0d3; --lcolor--lgreen-2: 170, 199, 145; --lfe-color--lgreen-2: #aac791; --lcolor--lgreen-3: 112, 173, 71; --lfe-color--lgreen-3: #70ad47; --lcolor--lgreen-4: 52, 97, 30; --lfe-color--lgreen-4: #34611e; --lcolor--lgreen-5: 9, 20, 5; --lfe-color--lgreen-5: #091405; --lcolor--yellow-1: 255, 255, 184; --lfe-color--yellow-1: #ffffb8; --lcolor--yellow-2: 255, 251, 143; --lfe-color--yellow-2: #fffb8f; --lcolor--yellow-3: 250, 219, 20; --lfe-color--yellow-3: #fadb14; --lcolor--yellow-4: 173, 139, 0; --lfe-color--yellow-4: #ad8b00; --lcolor--yellow-5: 97, 71, 0; --lfe-color--yellow-5: #614700; --lcolor--orange-1: 255, 237, 181; --lfe-color--orange-1: #ffedb5; --lcolor--orange-2: 255, 206, 99; --lfe-color--orange-2: #ffce63; --lcolor--orange-3: 243, 156, 17; --lfe-color--orange-3: #f39c11; --lcolor--orange-4: 166, 91, 0; --lfe-color--orange-4: #a65b00; --lcolor--orange-5: 89, 43, 0; --lfe-color--orange-5: #592b00; --lcolor--gold-1: 255, 246, 186; --lfe-color--gold-1: #fff6ba; --lcolor--gold-2: 255, 225, 105; --lfe-color--gold-2: #ffe169; --lcolor--gold-3: 255, 193, 22; --lfe-color--gold-3: #ffc116; --lcolor--gold-4: 179, 119, 0; --lfe-color--gold-4: #b37700; --lcolor--gold-5: 102, 61, 0; --lfe-color--gold-5: #663d00; --lcolor--purple-1: 251, 237, 255; --lfe-color--purple-1: #fbedff; --lcolor--purple-2: 206, 142, 232; --lfe-color--purple-2: #ce8ee8; --lcolor--purple-3: 157, 61, 207; --lfe-color--purple-3: #9d3dcf; --lcolor--purple-4: 86, 25, 130; --lfe-color--purple-4: #561982; --lcolor--purple-5: 31, 7, 54; --lfe-color--purple-5: #1f0736; --lcolor--pink-1: 255, 240, 240; --lfe-color--pink-1: #fff0f0; --lcolor--pink-2: 255, 158, 163; --lfe-color--pink-2: #ff9ea3; --lcolor--pink-3: 254, 76, 97; --lfe-color--pink-3: #fe4c61; --lcolor--pink-4: 179, 36, 62; --lfe-color--pink-4: #b3243e; --lcolor--pink-5: 102, 14, 36; --lfe-color--pink-5: #660e24; --lcolor--red-1: 255, 235, 230; --lfe-color--red-1: #ffebe6; --lcolor--red-2: 255, 166, 148; --lfe-color--red-2: #ffa694; --lcolor--red-3: 231, 76, 60; --lfe-color--red-3: #e74c3c; --lcolor--red-4: 156, 29, 25; --lfe-color--red-4: #9c1d19; --lcolor--red-5: 79, 8, 10; --lfe-color--red-5: #4f080a; --lcolor--grey-1: 250, 250, 250; --lfe-color--grey-1: #fafafa; --lcolor--grey-2: 232, 232, 232; --lfe-color--grey-2: #e8e8e8; --lcolor--grey-3: 191, 191, 191; --lfe-color--grey-3: #bfbfbf; --lcolor--grey-4: 89, 89, 89; --lfe-color--grey-4: #595959; --lcolor--grey-5: 38, 38, 38; --lfe-color--grey-5: #262626; --lcolor--primary: 52, 152, 219; --lfe-color--primary: #3498db; --lcolor--primary-bg: 224, 247, 255; --lfe-color--primary-bg: #e0f7ff; --lcolor--success: 82, 196, 26; --lfe-color--success: #52c41a; --lcolor--warning: 255, 193, 22; --lfe-color--warning: #ffc116; --lcolor--error: 231, 76, 60; --lfe-color--error: #e74c3c; --lcolor--link: 52, 152, 219; --lfe-color--link: #3498db; --lcolor--disabled: 191, 191, 191; --lfe-color--disabled: #bfbfbf; --lcolor--clicked: 41, 73, 180; --lfe-color--clicked: #2949b4; --lcolor--background: 245, 245, 245; --lfe-color--background: #f5f5f5; }
+
+/* Generated style for color lapis-1(202, 213, 232) */
+.lcolor-var-lapis-1 { --lcolor-rgb: 202, 213, 232; }
+.lcolor-var-lapis-1 > * { --lcolor-rgb: initial; }
+.lcolor--lapis-1 { color: rgb(202, 213, 232); }
+.lcolor-bg-lapis-1 { background-color: rgb(202, 213, 232); }
+
+/* Generated style for color lapis-2(114, 141, 207) */
+.lcolor-var-lapis-2 { --lcolor-rgb: 114, 141, 207; }
+.lcolor-var-lapis-2 > * { --lcolor-rgb: initial; }
+.lcolor--lapis-2 { color: rgb(114, 141, 207); }
+.lcolor-bg-lapis-2 { background-color: rgb(114, 141, 207); }
+
+/* Generated style for color lapis-3(41, 73, 180) */
+.lcolor-var-lapis-3 { --lcolor-rgb: 41, 73, 180; }
+.lcolor-var-lapis-3 > * { --lcolor-rgb: initial; }
+.lcolor--lapis-3 { color: rgb(41, 73, 180); }
+.lcolor-bg-lapis-3 { background-color: rgb(41, 73, 180); }
+
+/* Generated style for color lapis-4(14, 29, 105) */
+.lcolor-var-lapis-4 { --lcolor-rgb: 14, 29, 105; }
+.lcolor-var-lapis-4 > * { --lcolor-rgb: initial; }
+.lcolor--lapis-4 { color: rgb(14, 29, 105); }
+.lcolor-bg-lapis-4 { background-color: rgb(14, 29, 105); }
+
+/* Generated style for color lapis-5(2, 5, 28) */
+.lcolor-var-lapis-5 { --lcolor-rgb: 2, 5, 28; }
+.lcolor-var-lapis-5 > * { --lcolor-rgb: initial; }
+.lcolor--lapis-5 { color: rgb(2, 5, 28); }
+.lcolor-bg-lapis-5 { background-color: rgb(2, 5, 28); }
+
+/* Generated style for color blue-1(224, 247, 255) */
+.lcolor-var-blue-1 { --lcolor-rgb: 224, 247, 255; }
+.lcolor-var-blue-1 > * { --lcolor-rgb: initial; }
+.lcolor--blue-1 { color: rgb(224, 247, 255); }
+.lcolor-bg-blue-1 { background-color: rgb(224, 247, 255); }
+
+/* Generated style for color blue-2(137, 209, 245) */
+.lcolor-var-blue-2 { --lcolor-rgb: 137, 209, 245; }
+.lcolor-var-blue-2 > * { --lcolor-rgb: initial; }
+.lcolor--blue-2 { color: rgb(137, 209, 245); }
+.lcolor-bg-blue-2 { background-color: rgb(137, 209, 245); }
+
+/* Generated style for color blue-3(52, 152, 219) */
+.lcolor-var-blue-3 { --lcolor-rgb: 52, 152, 219; }
+.lcolor-var-blue-3 > * { --lcolor-rgb: initial; }
+.lcolor--blue-3 { color: rgb(52, 152, 219); }
+.lcolor-bg-blue-3 { background-color: rgb(52, 152, 219); }
+
+/* Generated style for color blue-4(20, 85, 143) */
+.lcolor-var-blue-4 { --lcolor-rgb: 20, 85, 143; }
+.lcolor-var-blue-4 > * { --lcolor-rgb: initial; }
+.lcolor--blue-4 { color: rgb(20, 85, 143); }
+.lcolor-bg-blue-4 { background-color: rgb(20, 85, 143); }
+
+/* Generated style for color blue-5(5, 34, 66) */
+.lcolor-var-blue-5 { --lcolor-rgb: 5, 34, 66; }
+.lcolor-var-blue-5 > * { --lcolor-rgb: initial; }
+.lcolor--blue-5 { color: rgb(5, 34, 66); }
+.lcolor-bg-blue-5 { background-color: rgb(5, 34, 66); }
+
+/* Generated style for color cyan-1(181, 245, 236) */
+.lcolor-var-cyan-1 { --lcolor-rgb: 181, 245, 236; }
+.lcolor-var-cyan-1 > * { --lcolor-rgb: initial; }
+.lcolor--cyan-1 { color: rgb(181, 245, 236); }
+.lcolor-bg-cyan-1 { background-color: rgb(181, 245, 236); }
+
+/* Generated style for color cyan-2(92, 219, 211) */
+.lcolor-var-cyan-2 { --lcolor-rgb: 92, 219, 211; }
+.lcolor-var-cyan-2 > * { --lcolor-rgb: initial; }
+.lcolor--cyan-2 { color: rgb(92, 219, 211); }
+.lcolor-bg-cyan-2 { background-color: rgb(92, 219, 211); }
+
+/* Generated style for color cyan-3(19, 194, 194) */
+.lcolor-var-cyan-3 { --lcolor-rgb: 19, 194, 194; }
+.lcolor-var-cyan-3 > * { --lcolor-rgb: initial; }
+.lcolor--cyan-3 { color: rgb(19, 194, 194); }
+.lcolor-bg-cyan-3 { background-color: rgb(19, 194, 194); }
+
+/* Generated style for color cyan-4(0, 109, 117) */
+.lcolor-var-cyan-4 { --lcolor-rgb: 0, 109, 117; }
+.lcolor-var-cyan-4 > * { --lcolor-rgb: initial; }
+.lcolor--cyan-4 { color: rgb(0, 109, 117); }
+.lcolor-bg-cyan-4 { background-color: rgb(0, 109, 117); }
+
+/* Generated style for color cyan-5(0, 35, 41) */
+.lcolor-var-cyan-5 { --lcolor-rgb: 0, 35, 41; }
+.lcolor-var-cyan-5 > * { --lcolor-rgb: initial; }
+.lcolor--cyan-5 { color: rgb(0, 35, 41); }
+.lcolor-bg-cyan-5 { background-color: rgb(0, 35, 41); }
+
+/* Generated style for color green-1(217, 240, 199) */
+.lcolor-var-green-1 { --lcolor-rgb: 217, 240, 199; }
+.lcolor-var-green-1 > * { --lcolor-rgb: initial; }
+.lcolor--green-1 { color: rgb(217, 240, 199); }
+.lcolor-bg-green-1 { background-color: rgb(217, 240, 199); }
+
+/* Generated style for color green-2(148, 214, 109) */
+.lcolor-var-green-2 { --lcolor-rgb: 148, 214, 109; }
+.lcolor-var-green-2 > * { --lcolor-rgb: initial; }
+.lcolor--green-2 { color: rgb(148, 214, 109); }
+.lcolor-bg-green-2 { background-color: rgb(148, 214, 109); }
+
+/* Generated style for color green-3(82, 196, 26) */
+.lcolor-var-green-3 { --lcolor-rgb: 82, 196, 26; }
+.lcolor-var-green-3 > * { --lcolor-rgb: initial; }
+.lcolor--green-3 { color: rgb(82, 196, 26); }
+.lcolor-bg-green-3 { background-color: rgb(82, 196, 26); }
+
+/* Generated style for color green-4(34, 112, 10) */
+.lcolor-var-green-4 { --lcolor-rgb: 34, 112, 10; }
+.lcolor-var-green-4 > * { --lcolor-rgb: initial; }
+.lcolor--green-4 { color: rgb(34, 112, 10); }
+.lcolor-bg-green-4 { background-color: rgb(34, 112, 10); }
+
+/* Generated style for color green-5(7, 36, 1) */
+.lcolor-var-green-5 { --lcolor-rgb: 7, 36, 1; }
+.lcolor-var-green-5 > * { --lcolor-rgb: initial; }
+.lcolor--green-5 { color: rgb(7, 36, 1); }
+.lcolor-bg-green-5 { background-color: rgb(7, 36, 1); }
+
+/* Generated style for color lgreen-1(218, 224, 211) */
+.lcolor-var-lgreen-1 { --lcolor-rgb: 218, 224, 211; }
+.lcolor-var-lgreen-1 > * { --lcolor-rgb: initial; }
+.lcolor--lgreen-1 { color: rgb(218, 224, 211); }
+.lcolor-bg-lgreen-1 { background-color: rgb(218, 224, 211); }
+
+/* Generated style for color lgreen-2(170, 199, 145) */
+.lcolor-var-lgreen-2 { --lcolor-rgb: 170, 199, 145; }
+.lcolor-var-lgreen-2 > * { --lcolor-rgb: initial; }
+.lcolor--lgreen-2 { color: rgb(170, 199, 145); }
+.lcolor-bg-lgreen-2 { background-color: rgb(170, 199, 145); }
+
+/* Generated style for color lgreen-3(112, 173, 71) */
+.lcolor-var-lgreen-3 { --lcolor-rgb: 112, 173, 71; }
+.lcolor-var-lgreen-3 > * { --lcolor-rgb: initial; }
+.lcolor--lgreen-3 { color: rgb(112, 173, 71); }
+.lcolor-bg-lgreen-3 { background-color: rgb(112, 173, 71); }
+
+/* Generated style for color lgreen-4(52, 97, 30) */
+.lcolor-var-lgreen-4 { --lcolor-rgb: 52, 97, 30; }
+.lcolor-var-lgreen-4 > * { --lcolor-rgb: initial; }
+.lcolor--lgreen-4 { color: rgb(52, 97, 30); }
+.lcolor-bg-lgreen-4 { background-color: rgb(52, 97, 30); }
+
+/* Generated style for color lgreen-5(9, 20, 5) */
+.lcolor-var-lgreen-5 { --lcolor-rgb: 9, 20, 5; }
+.lcolor-var-lgreen-5 > * { --lcolor-rgb: initial; }
+.lcolor--lgreen-5 { color: rgb(9, 20, 5); }
+.lcolor-bg-lgreen-5 { background-color: rgb(9, 20, 5); }
+
+/* Generated style for color yellow-1(255, 255, 184) */
+.lcolor-var-yellow-1 { --lcolor-rgb: 255, 255, 184; }
+.lcolor-var-yellow-1 > * { --lcolor-rgb: initial; }
+.lcolor--yellow-1 { color: rgb(255, 255, 184); }
+.lcolor-bg-yellow-1 { background-color: rgb(255, 255, 184); }
+
+/* Generated style for color yellow-2(255, 251, 143) */
+.lcolor-var-yellow-2 { --lcolor-rgb: 255, 251, 143; }
+.lcolor-var-yellow-2 > * { --lcolor-rgb: initial; }
+.lcolor--yellow-2 { color: rgb(255, 251, 143); }
+.lcolor-bg-yellow-2 { background-color: rgb(255, 251, 143); }
+
+/* Generated style for color yellow-3(250, 219, 20) */
+.lcolor-var-yellow-3 { --lcolor-rgb: 250, 219, 20; }
+.lcolor-var-yellow-3 > * { --lcolor-rgb: initial; }
+.lcolor--yellow-3 { color: rgb(250, 219, 20); }
+.lcolor-bg-yellow-3 { background-color: rgb(250, 219, 20); }
+
+/* Generated style for color yellow-4(173, 139, 0) */
+.lcolor-var-yellow-4 { --lcolor-rgb: 173, 139, 0; }
+.lcolor-var-yellow-4 > * { --lcolor-rgb: initial; }
+.lcolor--yellow-4 { color: rgb(173, 139, 0); }
+.lcolor-bg-yellow-4 { background-color: rgb(173, 139, 0); }
+
+/* Generated style for color yellow-5(97, 71, 0) */
+.lcolor-var-yellow-5 { --lcolor-rgb: 97, 71, 0; }
+.lcolor-var-yellow-5 > * { --lcolor-rgb: initial; }
+.lcolor--yellow-5 { color: rgb(97, 71, 0); }
+.lcolor-bg-yellow-5 { background-color: rgb(97, 71, 0); }
+
+/* Generated style for color orange-1(255, 237, 181) */
+.lcolor-var-orange-1 { --lcolor-rgb: 255, 237, 181; }
+.lcolor-var-orange-1 > * { --lcolor-rgb: initial; }
+.lcolor--orange-1 { color: rgb(255, 237, 181); }
+.lcolor-bg-orange-1 { background-color: rgb(255, 237, 181); }
+
+/* Generated style for color orange-2(255, 206, 99) */
+.lcolor-var-orange-2 { --lcolor-rgb: 255, 206, 99; }
+.lcolor-var-orange-2 > * { --lcolor-rgb: initial; }
+.lcolor--orange-2 { color: rgb(255, 206, 99); }
+.lcolor-bg-orange-2 { background-color: rgb(255, 206, 99); }
+
+/* Generated style for color orange-3(243, 156, 17) */
+.lcolor-var-orange-3 { --lcolor-rgb: 243, 156, 17; }
+.lcolor-var-orange-3 > * { --lcolor-rgb: initial; }
+.lcolor--orange-3 { color: rgb(243, 156, 17); }
+.lcolor-bg-orange-3 { background-color: rgb(243, 156, 17); }
+
+/* Generated style for color orange-4(166, 91, 0) */
+.lcolor-var-orange-4 { --lcolor-rgb: 166, 91, 0; }
+.lcolor-var-orange-4 > * { --lcolor-rgb: initial; }
+.lcolor--orange-4 { color: rgb(166, 91, 0); }
+.lcolor-bg-orange-4 { background-color: rgb(166, 91, 0); }
+
+/* Generated style for color orange-5(89, 43, 0) */
+.lcolor-var-orange-5 { --lcolor-rgb: 89, 43, 0; }
+.lcolor-var-orange-5 > * { --lcolor-rgb: initial; }
+.lcolor--orange-5 { color: rgb(89, 43, 0); }
+.lcolor-bg-orange-5 { background-color: rgb(89, 43, 0); }
+
+/* Generated style for color gold-1(255, 246, 186) */
+.lcolor-var-gold-1 { --lcolor-rgb: 255, 246, 186; }
+.lcolor-var-gold-1 > * { --lcolor-rgb: initial; }
+.lcolor--gold-1 { color: rgb(255, 246, 186); }
+.lcolor-bg-gold-1 { background-color: rgb(255, 246, 186); }
+
+/* Generated style for color gold-2(255, 225, 105) */
+.lcolor-var-gold-2 { --lcolor-rgb: 255, 225, 105; }
+.lcolor-var-gold-2 > * { --lcolor-rgb: initial; }
+.lcolor--gold-2 { color: rgb(255, 225, 105); }
+.lcolor-bg-gold-2 { background-color: rgb(255, 225, 105); }
+
+/* Generated style for color gold-3(255, 193, 22) */
+.lcolor-var-gold-3 { --lcolor-rgb: 255, 193, 22; }
+.lcolor-var-gold-3 > * { --lcolor-rgb: initial; }
+.lcolor--gold-3 { color: rgb(255, 193, 22); }
+.lcolor-bg-gold-3 { background-color: rgb(255, 193, 22); }
+
+/* Generated style for color gold-4(179, 119, 0) */
+.lcolor-var-gold-4 { --lcolor-rgb: 179, 119, 0; }
+.lcolor-var-gold-4 > * { --lcolor-rgb: initial; }
+.lcolor--gold-4 { color: rgb(179, 119, 0); }
+.lcolor-bg-gold-4 { background-color: rgb(179, 119, 0); }
+
+/* Generated style for color gold-5(102, 61, 0) */
+.lcolor-var-gold-5 { --lcolor-rgb: 102, 61, 0; }
+.lcolor-var-gold-5 > * { --lcolor-rgb: initial; }
+.lcolor--gold-5 { color: rgb(102, 61, 0); }
+.lcolor-bg-gold-5 { background-color: rgb(102, 61, 0); }
+
+/* Generated style for color purple-1(251, 237, 255) */
+.lcolor-var-purple-1 { --lcolor-rgb: 251, 237, 255; }
+.lcolor-var-purple-1 > * { --lcolor-rgb: initial; }
+.lcolor--purple-1 { color: rgb(251, 237, 255); }
+.lcolor-bg-purple-1 { background-color: rgb(251, 237, 255); }
+
+/* Generated style for color purple-2(206, 142, 232) */
+.lcolor-var-purple-2 { --lcolor-rgb: 206, 142, 232; }
+.lcolor-var-purple-2 > * { --lcolor-rgb: initial; }
+.lcolor--purple-2 { color: rgb(206, 142, 232); }
+.lcolor-bg-purple-2 { background-color: rgb(206, 142, 232); }
+
+/* Generated style for color purple-3(157, 61, 207) */
+.lcolor-var-purple-3 { --lcolor-rgb: 157, 61, 207; }
+.lcolor-var-purple-3 > * { --lcolor-rgb: initial; }
+.lcolor--purple-3 { color: rgb(157, 61, 207); }
+.lcolor-bg-purple-3 { background-color: rgb(157, 61, 207); }
+
+/* Generated style for color purple-4(86, 25, 130) */
+.lcolor-var-purple-4 { --lcolor-rgb: 86, 25, 130; }
+.lcolor-var-purple-4 > * { --lcolor-rgb: initial; }
+.lcolor--purple-4 { color: rgb(86, 25, 130); }
+.lcolor-bg-purple-4 { background-color: rgb(86, 25, 130); }
+
+/* Generated style for color purple-5(31, 7, 54) */
+.lcolor-var-purple-5 { --lcolor-rgb: 31, 7, 54; }
+.lcolor-var-purple-5 > * { --lcolor-rgb: initial; }
+.lcolor--purple-5 { color: rgb(31, 7, 54); }
+.lcolor-bg-purple-5 { background-color: rgb(31, 7, 54); }
+
+/* Generated style for color pink-1(255, 240, 240) */
+.lcolor-var-pink-1 { --lcolor-rgb: 255, 240, 240; }
+.lcolor-var-pink-1 > * { --lcolor-rgb: initial; }
+.lcolor--pink-1 { color: rgb(255, 240, 240); }
+.lcolor-bg-pink-1 { background-color: rgb(255, 240, 240); }
+
+/* Generated style for color pink-2(255, 158, 163) */
+.lcolor-var-pink-2 { --lcolor-rgb: 255, 158, 163; }
+.lcolor-var-pink-2 > * { --lcolor-rgb: initial; }
+.lcolor--pink-2 { color: rgb(255, 158, 163); }
+.lcolor-bg-pink-2 { background-color: rgb(255, 158, 163); }
+
+/* Generated style for color pink-3(254, 76, 97) */
+.lcolor-var-pink-3 { --lcolor-rgb: 254, 76, 97; }
+.lcolor-var-pink-3 > * { --lcolor-rgb: initial; }
+.lcolor--pink-3 { color: rgb(254, 76, 97); }
+.lcolor-bg-pink-3 { background-color: rgb(254, 76, 97); }
+
+/* Generated style for color pink-4(179, 36, 62) */
+.lcolor-var-pink-4 { --lcolor-rgb: 179, 36, 62; }
+.lcolor-var-pink-4 > * { --lcolor-rgb: initial; }
+.lcolor--pink-4 { color: rgb(179, 36, 62); }
+.lcolor-bg-pink-4 { background-color: rgb(179, 36, 62); }
+
+/* Generated style for color pink-5(102, 14, 36) */
+.lcolor-var-pink-5 { --lcolor-rgb: 102, 14, 36; }
+.lcolor-var-pink-5 > * { --lcolor-rgb: initial; }
+.lcolor--pink-5 { color: rgb(102, 14, 36); }
+.lcolor-bg-pink-5 { background-color: rgb(102, 14, 36); }
+
+/* Generated style for color red-1(255, 235, 230) */
+.lcolor-var-red-1 { --lcolor-rgb: 255, 235, 230; }
+.lcolor-var-red-1 > * { --lcolor-rgb: initial; }
+.lcolor--red-1 { color: rgb(255, 235, 230); }
+.lcolor-bg-red-1 { background-color: rgb(255, 235, 230); }
+
+/* Generated style for color red-2(255, 166, 148) */
+.lcolor-var-red-2 { --lcolor-rgb: 255, 166, 148; }
+.lcolor-var-red-2 > * { --lcolor-rgb: initial; }
+.lcolor--red-2 { color: rgb(255, 166, 148); }
+.lcolor-bg-red-2 { background-color: rgb(255, 166, 148); }
+
+/* Generated style for color red-3(231, 76, 60) */
+.lcolor-var-red-3 { --lcolor-rgb: 231, 76, 60; }
+.lcolor-var-red-3 > * { --lcolor-rgb: initial; }
+.lcolor--red-3 { color: rgb(231, 76, 60); }
+.lcolor-bg-red-3 { background-color: rgb(231, 76, 60); }
+
+/* Generated style for color red-4(156, 29, 25) */
+.lcolor-var-red-4 { --lcolor-rgb: 156, 29, 25; }
+.lcolor-var-red-4 > * { --lcolor-rgb: initial; }
+.lcolor--red-4 { color: rgb(156, 29, 25); }
+.lcolor-bg-red-4 { background-color: rgb(156, 29, 25); }
+
+/* Generated style for color red-5(79, 8, 10) */
+.lcolor-var-red-5 { --lcolor-rgb: 79, 8, 10; }
+.lcolor-var-red-5 > * { --lcolor-rgb: initial; }
+.lcolor--red-5 { color: rgb(79, 8, 10); }
+.lcolor-bg-red-5 { background-color: rgb(79, 8, 10); }
+
+/* Generated style for color grey-1(250, 250, 250) */
+.lcolor-var-grey-1 { --lcolor-rgb: 250, 250, 250; }
+.lcolor-var-grey-1 > * { --lcolor-rgb: initial; }
+.lcolor--grey-1 { color: rgb(250, 250, 250); }
+.lcolor-bg-grey-1 { background-color: rgb(250, 250, 250); }
+
+/* Generated style for color grey-2(232, 232, 232) */
+.lcolor-var-grey-2 { --lcolor-rgb: 232, 232, 232; }
+.lcolor-var-grey-2 > * { --lcolor-rgb: initial; }
+.lcolor--grey-2 { color: rgb(232, 232, 232); }
+.lcolor-bg-grey-2 { background-color: rgb(232, 232, 232); }
+
+/* Generated style for color grey-3(191, 191, 191) */
+.lcolor-var-grey-3 { --lcolor-rgb: 191, 191, 191; }
+.lcolor-var-grey-3 > * { --lcolor-rgb: initial; }
+.lcolor--grey-3 { color: rgb(191, 191, 191); }
+.lcolor-bg-grey-3 { background-color: rgb(191, 191, 191); }
+
+/* Generated style for color grey-4(89, 89, 89) */
+.lcolor-var-grey-4 { --lcolor-rgb: 89, 89, 89; }
+.lcolor-var-grey-4 > * { --lcolor-rgb: initial; }
+.lcolor--grey-4 { color: rgb(89, 89, 89); }
+.lcolor-bg-grey-4 { background-color: rgb(89, 89, 89); }
+
+/* Generated style for color grey-5(38, 38, 38) */
+.lcolor-var-grey-5 { --lcolor-rgb: 38, 38, 38; }
+.lcolor-var-grey-5 > * { --lcolor-rgb: initial; }
+.lcolor--grey-5 { color: rgb(38, 38, 38); }
+.lcolor-bg-grey-5 { background-color: rgb(38, 38, 38); }
+
+/* Generated style for color primary(52, 152, 219) */
+.lcolor-var-primary { --lcolor-rgb: 52, 152, 219; }
+.lcolor-var-primary > * { --lcolor-rgb: initial; }
+.lcolor--primary { color: rgb(52, 152, 219); }
+.lcolor-bg-primary { background-color: rgb(52, 152, 219); }
+
+/* Generated style for color primary-bg(224, 247, 255) */
+.lcolor-var-primary-bg { --lcolor-rgb: 224, 247, 255; }
+.lcolor-var-primary-bg > * { --lcolor-rgb: initial; }
+.lcolor--primary-bg { color: rgb(224, 247, 255); }
+.lcolor-bg-primary-bg { background-color: rgb(224, 247, 255); }
+
+/* Generated style for color success(82, 196, 26) */
+.lcolor-var-success { --lcolor-rgb: 82, 196, 26; }
+.lcolor-var-success > * { --lcolor-rgb: initial; }
+.lcolor--success { color: rgb(82, 196, 26); }
+.lcolor-bg-success { background-color: rgb(82, 196, 26); }
+
+/* Generated style for color warning(255, 193, 22) */
+.lcolor-var-warning { --lcolor-rgb: 255, 193, 22; }
+.lcolor-var-warning > * { --lcolor-rgb: initial; }
+.lcolor--warning { color: rgb(255, 193, 22); }
+.lcolor-bg-warning { background-color: rgb(255, 193, 22); }
+
+/* Generated style for color error(231, 76, 60) */
+.lcolor-var-error { --lcolor-rgb: 231, 76, 60; }
+.lcolor-var-error > * { --lcolor-rgb: initial; }
+.lcolor--error { color: rgb(231, 76, 60); }
+.lcolor-bg-error { background-color: rgb(231, 76, 60); }
+
+/* Generated style for color link(52, 152, 219) */
+.lcolor-var-link { --lcolor-rgb: 52, 152, 219; }
+.lcolor-var-link > * { --lcolor-rgb: initial; }
+.lcolor--link { color: rgb(52, 152, 219); }
+.lcolor-bg-link { background-color: rgb(52, 152, 219); }
+
+/* Generated style for color disabled(191, 191, 191) */
+.lcolor-var-disabled { --lcolor-rgb: 191, 191, 191; }
+.lcolor-var-disabled > * { --lcolor-rgb: initial; }
+.lcolor--disabled { color: rgb(191, 191, 191); }
+.lcolor-bg-disabled { background-color: rgb(191, 191, 191); }
+
+/* Generated style for color clicked(41, 73, 180) */
+.lcolor-var-clicked { --lcolor-rgb: 41, 73, 180; }
+.lcolor-var-clicked > * { --lcolor-rgb: initial; }
+.lcolor--clicked { color: rgb(41, 73, 180); }
+.lcolor-bg-clicked { background-color: rgb(41, 73, 180); }
+
+/* Generated style for color background(245, 245, 245) */
+.lcolor-var-background { --lcolor-rgb: 245, 245, 245; }
+.lcolor-var-background > * { --lcolor-rgb: initial; }
+.lcolor--background { color: rgb(245, 245, 245); }
+.lcolor-bg-background { background-color: rgb(245, 245, 245); }
