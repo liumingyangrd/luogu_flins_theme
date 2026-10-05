@@ -1341,11 +1341,6 @@ html.flins-layout-flins .theme-page > header .header-card::after {
   content: none !important;
   background: none !important;
 }
-html.flins-layout-flins .theme-page > header .header-card::after {
-  content: none !important;
-  display: none !important;
-  background: none !important;
-}
 /* 英雄区的标题加大一号 */
 html.flins-layout-flins .theme-page > header h1 {
   font-size: 1.5em !important;
@@ -2390,13 +2385,6 @@ html.flins-layout-flins .sidebar-container > .side .l-card .lfe-caption {
 html.flins-layout-flins .sidebar-container > .side .l-flex-info-row {
   font-size: 13px !important;
   padding: 4px 0 !important;
-}
-
-/* ── 打印 ────────────────────────────────────────────────────────────── */
-@media print {
-  html::before, html::after { display: none !important; }
-  html, body { background: #fff !important; color: #000 !important; }
-  .theme-page .l-card { box-shadow: none !important; border-color: #ccc !important; }
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
