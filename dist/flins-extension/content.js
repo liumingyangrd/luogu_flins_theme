@@ -1,8 +1,11 @@
 // ==UserScript==
 // @name         洛谷 · 菲林斯主题「终夜长茔 · 夜巡」
-// @namespace    https://github.com/flins-luogu-theme
-// @version      2026.1005.1449
-// @description  为洛谷换上一套《原神》菲林斯主题：深靛蓝夜色 + 提灯冷蓝焰 + 金色新月 + 灯塔剪影。支持自定义背景图片（内置 / 链接 / 本地上传）、深浅两套形态、三种强调色与毛玻璃开关。
+// @namespace    https://github.com/liumingyangrd/luogu_flins_theme
+// @homepageURL  https://github.com/liumingyangrd/luogu_flins_theme
+// @updateURL    https://raw.githubusercontent.com/liumingyangrd/luogu_flins_theme/main/dist/flins.user.js
+// @downloadURL  https://raw.githubusercontent.com/liumingyangrd/luogu_flins_theme/main/dist/flins.user.js
+// @version      2026.1005.1507
+// @description  为洛谷换上一套《原神》菲林斯主题：深靛蓝夜色 + 提灯冷蓝焰 + 金色新月 + 灯塔剪影。支持自定义背景图片（内置 / 链接 / 本地上传）、深浅两套形态、四种强调色与毛玻璃开关。
 // @author       Flins Theme
 // @license      MIT
 // @match        *://*.luogu.com.cn/*
