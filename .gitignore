@@ -1,0 +1,80 @@
+# ══════════════════════════════════════════════════════════════════════
+#  洛谷 · 菲林斯主题 —— 只提交「必要的文件」
+#
+#  本文件命中而被忽略的，全部是开发过程产物：体积巨大、含个人登录态、
+#  或对使用者没有价值。删掉本文件会让 `git add .` 试图提交约 1.7 GB，
+#  其中包含你的洛谷 Cookies 与 Login Data。
+# ══════════════════════════════════════════════════════════════════════
+
+# ── 1. 浏览器自动化目录：体积巨大 + 含真实登录态 ──────────────────────
+#  .login    1.66 GB，其中单个模型文件 168 MB（GitHub 单文件上限 100 MB），
+#            并且 profile/Default/Login Data 是你的浏览器账号库
+#  .realtest 50 MB，profile/Default/Network/Cookies 是真实登录 Cookie
+#  .exttest  28 MB，装扩展测试用的独立 Chrome 配置
+#  这三个目录一旦推上去，等于把洛谷账号公开。
+.login/
+.realtest/
+.exttest/
+.audit/
+.shots/
+**/profile/
+**/profile-*/
+**/Default/
+Cookies
+Cookies-journal
+Login Data
+Login Data-journal
+Local State
+Web Data
+
+# ── 2. 调试探针输出（分析用的临时文本，不进仓库）─────────────────────
+*.log
+.probe*.txt
+.audit*.txt
+.final.txt
+.home.txt
+.name.txt
+.login-log.txt
+
+# ── 3. 工具链白名单：只用得上这几个，其余探针脚本留在本地 ─────────────
+#  想连探针一起开源，删掉下面 tools/ 这一段即可（但请先看
+#  tools/login-and-audit.mjs，里面有作者本人的洛谷 UID）。
+tools/*
+!tools/build.mjs
+!tools/make_backgrounds.py
+!tools/make_tokens.py
+!tools/live-check.mjs
+!tools/verify.mjs
+!tools/check-extension.mjs
+!tools/check-installed.mjs
+!tools/extract-vue-attrs.mjs
+
+# ── 4. 内部笔记与本地小工具（要开源就删掉这一段）─────────────────────
+TODO.md
+续接提示词.md
+改用油猴安装.cmd
+检查主题状态.cmd
+开源发布材料.md
+保姆级发布教程.md
+
+# ── 5. 编辑器 / 系统 ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ── 6. Node / Python ───────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 注意：dist/ 与 assets/ 是**要提交**的 ——
+#   dist/   是给用户安装的成品（油猴脚本 / 扩展 / 纯 CSS）
+#   assets/ 是构建输入，node tools/build.mjs 会读它们

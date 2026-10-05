@@ -1,0 +1,36 @@
+{
+  "_说明": "洛谷官方主题格式（#luogu-theme）。用法见同目录 README.md。image 字段请换成你自己上传到洛谷图床后的直链。",
+  "id": 0,
+  "lNavi": {
+    "back": "#0b0f2b",
+    "fore": "#e6ebfb",
+    "logo": null
+  },
+  "lBody": {
+    "back": "#080b21",
+    "blur": 1000,
+    "fade": 1000,
+    "image": "https://cdn.luogu.com.cn/upload/image_hosting/替换成你的图片直链.jpg",
+    "midOpts": {
+      "size": "cover",
+      "position": [50, 20],
+      "repeat": "no-repeat"
+    }
+  },
+  "dNavi": {
+    "back": "#0b0f2b",
+    "fore": "#e6ebfb",
+    "logo": "#60e0f0"
+  },
+  "dBody": {
+    "back": "#080b21",
+    "blur": 1000,
+    "fade": 1000,
+    "image": "https://cdn.luogu.com.cn/upload/image_hosting/替换成你的图片直链.jpg",
+    "midOpts": {
+      "size": "cover",
+      "position": [50, 20],
+      "repeat": "no-repeat"
+    }
+  }
+}

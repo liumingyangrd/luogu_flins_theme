@@ -1,0 +1,36 @@
+{
+  "_说明": "洛谷官方主题格式（#luogu-theme）· 浅色「霜晨」。image 字段请换成你自己上传到洛谷图床后的直链。",
+  "id": 0,
+  "lNavi": {
+    "back": "#f7faff",
+    "fore": "#16203c",
+    "logo": null
+  },
+  "lBody": {
+    "back": "#eef3fc",
+    "blur": 1000,
+    "fade": 1000,
+    "image": "https://cdn.luogu.com.cn/upload/image_hosting/替换成你的图片直链.jpg",
+    "midOpts": {
+      "size": "cover",
+      "position": [50, 15],
+      "repeat": "no-repeat"
+    }
+  },
+  "dNavi": {
+    "back": "#f7faff",
+    "fore": "#16203c",
+    "logo": "#0e8f98"
+  },
+  "dBody": {
+    "back": "#eef3fc",
+    "blur": 1000,
+    "fade": 1000,
+    "image": "https://cdn.luogu.com.cn/upload/image_hosting/替换成你的图片直链.jpg",
+    "midOpts": {
+      "size": "cover",
+      "position": [50, 15],
+      "repeat": "no-repeat"
+    }
+  }
+}

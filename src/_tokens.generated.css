@@ -1,0 +1,277 @@
+/* ══════════════════════════════════════════════════════════════
+   洛谷 · 菲林斯主题 —— Lentille 设计令牌覆盖（深色「夜巡」）
+   由 tools/make_tokens.py 生成，请勿手改；改色请改该脚本。
+   !important 用于压过洛谷页内 <style> 的 :root 定义；
+   元素自身的 .lcolor-var-* 声明仍可正常覆盖这些值。
+   ══════════════════════════════════════════════════════════════ */
+/* 用 html:not(.flins-light) 而不是 :root：浅色模式直接让这些
+   深色色阶整体失效，回落到洛谷原值，避免逐个还原。 */
+html:not(.flins-light) {
+  --lcolor--lapis-1: 24, 34, 73 !important; --lfe-color--lapis-1: #182249 !important;
+  --lcolor--lapis-2: 39, 55, 107 !important; --lfe-color--lapis-2: #27376b !important;
+  --lcolor--lapis-3: 92, 134, 232 !important; --lfe-color--lapis-3: #5c86e8 !important;
+  --lcolor--lapis-4: 164, 187, 242 !important; --lfe-color--lapis-4: #a4bbf2 !important;
+  --lcolor--lapis-5: 222, 231, 250 !important; --lfe-color--lapis-5: #dee7fa !important;
+  --lcolor--blue-1: 21, 39, 73 !important; --lfe-color--blue-1: #152749 !important;
+  --lcolor--blue-2: 32, 67, 107 !important; --lfe-color--blue-2: #20436b !important;
+  --lcolor--blue-3: 74, 168, 232 !important; --lfe-color--blue-3: #4aa8e8 !important;
+  --lcolor--blue-4: 154, 206, 242 !important; --lfe-color--blue-4: #9acef2 !important;
+  --lcolor--blue-5: 219, 238, 250 !important; --lfe-color--blue-5: #dbeefa !important;
+  --lcolor--cyan-1: 19, 46, 69 !important; --lfe-color--cyan-1: #132e45 !important;
+  --lcolor--cyan-2: 29, 80, 98 !important; --lfe-color--cyan-2: #1d5062 !important;
+  --lcolor--cyan-3: 64, 206, 206 !important; --lfe-color--cyan-3: #40cece !important;
+  --lcolor--cyan-4: 148, 228, 228 !important; --lfe-color--cyan-4: #94e4e4 !important;
+  --lcolor--cyan-5: 217, 245, 245 !important; --lfe-color--cyan-5: #d9f5f5 !important;
+  --lcolor--green-1: 24, 45, 55 !important; --lfe-color--green-1: #182d37 !important;
+  --lcolor--green-2: 38, 79, 69 !important; --lfe-color--green-2: #264f45 !important;
+  --lcolor--green-3: 90, 204, 120 !important; --lfe-color--green-3: #5acc78 !important;
+  --lcolor--green-4: 163, 226, 179 !important; --lfe-color--green-4: #a3e2b3 !important;
+  --lcolor--green-5: 222, 245, 228 !important; --lfe-color--green-5: #def5e4 !important;
+  --lcolor--lgreen-1: 30, 43, 52 !important; --lfe-color--lgreen-1: #1e2b34 !important;
+  --lcolor--lgreen-2: 52, 74, 62 !important; --lfe-color--lgreen-2: #344a3e !important;
+  --lcolor--lgreen-3: 132, 190, 100 !important; --lfe-color--lgreen-3: #84be64 !important;
+  --lcolor--lgreen-4: 186, 219, 168 !important; --lfe-color--lgreen-4: #badba8 !important;
+  --lcolor--lgreen-5: 230, 242, 224 !important; --lfe-color--lgreen-5: #e6f2e0 !important;
+  --lcolor--yellow-1: 49, 48, 39 !important; --lfe-color--yellow-1: #313027 !important;
+  --lcolor--yellow-2: 92, 84, 35 !important; --lfe-color--yellow-2: #5c5423 !important;
+  --lcolor--yellow-3: 250, 219, 20 !important; --lfe-color--yellow-3: #fadb14 !important;
+  --lcolor--yellow-4: 252, 235, 123 !important; --lfe-color--yellow-4: #fceb7b !important;
+  --lcolor--yellow-5: 254, 248, 208 !important; --lfe-color--yellow-5: #fef8d0 !important;
+  --lcolor--orange-1: 49, 39, 44 !important; --lfe-color--orange-1: #31272c !important;
+  --lcolor--orange-2: 91, 65, 46 !important; --lfe-color--orange-2: #5b412e !important;
+  --lcolor--orange-3: 246, 162, 52 !important; --lfe-color--orange-3: #f6a234 !important;
+  --lcolor--orange-4: 250, 203, 141 !important; --lfe-color--orange-4: #facb8d !important;
+  --lcolor--orange-5: 253, 236, 214 !important; --lfe-color--orange-5: #fdecd6 !important;
+  --lcolor--gold-1: 50, 44, 46 !important; --lfe-color--gold-1: #322c2e !important;
+  --lcolor--gold-2: 93, 77, 50 !important; --lfe-color--gold-2: #5d4d32 !important;
+  --lcolor--gold-3: 252, 198, 64 !important; --lfe-color--gold-3: #fcc640 !important;
+  --lcolor--gold-4: 253, 223, 148 !important; --lfe-color--gold-4: #fddf94 !important;
+  --lcolor--gold-5: 254, 244, 217 !important; --lfe-color--gold-5: #fef4d9 !important;
+  --lcolor--purple-1: 37, 29, 74 !important; --lfe-color--purple-1: #251d4a !important;
+  --lcolor--purple-2: 66, 45, 109 !important; --lfe-color--purple-2: #422d6d !important;
+  --lcolor--purple-3: 172, 104, 238 !important; --lfe-color--purple-3: #ac68ee !important;
+  --lcolor--purple-4: 209, 170, 245 !important; --lfe-color--purple-4: #d1aaf5 !important;
+  --lcolor--purple-5: 238, 225, 252 !important; --lfe-color--purple-5: #eee1fc !important;
+  --lcolor--pink-1: 50, 29, 55 !important; --lfe-color--pink-1: #321d37 !important;
+  --lcolor--pink-2: 94, 45, 69 !important; --lfe-color--pink-2: #5e2d45 !important;
+  --lcolor--pink-3: 255, 104, 120 !important; --lfe-color--pink-3: #ff6878 !important;
+  --lcolor--pink-4: 255, 170, 179 !important; --lfe-color--pink-4: #ffaab3 !important;
+  --lcolor--pink-5: 255, 225, 228 !important; --lfe-color--pink-5: #ffe1e4 !important;
+  --lcolor--red-1: 49, 29, 51 !important; --lfe-color--red-1: #311d33 !important;
+  --lcolor--red-2: 91, 45, 59 !important; --lfe-color--red-2: #5b2d3b !important;
+  --lcolor--red-3: 246, 102, 90 !important; --lfe-color--red-3: #f6665a !important;
+  --lcolor--red-4: 250, 169, 163 !important; --lfe-color--red-4: #faa9a3 !important;
+  --lcolor--red-5: 253, 224, 222 !important; --lfe-color--red-5: #fde0de !important;
+  --lcolor--grey-1: 33, 39, 67 !important; --lfe-color--grey-1: #212743 !important;
+  --lcolor--grey-2: 58, 65, 95 !important; --lfe-color--grey-2: #3a415f !important;
+  --lcolor--grey-3: 150, 162, 196 !important; --lfe-color--grey-3: #96a2c4 !important;
+  --lcolor--grey-4: 196, 203, 222 !important; --lfe-color--grey-4: #c4cbde !important;
+  --lcolor--grey-5: 234, 236, 243 !important; --lfe-color--grey-5: #eaecf3 !important;
+  --lcolor--primary: 96, 224, 240 !important; --lfe-color--primary: #60E0F0 !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：雷紫 ── */
+html.flins-accent-volt {
+  --lcolor--primary: 156, 140, 255 !important; --lfe-color--primary: #9C8CFF !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：提灯金 ── */
+html.flins-accent-lamp {
+  --lcolor--primary: 240, 192, 112 !important; --lfe-color--primary: #F0C070 !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 强调色预设：洛谷蓝 ── */
+html.flins-accent-luogu {
+  --lcolor--primary: 52, 152, 219 !important; --lfe-color--primary: #3498DB !important;
+  --lcolor--primary-bg: 16, 42, 62 !important; --lfe-color--primary-bg: #102A3E !important;
+  --lcolor--link: 126, 232, 244 !important; --lfe-color--link: #7EE8F4 !important;
+  --lcolor--clicked: 146, 152, 248 !important; --lfe-color--clicked: #9298F8 !important;
+  --lcolor--disabled: 96, 104, 138 !important; --lfe-color--disabled: #60688A !important;
+  --lcolor--background: 8, 11, 33 !important; --lfe-color--background: #080B21 !important;
+  --lcolor--success: 82, 208, 150 !important; --lfe-color--success: #52D096 !important;
+  --lcolor--warning: 232, 184, 72 !important; --lfe-color--warning: #E8B848 !important;
+  --lcolor--error: 255, 110, 122 !important; --lfe-color--error: #FF6E7A !important;
+}
+
+/* ── 浅色「霜晨」：家族色阶沿用洛谷原值，只改语义色 ── */
+html.flins-light {
+  --lcolor--primary: 14, 143, 152 !important; --lfe-color--primary: #0E8F98 !important;
+  --lcolor--primary-bg: 221, 243, 245 !important; --lfe-color--primary-bg: #DDF3F5 !important;
+  --lcolor--link: 11, 124, 134 !important; --lfe-color--link: #0B7C86 !important;
+  --lcolor--clicked: 60, 75, 196 !important; --lfe-color--clicked: #3C4BC4 !important;
+  --lcolor--disabled: 191, 191, 191 !important; --lfe-color--disabled: #BFBFBF !important;
+  --lcolor--background: 239, 243, 251 !important; --lfe-color--background: #EFF3FB !important;
+  --lcolor--success: 46, 158, 99 !important; --lfe-color--success: #2E9E63 !important;
+  --lcolor--warning: 192, 138, 18 !important; --lfe-color--warning: #C08A12 !important;
+  --lcolor--error: 217, 74, 92 !important; --lfe-color--error: #D94A5C !important;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   工具类重写：洛谷把 .lcolor--X / .lcolor-bg-X 的颜色硬编码成
+   rgb(...)，不引用变量，所以必须在这里改成引用 --lcolor--*，
+   否则难度标签、状态色、页脚底色都不会跟随主题。
+   ══════════════════════════════════════════════════════════════ */
+.lcolor--lapis-1 { color: rgb(var(--lcolor--lapis-1)) !important; }
+.lcolor-bg-lapis-1 { background-color: rgb(var(--lcolor--lapis-1)) !important; }
+.lcolor--lapis-2 { color: rgb(var(--lcolor--lapis-2)) !important; }
+.lcolor-bg-lapis-2 { background-color: rgb(var(--lcolor--lapis-2)) !important; }
+.lcolor--lapis-3 { color: rgb(var(--lcolor--lapis-3)) !important; }
+.lcolor-bg-lapis-3 { background-color: rgb(var(--lcolor--lapis-3)) !important; }
+.lcolor--lapis-4 { color: rgb(var(--lcolor--lapis-4)) !important; }
+.lcolor-bg-lapis-4 { background-color: rgb(var(--lcolor--lapis-4)) !important; }
+.lcolor--lapis-5 { color: rgb(var(--lcolor--lapis-5)) !important; }
+.lcolor-bg-lapis-5 { background-color: rgb(var(--lcolor--lapis-5)) !important; }
+.lcolor--blue-1 { color: rgb(var(--lcolor--blue-1)) !important; }
+.lcolor-bg-blue-1 { background-color: rgb(var(--lcolor--blue-1)) !important; }
+.lcolor--blue-2 { color: rgb(var(--lcolor--blue-2)) !important; }
+.lcolor-bg-blue-2 { background-color: rgb(var(--lcolor--blue-2)) !important; }
+.lcolor--blue-3 { color: rgb(var(--lcolor--blue-3)) !important; }
+.lcolor-bg-blue-3 { background-color: rgb(var(--lcolor--blue-3)) !important; }
+.lcolor--blue-4 { color: rgb(var(--lcolor--blue-4)) !important; }
+.lcolor-bg-blue-4 { background-color: rgb(var(--lcolor--blue-4)) !important; }
+.lcolor--blue-5 { color: rgb(var(--lcolor--blue-5)) !important; }
+.lcolor-bg-blue-5 { background-color: rgb(var(--lcolor--blue-5)) !important; }
+.lcolor--cyan-1 { color: rgb(var(--lcolor--cyan-1)) !important; }
+.lcolor-bg-cyan-1 { background-color: rgb(var(--lcolor--cyan-1)) !important; }
+.lcolor--cyan-2 { color: rgb(var(--lcolor--cyan-2)) !important; }
+.lcolor-bg-cyan-2 { background-color: rgb(var(--lcolor--cyan-2)) !important; }
+.lcolor--cyan-3 { color: rgb(var(--lcolor--cyan-3)) !important; }
+.lcolor-bg-cyan-3 { background-color: rgb(var(--lcolor--cyan-3)) !important; }
+.lcolor--cyan-4 { color: rgb(var(--lcolor--cyan-4)) !important; }
+.lcolor-bg-cyan-4 { background-color: rgb(var(--lcolor--cyan-4)) !important; }
+.lcolor--cyan-5 { color: rgb(var(--lcolor--cyan-5)) !important; }
+.lcolor-bg-cyan-5 { background-color: rgb(var(--lcolor--cyan-5)) !important; }
+.lcolor--green-1 { color: rgb(var(--lcolor--green-1)) !important; }
+.lcolor-bg-green-1 { background-color: rgb(var(--lcolor--green-1)) !important; }
+.lcolor--green-2 { color: rgb(var(--lcolor--green-2)) !important; }
+.lcolor-bg-green-2 { background-color: rgb(var(--lcolor--green-2)) !important; }
+.lcolor--green-3 { color: rgb(var(--lcolor--green-3)) !important; }
+.lcolor-bg-green-3 { background-color: rgb(var(--lcolor--green-3)) !important; }
+.lcolor--green-4 { color: rgb(var(--lcolor--green-4)) !important; }
+.lcolor-bg-green-4 { background-color: rgb(var(--lcolor--green-4)) !important; }
+.lcolor--green-5 { color: rgb(var(--lcolor--green-5)) !important; }
+.lcolor-bg-green-5 { background-color: rgb(var(--lcolor--green-5)) !important; }
+.lcolor--lgreen-1 { color: rgb(var(--lcolor--lgreen-1)) !important; }
+.lcolor-bg-lgreen-1 { background-color: rgb(var(--lcolor--lgreen-1)) !important; }
+.lcolor--lgreen-2 { color: rgb(var(--lcolor--lgreen-2)) !important; }
+.lcolor-bg-lgreen-2 { background-color: rgb(var(--lcolor--lgreen-2)) !important; }
+.lcolor--lgreen-3 { color: rgb(var(--lcolor--lgreen-3)) !important; }
+.lcolor-bg-lgreen-3 { background-color: rgb(var(--lcolor--lgreen-3)) !important; }
+.lcolor--lgreen-4 { color: rgb(var(--lcolor--lgreen-4)) !important; }
+.lcolor-bg-lgreen-4 { background-color: rgb(var(--lcolor--lgreen-4)) !important; }
+.lcolor--lgreen-5 { color: rgb(var(--lcolor--lgreen-5)) !important; }
+.lcolor-bg-lgreen-5 { background-color: rgb(var(--lcolor--lgreen-5)) !important; }
+.lcolor--yellow-1 { color: rgb(var(--lcolor--yellow-1)) !important; }
+.lcolor-bg-yellow-1 { background-color: rgb(var(--lcolor--yellow-1)) !important; }
+.lcolor--yellow-2 { color: rgb(var(--lcolor--yellow-2)) !important; }
+.lcolor-bg-yellow-2 { background-color: rgb(var(--lcolor--yellow-2)) !important; }
+.lcolor--yellow-3 { color: rgb(var(--lcolor--yellow-3)) !important; }
+.lcolor-bg-yellow-3 { background-color: rgb(var(--lcolor--yellow-3)) !important; }
+.lcolor--yellow-4 { color: rgb(var(--lcolor--yellow-4)) !important; }
+.lcolor-bg-yellow-4 { background-color: rgb(var(--lcolor--yellow-4)) !important; }
+.lcolor--yellow-5 { color: rgb(var(--lcolor--yellow-5)) !important; }
+.lcolor-bg-yellow-5 { background-color: rgb(var(--lcolor--yellow-5)) !important; }
+.lcolor--orange-1 { color: rgb(var(--lcolor--orange-1)) !important; }
+.lcolor-bg-orange-1 { background-color: rgb(var(--lcolor--orange-1)) !important; }
+.lcolor--orange-2 { color: rgb(var(--lcolor--orange-2)) !important; }
+.lcolor-bg-orange-2 { background-color: rgb(var(--lcolor--orange-2)) !important; }
+.lcolor--orange-3 { color: rgb(var(--lcolor--orange-3)) !important; }
+.lcolor-bg-orange-3 { background-color: rgb(var(--lcolor--orange-3)) !important; }
+.lcolor--orange-4 { color: rgb(var(--lcolor--orange-4)) !important; }
+.lcolor-bg-orange-4 { background-color: rgb(var(--lcolor--orange-4)) !important; }
+.lcolor--orange-5 { color: rgb(var(--lcolor--orange-5)) !important; }
+.lcolor-bg-orange-5 { background-color: rgb(var(--lcolor--orange-5)) !important; }
+.lcolor--gold-1 { color: rgb(var(--lcolor--gold-1)) !important; }
+.lcolor-bg-gold-1 { background-color: rgb(var(--lcolor--gold-1)) !important; }
+.lcolor--gold-2 { color: rgb(var(--lcolor--gold-2)) !important; }
+.lcolor-bg-gold-2 { background-color: rgb(var(--lcolor--gold-2)) !important; }
+.lcolor--gold-3 { color: rgb(var(--lcolor--gold-3)) !important; }
+.lcolor-bg-gold-3 { background-color: rgb(var(--lcolor--gold-3)) !important; }
+.lcolor--gold-4 { color: rgb(var(--lcolor--gold-4)) !important; }
+.lcolor-bg-gold-4 { background-color: rgb(var(--lcolor--gold-4)) !important; }
+.lcolor--gold-5 { color: rgb(var(--lcolor--gold-5)) !important; }
+.lcolor-bg-gold-5 { background-color: rgb(var(--lcolor--gold-5)) !important; }
+.lcolor--purple-1 { color: rgb(var(--lcolor--purple-1)) !important; }
+.lcolor-bg-purple-1 { background-color: rgb(var(--lcolor--purple-1)) !important; }
+.lcolor--purple-2 { color: rgb(var(--lcolor--purple-2)) !important; }
+.lcolor-bg-purple-2 { background-color: rgb(var(--lcolor--purple-2)) !important; }
+.lcolor--purple-3 { color: rgb(var(--lcolor--purple-3)) !important; }
+.lcolor-bg-purple-3 { background-color: rgb(var(--lcolor--purple-3)) !important; }
+.lcolor--purple-4 { color: rgb(var(--lcolor--purple-4)) !important; }
+.lcolor-bg-purple-4 { background-color: rgb(var(--lcolor--purple-4)) !important; }
+.lcolor--purple-5 { color: rgb(var(--lcolor--purple-5)) !important; }
+.lcolor-bg-purple-5 { background-color: rgb(var(--lcolor--purple-5)) !important; }
+.lcolor--pink-1 { color: rgb(var(--lcolor--pink-1)) !important; }
+.lcolor-bg-pink-1 { background-color: rgb(var(--lcolor--pink-1)) !important; }
+.lcolor--pink-2 { color: rgb(var(--lcolor--pink-2)) !important; }
+.lcolor-bg-pink-2 { background-color: rgb(var(--lcolor--pink-2)) !important; }
+.lcolor--pink-3 { color: rgb(var(--lcolor--pink-3)) !important; }
+.lcolor-bg-pink-3 { background-color: rgb(var(--lcolor--pink-3)) !important; }
+.lcolor--pink-4 { color: rgb(var(--lcolor--pink-4)) !important; }
+.lcolor-bg-pink-4 { background-color: rgb(var(--lcolor--pink-4)) !important; }
+.lcolor--pink-5 { color: rgb(var(--lcolor--pink-5)) !important; }
+.lcolor-bg-pink-5 { background-color: rgb(var(--lcolor--pink-5)) !important; }
+.lcolor--red-1 { color: rgb(var(--lcolor--red-1)) !important; }
+.lcolor-bg-red-1 { background-color: rgb(var(--lcolor--red-1)) !important; }
+.lcolor--red-2 { color: rgb(var(--lcolor--red-2)) !important; }
+.lcolor-bg-red-2 { background-color: rgb(var(--lcolor--red-2)) !important; }
+.lcolor--red-3 { color: rgb(var(--lcolor--red-3)) !important; }
+.lcolor-bg-red-3 { background-color: rgb(var(--lcolor--red-3)) !important; }
+.lcolor--red-4 { color: rgb(var(--lcolor--red-4)) !important; }
+.lcolor-bg-red-4 { background-color: rgb(var(--lcolor--red-4)) !important; }
+.lcolor--red-5 { color: rgb(var(--lcolor--red-5)) !important; }
+.lcolor-bg-red-5 { background-color: rgb(var(--lcolor--red-5)) !important; }
+.lcolor--grey-1 { color: rgb(var(--lcolor--grey-1)) !important; }
+.lcolor-bg-grey-1 { background-color: rgb(var(--lcolor--grey-1)) !important; }
+.lcolor--grey-2 { color: rgb(var(--lcolor--grey-2)) !important; }
+.lcolor-bg-grey-2 { background-color: rgb(var(--lcolor--grey-2)) !important; }
+.lcolor--grey-3 { color: rgb(var(--lcolor--grey-3)) !important; }
+.lcolor-bg-grey-3 { background-color: rgb(var(--lcolor--grey-3)) !important; }
+.lcolor--grey-4 { color: rgb(var(--lcolor--grey-4)) !important; }
+.lcolor-bg-grey-4 { background-color: rgb(var(--lcolor--grey-4)) !important; }
+.lcolor--grey-5 { color: rgb(var(--lcolor--grey-5)) !important; }
+.lcolor-bg-grey-5 { background-color: rgb(var(--lcolor--grey-5)) !important; }
+.lcolor--vip { color: rgb(var(--lcolor--vip, 240, 192, 112)) !important; }
+.lcolor-bg-vip { background-color: rgb(var(--lcolor--vip, 240, 192, 112)) !important; }
+.lcolor--primary { color: rgb(var(--lcolor--primary)) !important; }
+.lcolor-bg-primary { background-color: rgb(var(--lcolor--primary)) !important; }
+.lcolor--primary-bg { color: rgb(var(--lcolor--primary-bg)) !important; }
+.lcolor-bg-primary-bg { background-color: rgb(var(--lcolor--primary-bg)) !important; }
+.lcolor--link { color: rgb(var(--lcolor--link)) !important; }
+.lcolor-bg-link { background-color: rgb(var(--lcolor--link)) !important; }
+.lcolor--clicked { color: rgb(var(--lcolor--clicked)) !important; }
+.lcolor-bg-clicked { background-color: rgb(var(--lcolor--clicked)) !important; }
+.lcolor--disabled { color: rgb(var(--lcolor--disabled)) !important; }
+.lcolor-bg-disabled { background-color: rgb(var(--lcolor--disabled)) !important; }
+.lcolor--background { color: rgb(var(--lcolor--background)) !important; }
+.lcolor-bg-background { background-color: rgb(var(--lcolor--background)) !important; }
+.lcolor--success { color: rgb(var(--lcolor--success)) !important; }
+.lcolor-bg-success { background-color: rgb(var(--lcolor--success)) !important; }
+.lcolor--warning { color: rgb(var(--lcolor--warning)) !important; }
+.lcolor-bg-warning { background-color: rgb(var(--lcolor--warning)) !important; }
+.lcolor--error { color: rgb(var(--lcolor--error)) !important; }
+.lcolor-bg-error { background-color: rgb(var(--lcolor--error)) !important; }
