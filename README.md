@@ -7,13 +7,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85-4C6FE8.svg)](https://raw.githubusercontent.com/liumingyangrd/luogu_flins_theme/main/dist/flins.user.js)
 [![Chrome MV3](https://img.shields.io/badge/Chrome%20%2F%20Edge-MV3%20%E6%89%A9%E5%B1%95-60A0C0.svg)](dist/flins-extension)
-[![Version](https://img.shields.io/badge/version-2026.1005.1342-0B0F2B.svg)](https://github.com/liumingyangrd/luogu_flins_theme/releases)
+[![Release](https://img.shields.io/github/v/release/liumingyangrd/luogu_flins_theme?color=0B0F2B&label=version)](https://github.com/liumingyangrd/luogu_flins_theme/releases)
 
 **在真实的 luogu.com.cn 上截图，不是离线预览：**
 
+![首页 · 夜巡（深色）](docs/live-home.png)
+
 ![题目页 · 夜巡（深色）](docs/live-problem.png)
 
-![首页 · 夜巡（深色）](docs/live-home.png)
+![题库页 · 夜巡（深色）](docs/live-problemlist.png)
 
 | 霜晨（浅色） | 设置面板 |
 |---|---|
@@ -45,11 +47,13 @@
 - **底色跟洛谷语义令牌走**：改动同时驱动 `--lcolor--primary`、`--lcolor--link` 等，
   按钮、链接、选中态一起变色，而不是硬盖一层皮。
 - **两套形态**：夜巡（深）/ 霜晨（浅），可跟随系统。
-- **三种强调色**：幽焰青 / 雷紫 / 提灯金，也能自己取色。
+- **四种强调色**：幽焰青 / 雷紫 / 提灯金 / 洛谷蓝，也能自己取色。
 - **背景图片 6 种来源 + 6 个参数**（模糊 / 明暗 / 缩放 / 蒙版浓度 / 对齐 / 平铺）。
 - **白块自愈**：洛谷把不少背景硬编码成 `#fff`，面板里可「扫描并修复」，
   并把修了什么复制到剪贴板；自动模式默认开启。
 - **毛玻璃 / 装饰 / 动效**可单独关闭，尊重系统「减弱动态效果」与洛谷自己的低端机降级。
+- **三处自定义图片**：右下角小灯、左上角誓灯徽记、标题小灯都能换成自己的图
+  （建议正方形、透明背景的 PNG）。
 - **配置可导出**：面板底部「复制配置」输出一段 JSON，方便备份或分享。
 - **带一套真站验证工具**：CDP 注入诊断、白块审计、按坐标查「到底是谁给它上的色」。
 - **零依赖、零遥测**：脚本里没有任何 `fetch` / `XMLHttpRequest` / `sendBeacon` / `WebSocket`
@@ -68,7 +72,7 @@
    或把仓库里的 `dist/flins.user.js` 直接拖进浏览器窗口，按提示安装。
 3. 打开任意洛谷页面。右下角会出现一个**灯形按钮**，点开就是设置面板。
 
-脚本自带「夜巡」背景插画（已内嵌，约 427 KB），装完即用，不需要额外配置。
+脚本自带「夜巡」背景插画（已内嵌，约 428 KB），装完即用，不需要额外配置。
 
 ### B. Chrome / Edge 扩展（不想装油猴）
 
@@ -142,11 +146,14 @@
 除了背景图片，面板里还能调：
 
 - **外观形态** —— 跟随系统 / 夜巡（深）/ 霜晨（浅）
-- **强调色** —— 幽焰青（默认）/ 雷紫 / 提灯金，或自己取色
+- **强调色** —— 幽焰青（默认）/ 雷紫 / 提灯金 / 洛谷蓝，或自己取色
 - **效果开关** —— 毛玻璃、装饰元素（徽记 / 极光扫带 / 页脚铭牌）、动效（灯火呼吸、
   选中脉动；跟随系统「减弱动态效果」）、**自动修补遗漏的白块**
-- **标题小灯** —— 标题左边那个发光的小标记，可在「灯芯 / 新月 / 无」之间换。
-  颜色跟着深浅形态走：深色用亮青（灯火感），浅色自动换成深青，否则白底上是一团看不见的淡色。
+- **标题小灯** —— 标题左边那个发光的小标记，可在「灯芯 / 新月 / 无」之间换，
+  或直接填一张自定义图片。颜色跟着深浅形态走：深色用亮青（灯火感），
+  浅色自动换成深青，否则白底上是一团看不见的淡色。
+- **自定义图片** —— 三处都能换成自己的图：右下角小灯按钮（`fabImage`）、
+  左上角誓灯徽记（`emblemImage`）、标题小灯（`lampImage`）。面板里直接粘图片直链即可。
 - **漏网的白块** —— 一个「扫描并修复」按钮。洛谷把不少背景色硬编码成 `#fff`，其中一些页面
   （私信、犇犇、登录后才出现的翻页条）**未登录根本看不到**，没法提前枚举。这个按钮当场扫出并
   修掉，同时把「修了什么」复制到剪贴板。自动模式默认开着。
@@ -179,12 +186,12 @@
 ```
 luogu-flins-theme/
 ├─ dist/                        ← 要用的东西都在这里（成品）
-│  ├─ flins.user.js             油猴脚本（约 427 KB，样式表 + 背景图 + 徽记全部内嵌）
+│  ├─ flins.user.js             油猴脚本（约 429 KB，样式表 + 背景图 + 徽记全部内嵌）
 │  ├─ flins-extension/          Chrome / Edge 扩展（MV3，免油猴）
 │  │  ├─ manifest.json
 │  │  ├─ content.js             与 flins.user.js 同一份脚本
 │  │  └─ icons/
-│  ├─ flins.css                 等价的纯 CSS（Stylus 用，约 154 KB）
+│  ├─ flins.css                 等价的纯 CSS（Stylus 用，约 156 KB）
 │  ├─ flins-emblem.svg          「誓灯」徽记
 │  └─ assets/                   可直接上传到洛谷图床的完整尺寸背景图
 ├─ src/                         ← 源码（构建输入）
@@ -255,7 +262,7 @@ URL 参数（方便截图和排查）：
 |---|---|
 | `?mode=dark\|light` | 强制深浅形态 |
 | `?view=problem\|home` | 切页面 |
-| `?accent=ghost\|volt\|lamp` | 强调色 |
+| `?accent=ghost\|volt\|lamp\|luogu` | 强调色 |
 | `?bg=auto\|builtin-dark\|builtin-light\|url\|upload\|none` | 背景来源 |
 | `?blur=16&scrim=30&zoom=1.2` | 背景参数 |
 | `?panel=1` | 自动展开设置面板 |
@@ -421,6 +428,8 @@ FAB / 面板是否挂上、以及 `window.onerror` 捕获到的异常列表（**
 ## 授权与免责
 
 - **代码**：MIT，见 [LICENSE](LICENSE)。可自由使用、修改、分发、商用，保留版权声明即可。
+  （`LICENSE` 文件是标准 MIT 全文，**没有**附加条款 —— 这样 GitHub 才能正确识别出 MIT。
+  第三方权利归属统一写在本节，不写进 `LICENSE`。）
 - **背景插画与「誓灯」徽记**：由本仓库的脚本（`tools/make_backgrounds.py`）程序化生成，
   不是从官方素材抠的，可随本项目一起自由使用。
 - **角色相关**：《原神》菲林斯的名字、形象与官方文案版权归**米哈游**所有。

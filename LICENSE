@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-补充说明（不属于 MIT 条款正文，仅作权利归属澄清）：
-
-1. 本许可证覆盖本仓库中的代码、样式表与由 tools/make_backgrounds.py 程序化生成的
-   背景插画与徽记。
-2. 《原神》角色「菲林斯」的名称、形象、官方文案，版权归米哈游（miHoYo / HoYoverse）所有。
-3. 洛谷（luogu.com.cn）的商标与前端样式版权归洛谷所有；preview/vendor/ 目录下的
-   样式快照取自洛谷线上产物，仅为离线调试复现布局所用，不在本 MIT 授权范围内。
-4. 本项目为非官方同人美化作品，与米哈游、洛谷均无隶属关系。
