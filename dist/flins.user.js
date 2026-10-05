@@ -38,7 +38,7 @@
   const EMBLEM_SVG = /* @flins:emblem */"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" width=\"64\" height=\"64\"\n     role=\"img\" aria-label=\"菲林斯 · 誓灯\">\n  <title>菲林斯 · 誓灯</title>\n  <defs>\n    <linearGradient id=\"flinsTower\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0\" stop-color=\"#2B3480\"/>\n      <stop offset=\"1\" stop-color=\"#0B0F2B\"/>\n    </linearGradient>\n    <linearGradient id=\"flinsFlame\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0\" stop-color=\"#EAFBFF\"/>\n      <stop offset=\"0.5\" stop-color=\"#60E0F0\"/>\n      <stop offset=\"1\" stop-color=\"#4C6FE8\"/>\n    </linearGradient>\n    <linearGradient id=\"flinsGold\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0\" stop-color=\"#F8E080\"/>\n      <stop offset=\"1\" stop-color=\"#C89020\"/>\n    </linearGradient>\n    <radialGradient id=\"flinsHalo\" cx=\"0.5\" cy=\"0.5\" r=\"0.5\">\n      <stop offset=\"0\" stop-color=\"#60E0F0\" stop-opacity=\"0.6\"/>\n      <stop offset=\"1\" stop-color=\"#60E0F0\" stop-opacity=\"0\"/>\n    </radialGradient>\n  </defs>\n\n  <!-- 灯室辉光 -->\n  <circle cx=\"30\" cy=\"26\" r=\"15\" fill=\"url(#flinsHalo)\"/>\n\n  <!-- 金色新月（点缀，占比很小；置于右上角，避免与灯顶重叠） -->\n  <path d=\"M52.4 6.4a8.8 8.8 0 1 0 6.3 10.6 7 7 0 1 1-6.3-10.6z\" fill=\"url(#flinsGold)\"/>\n\n  <!-- 提灯：顶环 -->\n  <path d=\"M30 8.2a3.4 3.4 0 0 1 3.4 3.4\" fill=\"none\" stroke=\"#B9BCC6\"\n        stroke-width=\"1.6\" stroke-linecap=\"round\" opacity=\"0.9\"/>\n\n  <!-- 提灯：顶盖 -->\n  <path d=\"M24.2 15.6h11.6l-1.6-4.2H25.8z\" fill=\"#C8CBD6\"/>\n\n  <!-- 提灯：灯室（冷蓝火焰） -->\n  <rect x=\"24.6\" y=\"16.2\" width=\"10.8\" height=\"13.4\" rx=\"1.8\"\n        fill=\"#0B0F2B\" stroke=\"#C8CBD6\" stroke-width=\"1.3\"/>\n  <path d=\"M30 18.4c2.7 3.3 3.9 5.1 3.9 7.1a3.9 3.9 0 0 1-7.8 0c0-2 1.2-3.8 3.9-7.1z\"\n        fill=\"url(#flinsFlame)\"/>\n  <path d=\"M30 22.4c1.2 1.5 1.7 2.3 1.7 3.3a1.7 1.7 0 0 1-3.4 0c0-1 0.5-1.8 1.7-3.3z\"\n        fill=\"#EAFBFF\"/>\n\n  <!-- 提灯：塔身（呼应终夜长茔的灯塔） -->\n  <path d=\"M25.6 30.4h8.8l2.4 19.0H23.2z\" fill=\"url(#flinsTower)\"/>\n  <path d=\"M23.9 35.0h12.2M24.7 40.4h10.6M25.3 45.8h9.4\"\n        stroke=\"#B9BCC6\" stroke-width=\"1.0\" opacity=\"0.45\" fill=\"none\" stroke-linecap=\"round\"/>\n  <rect x=\"22.2\" y=\"49.6\" width=\"15.6\" height=\"3.6\" rx=\"1.0\" fill=\"#C8CBD6\" opacity=\"0.85\"/>\n\n  <!-- 灯身银饰 -->\n  <path d=\"M30 31.6v17.4\" stroke=\"#F2F4F8\" stroke-width=\"0.8\" opacity=\"0.3\"/>\n</svg>"/* @flins:emblem-end */;
 
   // ────────────────────────────────────────────────────────────────────────
-  // 配置
+  // 配置         
   // ────────────────────────────────────────────────────────────────────────
   const STORE_KEY = 'flins-theme-v1';
 
@@ -46,13 +46,13 @@
     ghost: { name: '幽焰青', hex: '#60E0F0' },
     volt:  { name: '雷紫',   hex: '#9C8CFF' },
     lamp:  { name: '提灯金', hex: '#F0C070' },
-    // 洛谷原生蓝：给「想要改动最小」的人用
+    // 洛谷原生蓝：给「想要改动最小」的人用    
     luogu: { name: '洛谷蓝', hex: '#3498DB' },
   };
 
   const DEFAULTS = {
     mode: 'auto',            // auto | dark | light
-    accent: 'ghost',         // 预设名，或 'custom'
+    accent: 'ghost',         // 预设名，或 'custom'      
     accentCustom: '#60E0F0',
     bgSource: 'auto',        // auto | builtin-dark | builtin-light | url | upload | none
     bgUrl: '',
