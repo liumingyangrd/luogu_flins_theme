@@ -17,6 +17,8 @@
 
 ![题库页 · 夜巡（深色）](docs/live-problemlist.png)
 
+![专栏文章页 · 夜巡（深色）](docs/live-article.png)
+
 | 霜晨（浅色） | 设置面板 |
 |---|---|
 | ![霜晨](docs/preview-frost.png) | ![设置面板](docs/settings-panel.png) |

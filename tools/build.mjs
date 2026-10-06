@@ -85,12 +85,14 @@ user = replaceBlock(user, '/* @flins:bg */', '/* @flins:bg-end */', JSON.stringi
 user = replaceBlock(user, '/* @flins:emblem */', '/* @flins:emblem-end */', JSON.stringify(emblemSvg));
 
 // ── 版本号每次构建自动递增 ─────────────────────────────────────────────────
-// 每次构建写入时间戳版本号，便于在 Tampermonkey 面板确认装的是哪一版。
+// 版本号格式为「语义版本 + 构建时间戳」：1.2.0.202610061440
+// —— 既看得出功能版本，又能在 Tampermonkey 面板区分每一次构建。
 const d = new Date();
 const p2 = (n) => String(n).padStart(2, '0');
-const stamp = `${d.getFullYear()}.${p2(d.getMonth() + 1)}${p2(d.getDate())}.${p2(d.getHours())}${p2(d.getMinutes())}`;
+const stamp = `${d.getFullYear()}${p2(d.getMonth() + 1)}${p2(d.getDate())}${p2(d.getHours())}${p2(d.getMinutes())}`;
+const semver = (/^\/\/ @version\s+([0-9]+\.[0-9]+\.[0-9]+)\s*$/m.exec(user) || [null, '0.0.0'])[1];
 const before = user;
-user = user.replace(/^\/\/ @version\s+\S+$/m, `// @version      ${stamp}`);
+user = user.replace(/^\/\/ @version\s+\S+$/m, `// @version      ${semver}.${stamp}`);
 if (user === before) {
   console.error('✗ 没能替换 @version，检查 src/userscript.js 的头部格式');
   process.exit(1);
@@ -124,8 +126,10 @@ console.log(`✓ dist/flins.user.js        ${kb(join(DIST, 'flins.user.js'))}`);
 const EXT = join(DIST, 'flins-extension');
 mkdirSync(join(EXT, 'icons'), { recursive: true });
 
-// 版本号与用户脚本保持一致，这样 edge://extensions 里一眼能看出装的是哪一版
-const extVersion = stamp.split('.').slice(0, 3).join('.').replace(/^(\d+)\.(\d{4})(\d{2})\.(\d{4})$/, '$1.$2$3.$4');
+// 版本号与用户脚本保持一致（同一次构建），这样 edge://extensions 里一眼能看出是哪一版。
+// ⚠️ Chrome 的 manifest version 必须是 1~4 段纯数字、每段 ≤ 65535，
+//    所以这里用「年.月日.时分」三段（2026.1006.1441），不能塞时间戳长整数。
+const extVersion = `${d.getFullYear()}.${p2(d.getMonth() + 1)}${p2(d.getDate())}.${p2(d.getHours())}${p2(d.getMinutes())}`;
 
 // content.js 就是同一个脚本：里面已经写好 GM_* 缺失时的兜底分支
 writeFileSync(join(EXT, 'content.js'), user, 'utf8');

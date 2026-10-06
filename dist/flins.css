@@ -3355,6 +3355,35 @@ html.flins-layout-flins .full-container.columba-content-wrap .lfe-caption {
   color: var(--flins-text-muted) !important;
 }
 
+/* ──────────────────────────────────────────────────────────────────────────
+   18. 专栏文章页（/article/<id>）
+
+   洛谷原版把正文做成 768px 的阅读栏并居中，悬浮的「赞 / 评论 / 不推荐」条
+   （.actions.left-mode）由洛谷 CSS 用 left: calc(50% - 412px) 钉在正文左侧的
+   空白里 —— 也就是「50% 减去半个 768 栏再减 28px 间隙」。
+
+   主题的 --flins-read-w: 1480px 让 .columba-content-wrap 铺满整屏，专栏正文
+   于是变成 1452px 一行：悬浮条还钉在 50%-412 的位置，正好【压在正文上】。
+   实测会遮住 6 行正文。
+
+   这里给专栏单独一条阅读栏（860px 居中），并把悬浮条重新钉到栏外左侧空白：
+     正文左边 = 50% - 430px；条的右边 = 50% - 514px + 60px = 50% - 454px
+     ⇒ 条与正文之间留 24px 间隙。
+   窗口太窄时没有空白放条，直接隐藏（正文底部本来还有一条同样的操作栏）。
+   ────────────────────────────────────────────────────────────────────────── */
+html.flins-layout-flins .article-banner.columba-content-wrap,
+html.flins-layout-flins .article-content.columba-content-wrap,
+html.flins-layout-flins .article-comment.columba-content-wrap {
+  max-width: 860px !important;
+  margin-inline: auto !important;
+}
+html.flins-layout-flins .actions.left-mode {
+  left: max(12px, calc(50% - 514px)) !important;
+}
+@media (max-width: 1100px) {
+  html.flins-layout-flins .actions.left-mode { display: none !important; }
+}
+
 /* ── 打印 ────────────────────────────────────────────────────────────── */
 @media print {
   html::before, html::after { display: none !important; }

@@ -4,7 +4,7 @@
 // @homepageURL  https://github.com/liumingyangrd/luogu_flins_theme
 // @updateURL    https://raw.githubusercontent.com/liumingyangrd/luogu_flins_theme/main/dist/flins.user.js
 // @downloadURL  https://raw.githubusercontent.com/liumingyangrd/luogu_flins_theme/main/dist/flins.user.js
-// @version      1.1.0
+// @version      1.2.0
 // @description  为洛谷换上一套《原神》菲林斯主题：深靛蓝夜色 + 提灯冷蓝焰 + 金色新月 + 灯塔剪影。支持自定义背景图片（内置 / 链接 / 本地上传）、深浅两套形态、四种强调色与毛玻璃开关。
 // @author       Flins Theme
 // @license      MIT
@@ -278,7 +278,7 @@
   /** 逐级向上找第一个不透明背景。
    *  ⚠️ 一定要给兜底值：本主题把所有容器都设成了透明，好让 html::before 的
    *  背景图透出来 —— 于是往上走到 <html> 都找不到不透明背景。
-   *  早期版本这里返回 null，结果每一条都被 continue 掉，整个自愈形同虚设。 */
+   *  这里必须返回兜底色：返回 null 会让每一条都被 continue 掉，自愈形同虚设。 */
   function bgBehind(el) {
     let p = el;
     while (p && p !== document.documentElement) {
@@ -603,7 +603,7 @@
   //
   // ⚠️ 这里是整套脚本最容易挂的地方，务必保持现在的写法：
   //    @run-at document-start 时 document.head 与 document.documentElement
-  //    「都可能是 null」（文档还是完全空的）。早期版本在这里直接
+  //    「都可能是 null」（文档还是完全空的）。这里若直接
   //    (document.head || document.documentElement).appendChild(...) 会抛
   //    TypeError，整个 boot() 就此中断，页面上一点效果都没有。
   //    所以：① 等根元素出现再插 ② 不用 GM_addStyle，自己管 <style> 的 id，
@@ -1139,7 +1139,7 @@
   // 启动
   //
   // 每一步都单独 try：document-start 阶段 DOM 是空的，任何一个环节抛异常
-  // 都不应该把后面的步骤一起带走（这正是早期版本「完全没效果」的原因）。
+  // 都不应该把后面的步骤一起带走。
   // ────────────────────────────────────────────────────────────────────────
   function boot() {
     const steps = [
